@@ -1,0 +1,78 @@
+---
+title: "Vid adgang til å be om ettersending i kvalifikasjonsfasen, ikke i tilbudsfasen"
+date: 2018-03-02
+excerpt: "Det er ikke tillatt å forbedre et tilbud ved ettersendelse av opplysninger uavhengig av om det har betydning for konkurranseforholdet. En konkret vurdering avgjør om ettersendelse av ny dokumentasjon eller nye opplysninger innebærer at tilbudet er forbedret. I kvalifikasjonsfasen har oppdragsgive..."
+image: "https://static.wixstatic.com/media/fc4334_87b2027f60df42d38e7a85ec56fa6501~mv2.jpg/v1/fill/w_1000,h_496,al_c,q_85,usm_0.66_1.00_0.01/fc4334_87b2027f60df42d38e7a85ec56fa6501~mv2.jpg"
+---
+
+![](https://static.wixstatic.com/media/fc4334_87b2027f60df42d38e7a85ec56fa6501~mv2.jpg/v1/fill/w_147,h_73,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/fc4334_87b2027f60df42d38e7a85ec56fa6501~mv2.jpg)
+
+Det er ikke tillatt å forbedre et tilbud ved ettersendelse av opplysninger uavhengig av om det har betydning for konkurranseforholdet. En konkret vurdering avgjør om ettersendelse av ny dokumentasjon eller nye opplysninger innebærer at tilbudet er forbedret. I kvalifikasjonsfasen har oppdragsgiveren en vid adgang til å be om ettersending og avklaringer av opplysninger. Spørsmålet her er om leverandøren er egnet til å delta i konkurransen, og ettersending påvirker ikke konkurranseforholdet mellom leverandørenes tilbud.
+
+I denne spalten tar vi for oss ulike problemstillinger knyttet til gjennomføring av offentlige anskaffelser. Ny lov om offentlige anskaffelser med tilhørende forskrifter trådte i kraft 1. januar i 2017. Nærings- og fiskeridepartementet (NFD) har samlet veiledninger til de enkelte bestemmelser i regelverket i ett dokument. Denne gangen tar vi for oss reglene om ettersending og avklaringer (Del III). Ikke alle opplysninger er med i artikkelen, så sjekk for sikkerhets skyld hva som står i departementets veiledning.
+
+https://www.regjeringen.no/no/dokumenter/veileder-offentlige-anskaffelser/id2581234/
+
+Bestemmelsen fastsetter at oppdragsgiveren skriftlig kan be leverandørene om å ettersende, supplere, avklare eller utfylle mottatte opplysninger og dokumentasjon innen en kort tilleggsfrist. Dette gjelder dersom opplysningene eller dokumentasjonen synes å inneholde feil eller uklarheter eller dersom bestemte opplysninger eller dokumenter mangler.
+
+Dette er en overgangsregel som gjelder frem til kravet om at all kommunikasjons- og informasjonsutveksling mellom oppdragsgiveren og leverandøren skal skje elektronisk trer i kraft. Kravet har allerede trådt i kraft for innkjøpssentraler (skjedde 1. april 2017).
+
+For statlige oppdragsgivere trer kravet i kraft fra 1. januar 2018, mens for andre oppdragsgivere (inkludert kommuner og fylkeskommuner) trer kravet i kraft fra 1. juli 2018. Etter at kravet har trådt i kraft, vil bestemmelsene i § 25-2 første ledd om karensperiode gjelde.
+
+Bestemmelsen gir oppdragsgiveren en utvidet adgang til å be om ettersending og avklaringer i forhold til tidligere regelverk. En utvidet ettersendings- og avklaringsadgang kan bidra til bedre og mer effektive anskaffelser ved at færre leverandører må avvises på grunn av mangelfull dokumentasjon, feil, uklarheter eller lignende.
+
+**Hva kan oppdragsgiveren be om ettersending eller avklaring av?**
+
+Oppdragsgiveren kan både be leverandørene om å ettersende eller avklare dokumentasjon som knytter seg til oppfyllelse av krav i kvalifikasjonsfasen eller til selve tilbudet. I tillegg til en faktisk ettersending av opplysninger eller dokumenter, inklusive vareprøver, som mangler, kan oppdragsgiveren be om at leverandørene supplerer, avklarer eller utfyller allerede innsendt informasjon og dokumentasjon. Når oppdragsgiveren fastsetter fristen for når informasjonen må være mottatt, må fristen være rimelig og gi leverandørene en reell mulighet til å komme med de opplysningene som blir etterspurt.
+
+**Ettersending og avklaring knyttet til leverandørens kvalifikasjoner  **
+
+Oppdragsgiveren kan be om ettersending og avklaring av opplysninger som gjelder leverandørens kvalifikasjoner. Dette kan eksempelvis gjelde kvalifikasjonskrav, utvelgelseskriterier eller avvisningsgrunner. Slik ettersending og avklaring må gjennomføres i samsvar med de grunnleggende prinsippene, særlig kravene til likebehandling og etterprøvbarhet. Fordi ettersending og avklaring i kvalifikasjonsfasen gjelder spørsmålet om hvorvidt leverandøren er kvalifisert for oppdraget eller ikke, har oppdragsgiveren en vid adgang til å be om ettersending og avklaringer av opplysninger i denne fasen. Spørsmålet på dette stadiet er om leverandøren er egnet til å delta i konkurransen og ettersending av manglende informasjon eller avklaring av inngitt dokumentasjon påvirker av denne grunn ikke konkurranseforholdet mellom leverandørene når det gjelder hvem som har levert det beste tilbudet.
+
+**Eksempler på avklaring knyttet til kvalifikasjonskravene**
+
+Ettersending av opplysninger knyttet til leverandørens oppfyllelse av kvalifikasjonskravene kan eksempelvis gjelde at oppdragsgiveren har stilt et krav om økonomisk kapasitet. Leverandøren har angitt i egenerklæringsskjemaet at han oppfyller alle de angitte kvalifikasjonskravene. Når oppdragsgiveren ber leverandøren om å oversende dokumentasjonsbevisene, har ikke leverandøren lagt ved det etterspurte regnskapet som skal vise oppfyllelse av kravet om økonomisk kapasitet. I et slikt tilfelle kan oppdragsgiveren be om ettersending av hele regnskapet.
+
+Et annet eksempel er der leverandøren har opplyst at han har den erfaringen som oppdragsgiver etterspør. Leverandøren har også levert liste over referanseoppdrag for å dokumentere oppfyllelse av kravet. Listen mangler imidlertid opplysninger om referanseoppdragenes verdi og tidspunkt for utførelse. I et slikt tilfelle kan oppdragsgiveren be om at referanselisten suppleres med de relevante opplysningene.
+
+Avklaringer knyttet til leverandørens oppfyllelse av kvalifikasjonskravene kan også eksempelvis gjelde der leverandøren har opplyst at han har medarbeidere med den erfaring som oppdragsgiveren etterspør. Leverandørene har levert CVer for å dokumentere oppfyllelse av disse kravene. Dersom det er uklart for oppdragsgiveren hvorvidt de kvalifikasjonene som det er vist til, faktisk er de han etterspør, eller hvorvidt leverandøren har et tilstrekkelig antall medarbeidere med slike kvalifikasjoner, kan oppdragsgiveren i et slikt tilfelle avklare dette.
+
+**Ettersending og avklaring av opplysninger knyttet til tilbudet**
+
+Når det gjelder opplysninger som knytter seg til selve tilbudet, kan oppdragsgiveren be om avklaringer, suppleringer, utfylling og ettersending av opplysningene. Slik ettersending og avklaring må gjennomføres i samsvar med de grunnleggende prinsippene, særlig kravene til likebehandling og etterprøvbarhet. Det gjør seg dessuten gjeldende en begrensning i ettersending- og avklaringsadgangen ved åpen eller begrenset anbudskonkurranse. Ved disse prosedyrene gjelder det et forhandlingsforbud som innebærer at endringer eller avklaringer ikke skal føre til en forbedring av tilbudet.
+
+**Forhandlingsforbudet ved åpen eller begrenset anbudskonkurranse**
+
+Forhandlingsforbudet fastsetter at det ved åpne og begrensede anbudskonkurranser er forbudt å forbedre tilbudet gjennom forhandlinger. Forhandlingsforbudet gjelder fra tilbudsfristens utløp og helt frem til kontrakt er inngått. Kravet om at tilbudet ikke må forbedres innebærer ikke at enhver endring av tilbudet vil være forbudt. Det er først når endringen fører til en forbedring av tilbudet at den ikke vil være lovlig. En forbedring vil kunne medføre en konkurransefordel for den leverandøren som gis adgang til å foreta forbedringen. Forhandlingsforbudet innebærer ikke et forbud mot kontakt mellom partene. I tråd med adgangen til å anmode om ettersending og avklaring av opplysninger som knytter seg til tilbudet, gjelder forbudet bare når en slik anmodning fører til at tilbudet forbedres.
+
+**Når er et tilbud forbedret?  **
+
+Det er ikke tillatt å forbedre pris, kvalitet, leveringstid eller andre egenskaper ved tilbudet uavhengig av om det har betydning for konkurranseforholdet. Det vil være en konkret vurdering hvorvidt ettersendelse av ny dokumentasjon eller nye opplysninger innebærer at leverandøren har fremsatt et forbedret tilbud. Det vil ikke være en forbedring av tilbudet dersom det i tilbudet finnes objektive holdepunkter for at de opplysningene som ettersendes eller avklares forelå og ble tilbudt allerede på det tidspunktet hvor leverandøren leverte tilbudet. Det er ikke et krav om at selve dokumentet som ettersendes forelå ved tilbudsfristens utløp, men det må være holdepunkter for at selve innholdet i dokumentet faktisk lå i tilbudet allerede da. Oppdragsgiveren vil i disse tilfeller for eksempel kunne spørre leverandørene om det han har forstått som tilbudt, faktisk er tilbudt eller få ettersendt utfyllende opplysninger om det som er tilbudt. Dersom oppdragsgiveren derimot etterspør opplysninger som ikke fremkom av tilbudet, eller som det ikke er objektive holdepunkter for å innfortolke i dette, vil det være fremsettelse av et nytt og forbedret tilbud dersom leverandørene gis muligheter til å komme med slike opplysninger.
+
+Det avgjørende er ikke om leverandørens svar på oppdragsgiverens henvendelse har betydning for rangrekkefølgen av tilbudene, men om svaret fra leverandøren innebærer et nytt og forbedret tilbud sammenlignet med det opprinnelige tilbudet.
+
+**Lovlige avklaringer**
+
+I utgangspunktet kan oppdragsgiveren avklare alle typer opplysninger og be om ettersending av alle typer dokumentasjon så lenge det ikke medfører en forbedring av tilbudet. Oppdragsgiveren må vurdere konkret i hvert enkelt tilfelle hvilke opplysninger han kan be om og hvilke opplysninger som medfører en forbedring av leverandørens tilbud. Oppdragsgiveren kan for eksempel be om dokumentasjon som bekrefter opplysninger angitt i tilbudet. Oppdragsgiveren kan også sende en nøytral forespørsel for å avklare sin forståelse om at noe er inkludert eller ikke inkludert i tilbudet. Dersom oppdragsgiveren er usikker på akkurat hva som ligger i tilbudet, fordi det inneholder motstridende opplysninger eller åpenbare feil, kan oppdragsgiveren også henvende seg til leverandøren for å avklare hva som er ment tilbudt.
+
+Oppdragsgiveren kan imidlertid ikke anmode om å motta manglende opplysninger eller dokumentasjon dersom han i anskaffelsesdokumentene har angitt at det vil føre til avvisning dersom opplysningene eller dokumentasjonen ikke innleveres innen tilbudsfristens utløp. Oppdragsgiveren skal følge de regler han selv har fastsatt i konkurransen. Dette følger av det grunnleggende kravet til forutberegnelighet. Dersom leverandørene, etter å ha mottatt en henvendelse om ettersending og avklaring fra oppdragsgiveren, gir opplysninger som medfører en forbedring av tilbudet, kan oppdragsgiveren ikke se hen til disse opplysningene ved evalueringen av tilbudene.
+
+**Eksempler på lovlige og ulovlige avklaringer av tilbudet**
+
+Et eksempel på en lovlig avklaring er der leverandøren i en konkurranse om bygging av skole med medfølgende uteplass bare har oppgitt i tilbudet at "byggingen av skolen kan oppføres til en totalpris på 50 millioner kroner". Oppdragsgiveren kan her ha behov for å få klarlagt at prisen også inkluderer tilretteleggingen av uteplassen, selv om dette ikke står eksplisitt. Dette vil være en lovlig avklaring dersom leverandør bekrefter at dette er korrekt. Dersom leverandør avkrefter og kommer med tilleggspriser på tilrettelegging av uteplass, så vil avklaringen ikke være lovlig da tilretteleggingen av uteplassen da åpenbart ikke var en del av det opprinnelige tilbudet og følgelig inneholdt vesentlige avvik.
+
+Et annet eksempel på en lovlig avklaring er der leverandøren har gitt et tilbud der leverandørens beskrivelser av løsninger, arbeidsmetoder og materialer er knapp og oppdragsgiver derfor ønsker en utfyllende eller nærmere beskrivelse av hva som ligger i de tilbudte løsningene, arbeidsmetodene og materialene. Leverandøren kan ikke tilby nye løsninger, men de løsningene som allerede er tilbudt kan utdypes og forklares nærmere.
+
+Oppdragsgiveren har i tillegg adgang til rette opp åpenbare feil i tilbudet uten å kontakte leverandøren. Forutsetningen er da at feilen er åpenbar og at det er utvilsomt hvordan denne skal rettes. Siden oppdragsgiveren har adgang til å ta kontakt med leverandørene for å avklare opplysninger, vil det som regel være lurt å sende en forespørsel til leverandøren for å sjekke.
+
+Et tredje eksempel er der leverandørene skal konkurrere på tilbudt personells erfaring og kompetanse. Oppdragsgiveren kan anmode om at CVen til en tilbudt person ettersendes dersom denne mangler eller dersom feil CV er vedlagt. Dette fordrer at personen som CVen knytter seg til, er tydelig angitt i tilbudet. Personens erfaring og kompetanse er da allerede tilbudt og en ettersending av CVen vil ikke forbedre tilbudet. Forholdet vil derimot stille seg annerledes dersom leverandøren ved ettersendelsen av CVen, velger å tilby en annen person eller tilbyr en annen person i tillegg. Denne informasjonen lå ikke i det opprinnelige tilbudet og det vil ikke være tillatt å se hen til denne informasjonen.
+
+**Særlig om vesentlige avvik**
+
+Oppdragsgiveren har plikt til å avvise tilbud som inneholder vesentlige avvik fra anskaffelsesdokumentene. Hvilke avvik som skal regnes som "vesentlige", må vurderes konkret i hvert enkelt tilfelle. Vurderingen må foretas ut fra en sammenligning av det som er tilbudt og de krav/bestemmelser som er fastsatt i anskaffelsesdokumentene. Det vil være den konkrete betydningen av det aktuelle avviket som er avgjørende for om det skal anses som vesentlig. Av KOFA-praksis fremgår det at det ved denne vurderingen blant annet skal legges vekt på hvor stort avviket er, hvor viktig forholdet det avvikes fra er, og i hvilken grad et avvik vil kunne forrykke konkurransen. Hvis tilbudet avviker fra kravspesifikasjonene på flere steder, som isolert sett ikke er å anse som vesentlige, kan avvikene likevel samlet sett medføre at avviket er vesentlig. Oppdragsgiveren har mulighet til å utsette avgjørelsen om avvisning til "han har foretatt eventuelle avklaringer etter § 23-5". Oppdragsgiveren kan altså be om ettersendelse og avklaring av dokumentasjon knyttet til tilbud som inneholder vesentlige avvik for å avklare om det foreligger et vesentlig avvik. Dersom det etter avklaringen viser seg at avviket er vesentlig må oppdragsgiver avvise tilbudet.
+
+**Krav til forespørselen om ettersending eller avklaring**
+
+Dersom oppdragsgiveren anmoder om at relevante opplysninger eller dokumentasjon ettersendes, suppleres, avklares eller utfylles må han opptre i overensstemmelse med likebehandlingsprinsippet. Kravene til oppdragsgiverens handlemåte avhenger av om han har foretatt en evaluering og rangering av tilbudene. Dersom han ikke har evaluert og rangert tilbudene må anmodningen rettes mot alle virksomheter som er i samme situasjon i konkurransen. Dette innebærer at oppdragsgiveren ikke kan avvise en leverandør med den begrunnelse at tilbudet mangler dokumentasjon, og samtidig anmode en annen leverandør om å innsende dokumentasjon eller supplerende opplysninger. Dersom oppdragsgiveren velger å anmode om avklaring eller ettersending av enkelte dokumenter eller opplysninger må han be om dette for alle punkter som skal suppleres, presiseres eller klargjøres. Oppdragsgiveren kan med andre ord ikke be om at noen uklare opplysninger avklares, og så avvise tilbudet basert på andre opplysninger som han ikke har bedt om å få klargjort
+
+[#avklaringer](../../../../nyheter/hashtags/avklaringer.html)
