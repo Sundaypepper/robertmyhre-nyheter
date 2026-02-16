@@ -250,11 +250,73 @@
     }
 
     let articles = [];
-    const REPO_BASE = 'https://raw.githubusercontent.com/sundaypepper/robertmyhre-nyheter/main/nyheter/';
+    const REPO = 'sundaypepper/robertmyhre-nyheter';
+    const BRANCH = 'main';
+    const FOLDER = 'nyheter';
+    const RAW_BASE = `https://raw.githubusercontent.com/${REPO}/${BRANCH}/${FOLDER}/`;
+    const API_URL = `https://api.github.com/repos/${REPO}/contents/${FOLDER}?ref=${BRANCH}`;
 
     async function init() {
-      const res = await fetch('articles.json');
-      articles = await res.json();
+      document.getElementById('result-count').textContent = 'Laster artikler...';
+
+      try {
+        // Fetch file list from GitHub API
+        const res = await fetch(API_URL);
+        const files = await res.json();
+
+        // Filter .md files and fetch each one's frontmatter
+        const mdFiles = files.filter(f => f.name.endsWith('.md')).map(f => f.name);
+
+        // Fetch all files in parallel to extract frontmatter
+        const fetches = mdFiles.map(async (filename) => {
+          try {
+            const r = await fetch(RAW_BASE + filename);
+            const text = await r.text();
+            const slug = filename.replace('.md', '');
+            let title = slug.replace(/-/g, ' ');
+            let date = '';
+            let excerpt = '';
+
+            // Parse frontmatter
+            if (text.startsWith('---')) {
+              const end = text.indexOf('---', 3);
+              if (end > 0) {
+                const fm = text.slice(3, end);
+                const titleMatch = fm.match(/^title:\s*"?(.+?)"?\s*$/m);
+                const dateMatch = fm.match(/^date:\s*(.+)$/m);
+                const excerptMatch = fm.match(/^excerpt:\s*"?(.+?)"?\s*$/m);
+                if (titleMatch) title = titleMatch[1];
+                if (dateMatch) date = dateMatch[1].trim();
+                if (excerptMatch) excerpt = excerptMatch[1].slice(0, 250);
+              }
+            }
+
+            // Fallback excerpt from body
+            if (!excerpt) {
+              const body = text.startsWith('---') ? text.slice(text.indexOf('---', 3) + 3).trim() : text;
+              excerpt = body.replace(/[#*\[\]!\-_>]/g, '').slice(0, 250);
+            }
+
+            return { s: slug, t: title, d: date, e: excerpt };
+          } catch {
+            return null;
+          }
+        });
+
+        const results = await Promise.all(fetches);
+        articles = results.filter(Boolean).sort((a, b) => b.d.localeCompare(a.d));
+
+      } catch (e) {
+        // Fallback: try articles.json
+        try {
+          const res = await fetch('articles.json');
+          articles = await res.json();
+        } catch {
+          document.getElementById('result-count').textContent = 'Kunne ikke laste artikler.';
+          return;
+        }
+      }
+
       renderList(articles);
       document.getElementById('result-count').textContent = articles.length + ' artikler';
 
@@ -324,7 +386,7 @@
       document.getElementById('article-body').innerHTML = '<p style="color:#999">Laster artikkel...</p>';
 
       try {
-        const res = await fetch(REPO_BASE + slug + '.md');
+        const res = await fetch(RAW_BASE + slug + '.md');
         let md = await res.text();
         // Strip frontmatter
         if (md.startsWith('---')) {
