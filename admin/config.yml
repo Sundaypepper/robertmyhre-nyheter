@@ -1,1 +1,25 @@
+backend:
+  name: github
+  repo: sundaypepper/robertmyhre-nyheter
+  branch: main
 
+media_folder: "images"
+public_folder: "/images"
+
+locale: "nb"
+
+collections:
+  - name: "nyheter"
+    label: "Artikler"
+    folder: "nyheter"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    sort: "date:desc"
+    fields:
+      - { label: "Tittel", name: "title", widget: "string" }
+      - { label: "Dato", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
+      - { label: "Oppsummering", name: "excerpt", widget: "text", required: false }
+      - { label: "Bilde", name: "image", widget: "image", required: false }
+      - { label: "Innhold", name: "body", widget: "markdown" }
