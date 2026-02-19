@@ -63,4 +63,4 @@ Da gjenstår hovedregelen: 30 prosent til miljø. Men hva skulle man egentlig ev
 
 Saken synliggjør en bredere spenning i regelverket. Miljø har fått en plass som trumfer nær sagt alt annet — men det er ikke det eneste hensynet lovgiver har ønsket å fremme gjennom offentlige anskaffelser. Innovasjon, beredskap og nasjonal sikkerhet, lønns- og arbeidsvilkår, lærlingkrav og sosiale hensyn — alle konkurrerer om plass i en evalueringsmodell som allerede er presset.
 
-Når miljø låser 30 prosent, pris er fjernet fra ligningen, og resten skal dekke kvalitet og gjennomføringsevne, er det rett og slett ikke matematisk rom for alt lovgiver mener er viktig. Alt kan ikke prioriteres samtidig, og innovasjonspartnerskapet illustrerer dette med ubehagelig tydelighet
+Når miljø låser 30 prosent, pris er fjernet fra ligningen, og resten skal dekke kvalitet og gjennomføringsevne, er det rett og slett ikke matematisk rom for alt lovgiver mener er viktig. Alt kan ikke prioriteres samtidig, og innovasjonspartnerskapet illustrerer dette med ubehagelig tydelighet.
