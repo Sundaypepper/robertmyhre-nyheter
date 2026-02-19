@@ -22,4 +22,4 @@ collections:
       - { label: "Dato", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
       - { label: "Oppsummering", name: "excerpt", widget: "text", required: false }
       - { label: "Bilde", name: "image", widget: "image", required: false }
-      - { label: "Innhold", name: "body", widget: "markdown" }
+      - { label: "Innhold", name: "body", widget: "rich-text" }
