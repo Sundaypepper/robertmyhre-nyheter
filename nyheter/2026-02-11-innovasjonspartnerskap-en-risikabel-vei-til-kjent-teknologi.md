@@ -1,5 +1,5 @@
 ---
-title: "Innovasjonspartnerskap: En risikabel vei til kjent teknologi?"
+title: "Innovasjonspartnerskap – hvorfor det ofte mislykkes og hva du bør vite før du starter"
 date: 2026-02-11
 excerpt: "I arbeidet med å modernisere offentlig sektor har «innovative anskaffelser» blitt et hyppig brukt begrep. Det reises imidlertid stadig oftere spørsmål ved om innovasjon drives best gjennom komplekse, flerårige partnerskap, eller om man oppnår mer ved å stille åpne funksjonskrav og la markedet kon..."
 image: "https://static.wixstatic.com/media/fc4334_cc6baf007ade43e580982b5b583e50ac~mv2.jpg/v1/fill/w_671,h_1000,al_c,q_85,usm_0.66_1.00_0.01/fc4334_cc6baf007ade43e580982b5b583e50ac~mv2.jpg"
