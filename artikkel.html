@@ -228,7 +228,12 @@
         html += '<h1 class="article-title">' + title + '</h1>';
         if (excerpt) html += '<p class="article-excerpt">' + excerpt + '</p>';
         html += '</div>';
-        html += '<div class="article-body">' + markdownToHtml(body) + '</div>';
+        var bodyHtml = markdownToHtml(body);
+        // Løs relative bilde-URLer i rå <img>-tagger
+        bodyHtml = bodyHtml.replace(/<img\s+([^>]*?)src=["']([^"']+)["']/g, function(match, before, src) {
+          return '<img ' + before + 'src="' + resolveImageUrl(src) + '"';
+        });
+        html += '<div class="article-body">' + bodyHtml + '</div>';
         html += '<div class="article-footer"><a href="nyheter.html">&larr; Alle artikler</a></div>';
 
         container.innerHTML = html;
