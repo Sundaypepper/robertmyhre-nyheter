@@ -7,9 +7,9 @@ excerpt: "Miljømerking måler miljøprestasjonen i tjenesten. Miljøledelse må
 
 *Miljømerking måler miljøprestasjonen i tjenesten. Miljøledelse måler systemet hos leverandøren. Det er ikke det samme, og bør ikke behandles som likeverdig.*
 
-<img src="oli-woodman-f4jsI88K7ds-unsplash.jpg" alt="Vaskerom" style="width: 30%; float: left; margin: 0 15px 15px 0;">
-
 <h2 style="color: #2C5F2D;">Leveransen eller leverandøren?</h2>
+
+<img src="oli-woodman-f4jsI88K7ds-unsplash.jpg" alt="Vaskerom" style="width: 30%; float: left; margin: 0 15px 15px 0;">
 
 DFØ anbefaler i sin veileder for renholdstjenester at innkjøpere bør akseptere enten miljømerket tjeneste eller miljøledelsessystem som likeverdige alternativer. Det blander to forskjellige størrelser.
 
