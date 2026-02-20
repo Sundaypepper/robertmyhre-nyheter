@@ -5,6 +5,8 @@ image: oli-woodman-f4jsI88K7ds-unsplash.jpg
 excerpt: "Miljømerking måler miljøprestasjonen i tjenesten. Miljøledelse måler systemet hos leverandøren. Det er ikke det samme, og bør ikke behandles som likeverdig."
 ---
 
+<span style="color: #2C5F2D; font-weight: bold; font-size: 1.2em;">DEBATTARTIKKEL</span>
+
 *Miljømerking måler miljøprestasjonen i tjenesten. Miljøledelse måler systemet hos leverandøren. Det er ikke det samme, og bør ikke behandles som likeverdig.*
 
 ## Leveransen eller leverandøren?
@@ -17,14 +19,14 @@ Svanemerket dokumenterer at den konkrete tjenesten oppfyller produktspesifikke m
 
 For renholdstjenester er forskjellen konkret.
 
-#### Hva Svanemerket dokumenterer (leveransen)
+### Hva Svanemerket dokumenterer (leveransen)
 
 - Konkrete krav til kjemikalier, metoder og forbruk i selve renholdet – inkludert grenseverdier per kvadratmeter
 - Produktspesifikke krav til mikrofiber, tekstiler og utstyr
 - Livsløpsvurdering: råvarer, produksjon, bruk og avhending vurderes samlet
 - Kontrollerbar ytelse knyttet direkte til kontrakten
 
-#### Hva Miljøfyrtårn dokumenterer (leverandøren)
+### Hva Miljøfyrtårn dokumenterer (leverandøren)
 
 - Miljøledelse og rutiner på virksomhetsnivå: mål, tiltak og rapportering
 - Gjelder på tvers av leveranser, ikke bare den aktuelle kontrakten
