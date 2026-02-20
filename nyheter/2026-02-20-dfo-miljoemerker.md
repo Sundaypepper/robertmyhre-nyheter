@@ -2,12 +2,12 @@
 title: "Når DFØ sidestiller Miljøfyrtårn og Svanemerket, svekkes miljøeffekten"
 date: 2026-02-20
 image: oli-woodman-f4jsI88K7ds-unsplash.jpg
-excerpt: "Når DFØ sidestiller miljøledelsessystem og miljømerking som likeverdige, svekkes miljøeffekten. En artikkel om forskjellen mellom leveranse og leverandør."
+excerpt: "Miljømerking måler miljøprestasjonen i tjenesten. Miljøledelse måler systemet hos leverandøren. Det er ikke det samme, og bør ikke behandles som likeverdig."
 ---
 
 *Miljømerking måler miljøprestasjonen i tjenesten. Miljøledelse måler systemet hos leverandøren. Det er ikke det samme, og bør ikke behandles som likeverdig.*
 
-![Vaskerom med vaskemaskiner](oli-woodman-f4jsI88K7ds-unsplash.jpg)
+<img src="oli-woodman-f4jsI88K7ds-unsplash.jpg" alt="Vaskerom" style="width: 30%; float: left; margin: 0 15px 15px 0;">
 
 <h2 style="color: #2C5F2D;">Leveransen eller leverandøren?</h2>
 
@@ -19,14 +19,14 @@ Svanemerket dokumenterer at den konkrete tjenesten oppfyller produktspesifikke m
 
 For renholdstjenester er forskjellen konkret.
 
-#### Hva Svanemerket dokumenterer (leveransen)
+<h4>Hva Svanemerket dokumenterer (leveransen)</h4>
 
 - Konkrete krav til kjemikalier, metoder og forbruk i selve renholdet – inkludert grenseverdier per kvadratmeter
 - Produktspesifikke krav til mikrofiber, tekstiler og utstyr
 - Livsløpsvurdering: råvarer, produksjon, bruk og avhending vurderes samlet
 - Kontrollerbar ytelse knyttet direkte til kontrakten
 
-#### Hva Miljøfyrtårn dokumenterer (leverandøren)
+<h4>Hva Miljøfyrtårn dokumenterer (leverandøren)</h4>
 
 - Miljøledelse og rutiner på virksomhetsnivå: mål, tiltak og rapportering
 - Gjelder på tvers av leveranser, ikke bare den aktuelle kontrakten
