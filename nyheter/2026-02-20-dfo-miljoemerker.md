@@ -2,7 +2,7 @@
 title: "Når DFØ sidestiller Miljøfyrtårn og Svanemerket, svekkes miljøeffekten"
 date: 2026-02-20
 image: oli-woodman-f4jsI88K7ds-unsplash.jpg
-excerpt: "Miljømerking måler miljøprestasjonen i tjenesten. Miljøledelse måler systemet hos leverandøren. Det er ikke det samme, og bør ikke behandles som likeverdig."
+excerpt: "Når DFØ sidestiller miljøledelsessystem og miljømerking som likeverdige, svekkes miljøeffekten. En artikkel om forskjellen mellom leveranse og leverandør."
 ---
 
 *Miljømerking måler miljøprestasjonen i tjenesten. Miljøledelse måler systemet hos leverandøren. Det er ikke det samme, og bør ikke behandles som likeverdig.*
