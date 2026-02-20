@@ -7,8 +7,6 @@ excerpt: "Miljømerking måler miljøprestasjonen i tjenesten. Miljøledelse må
 
 <h2 style="color: #2C5F2D;">Leveransen eller leverandøren?</h2>
 
-<img src="oli-woodman-f4jsI88K7ds-unsplash.jpg" alt="Vaskerom" style="width: 30%; float: left; margin: 0 15px 15px 0;">
-
 DFØ anbefaler i sin veileder for renholdstjenester at innkjøpere bør akseptere enten miljømerket tjeneste eller miljøledelsessystem som likeverdige alternativer. Det blander to forskjellige størrelser.
 
 Svanemerket dokumenterer at den konkrete tjenesten oppfyller produktspesifikke miljøkrav i et livsløpsperspektiv. Miljøfyrtårn dokumenterer at virksomheten som organisasjon har systemer for miljøforbedring – på tvers av alle tjenester, til alle kunder. Begge har verdi, men de sikrer forskjellige ting.
