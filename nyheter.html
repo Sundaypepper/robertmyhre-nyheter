@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Innsikt | Robert Myhre</title>
   <meta name="description" content="Analyser og kommentarer om offentlige anskaffelser av Robert Myhre. KOFA-praksis, EU-dommer og regelverksendringer.">
+  <meta property="og:title" content="Innsikt | Robert Myhre">
+  <meta property="og:description" content="Praktiske analyser av KOFA-praksis, EU-dommer og regelverksendringer innen offentlige anskaffelser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://robertmyhre.no/nyheter.html">
+  <meta property="og:image" content="https://robertmyhre.no/bilder/IMG_7162_4.jpg">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:site_name" content="Robert Myhre">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Innsikt | Robert Myhre">
+  <meta name="twitter:description" content="Praktiske analyser av KOFA-praksis, EU-dommer og regelverksendringer.">
+  <meta name="twitter:image" content="https://robertmyhre.no/bilder/IMG_7162_4.jpg">
+  <link rel="canonical" href="https://robertmyhre.no/nyheter.html">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Robert Myhre">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -54,6 +68,22 @@
 
     /* LOADING */
     .loading{text-align:center;padding:4rem 0;color:var(--muted)}
+
+    /* PROMO BANNER */
+    .promo-banner{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.75rem;margin-top:.75rem;display:flex;align-items:center;gap:1.25rem;transition:all .2s;text-decoration:none;color:var(--ink)}
+    .promo-banner:hover{box-shadow:var(--shadow-md);border-color:var(--accent)}
+    .promo-banner::before{content:'';flex-shrink:0;width:4px;height:48px;background:var(--accent);border-radius:2px}
+    .promo-content{flex:1;min-width:0}
+    .promo-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}
+    .promo-title{font-family:var(--serif);font-size:1rem;font-weight:600;line-height:1.35;margin-bottom:.2rem}
+    .promo-desc{font-size:.82rem;color:var(--muted);line-height:1.5}
+    .promo-cta{flex-shrink:0;background:var(--accent);color:#fff;padding:.5rem 1.1rem;border-radius:6px;font-size:.85rem;font-weight:500;text-decoration:none;transition:background .2s}
+    .promo-banner:hover .promo-cta{background:var(--accent-hover)}
+    @media(max-width:640px){
+      .promo-banner{flex-direction:column;align-items:stretch;text-align:center;gap:.75rem}
+      .promo-banner::before{width:100%;height:3px}
+      .promo-cta{align-self:center}
+    }
 
     /* FOOTER */
     footer{background:var(--ink);color:rgba(255,255,255,.7);padding:2.5rem 0 1.5rem;margin-top:2rem}
@@ -112,6 +142,7 @@
     </div>
   </footer>
 
+  <script src="promo.js"></script>
   <script>
     var GITHUB_OWNER = 'sundaypepper';
     var GITHUB_REPO = 'robertmyhre-nyheter';
@@ -156,14 +187,22 @@
         g.innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1">Ingen artikler publisert ennå.</p>';
         return;
       }
-      g.innerHTML = articles.map(function(a) {
+      var promoIndex = 0;
+      var html = '';
+      articles.forEach(function(a, i) {
         var href = a.fil ? 'artikkel.html?fil=' + encodeURIComponent(a.fil) : '#';
-        return '<a href="' + href + '" class="article-card">'
+        html += '<a href="' + href + '" class="article-card">'
           + '<span class="card-date">' + a.date + '</span>'
           + '<h3>' + a.title + '</h3>'
           + '<p>' + a.excerpt + '</p>'
           + '<span class="les-mer">Les mer &rarr;</span></a>';
-      }).join('');
+        // Sett inn promo-banner etter hver 3. artikkel
+        if ((i + 1) % 3 === 0) {
+          html += PROMO.getPromoHtml(promoIndex);
+          promoIndex++;
+        }
+      });
+      g.innerHTML = html;
     }
 
     var allArticles = [];

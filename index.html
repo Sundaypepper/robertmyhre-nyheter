@@ -9,6 +9,43 @@
   <meta property="og:description" content="Rådgivning, kurs og innsikt innen offentlige anskaffelser.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://robertmyhre.no">
+  <meta property="og:image" content="https://robertmyhre.no/bilder/IMG_7162_4.jpg">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:site_name" content="Robert Myhre">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Robert Myhre | Rådgivning innen offentlige anskaffelser">
+  <meta name="twitter:description" content="Rådgivning, kurs og innsikt innen offentlige anskaffelser.">
+  <meta name="twitter:image" content="https://robertmyhre.no/bilder/IMG_7162_4.jpg">
+  <link rel="canonical" href="https://robertmyhre.no/">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Robert Myhre">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Robert Myhre",
+    "description": "Uavhengig rådgiver innen offentlige anskaffelser. Rådgivning for innkjøpere og leverandører, kurs, fagbøker og juridisk innsikt.",
+    "url": "https://robertmyhre.no",
+    "telephone": "+4792054415",
+    "email": "robert@robertmyhre.no",
+    "image": "https://robertmyhre.no/bilder/IMG_7162_4.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "NO"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/robertmyhre/",
+      "https://www.youtube.com/@robert_myhre",
+      "https://www.facebook.com/roebrtmyhre.no/"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Robert Myhre",
+      "jobTitle": "Rådgiver innen offentlige anskaffelser",
+      "knowsAbout": ["Offentlige anskaffelser", "KOFA", "Anskaffelsesforskriften", "EU-rett"]
+    }
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -144,6 +181,24 @@
     .innsikt-card p{font-size:.88rem;color:var(--muted);line-height:1.6;flex:1}
     .innsikt-card .les-mer{margin-top:1rem;font-size:.85rem;font-weight:500;color:var(--accent)}
     .innsikt-card:hover .les-mer{text-decoration:underline}
+
+    /* PROMO BANNER */
+    .promo-banner{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.75rem;display:flex;align-items:center;gap:1.25rem;transition:all .2s;text-decoration:none;color:var(--ink)}
+    .promo-banner:hover{box-shadow:var(--shadow-md);border-color:var(--accent)}
+    .promo-banner::before{content:'';flex-shrink:0;width:4px;height:48px;background:var(--accent);border-radius:2px}
+    .promo-content{flex:1;min-width:0}
+    .promo-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}
+    .promo-title{font-family:var(--serif);font-size:1rem;font-weight:600;line-height:1.35;margin-bottom:.2rem}
+    .promo-desc{font-size:.82rem;color:var(--muted);line-height:1.5}
+    .promo-cta{flex-shrink:0;background:var(--accent);color:#fff;padding:.5rem 1.1rem;border-radius:6px;font-size:.85rem;font-weight:500;text-decoration:none;transition:background .2s}
+    .promo-banner:hover .promo-cta{background:var(--accent-hover)}
+    .promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+    @media(max-width:640px){
+      .promo-banner{flex-direction:column;align-items:stretch;text-align:center;gap:.75rem}
+      .promo-banner::before{width:100%;height:3px}
+      .promo-cta{align-self:center}
+      .promo-grid{grid-template-columns:1fr}
+    }
 
     /* FOOTER */
     footer{background:var(--ink);color:rgba(255,255,255,.7);padding:3.5rem 0 2rem}
@@ -397,6 +452,7 @@
         <p class="section-subtitle">Praktiske analyser av KOFA-praksis, EU-dommer og regelverksendringer.</p>
       </div>
       <div class="innsikt-grid fade-up" id="innsiktGrid"></div>
+      <div class="fade-up" id="innsiktPromo"></div>
       <p class="kurs-footer fade-up" style="margin-top:2rem"><a href="nyheter.html">Se alle artikler &rarr;</a></p>
     </div>
   </section>
@@ -538,6 +594,12 @@
         render(FALLBACK);
       }
     })();
+  </script>
+  <script src="promo.js"></script>
+  <script>
+    // Last promo-bannere dynamisk under innsikt-seksjonen
+    var promoEl = document.getElementById('innsiktPromo');
+    if (promoEl) promoEl.innerHTML = PROMO.byggPromoGrid();
   </script>
 
 </body>

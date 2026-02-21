@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Robert Myhre | Artikkel</title>
   <meta name="description" content="Innsikt og analyser innen offentlige anskaffelser av Robert Myhre.">
+  <meta property="og:title" content="Robert Myhre | Artikkel">
+  <meta property="og:description" content="Innsikt og analyser innen offentlige anskaffelser av Robert Myhre.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://robertmyhre.no/artikkel.html">
+  <meta property="og:image" content="https://robertmyhre.no/bilder/IMG_7162_4.jpg">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:site_name" content="Robert Myhre">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Robert Myhre | Artikkel">
+  <meta name="twitter:description" content="Innsikt og analyser innen offentlige anskaffelser.">
+  <meta name="twitter:image" content="https://robertmyhre.no/bilder/IMG_7162_4.jpg">
+  <link rel="canonical" href="https://robertmyhre.no/artikkel.html">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Robert Myhre">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -58,6 +72,24 @@
     .article-footer a{display:inline-flex;align-items:center;gap:.4rem;color:var(--accent);text-decoration:none;font-weight:500;font-size:.95rem;transition:gap .2s}
     .article-footer a:hover{gap:.6rem}
 
+    /* PROMO BANNER */
+    .promo-banner{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.75rem;display:flex;align-items:center;gap:1.25rem;transition:all .2s;text-decoration:none;color:var(--ink)}
+    .promo-banner:hover{box-shadow:var(--shadow-md);border-color:var(--accent)}
+    .promo-banner::before{content:'';flex-shrink:0;width:4px;height:48px;background:var(--accent);border-radius:2px}
+    .promo-content{flex:1;min-width:0}
+    .promo-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}
+    .promo-title{font-family:var(--serif);font-size:1rem;font-weight:600;line-height:1.35;margin-bottom:.2rem}
+    .promo-desc{font-size:.82rem;color:var(--muted);line-height:1.5}
+    .promo-cta{flex-shrink:0;background:var(--accent);color:#fff;padding:.5rem 1.1rem;border-radius:6px;font-size:.85rem;font-weight:500;text-decoration:none;transition:background .2s}
+    .promo-banner:hover .promo-cta{background:var(--accent-hover)}
+    .promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+    @media(max-width:640px){
+      .promo-banner{flex-direction:column;align-items:stretch;text-align:center;gap:.75rem}
+      .promo-banner::before{width:100%;height:3px}
+      .promo-cta{align-self:center}
+      .promo-grid{grid-template-columns:1fr}
+    }
+
     /* FOOTER */
     footer{background:var(--ink);color:rgba(255,255,255,.7);padding:2.5rem 0 1.5rem;margin-top:4rem}
     .footer-inner{max-width:1120px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
@@ -95,6 +127,7 @@
     </div>
   </footer>
 
+  <script src="promo.js"></script>
   <script>
     // Konfigurasjon - same som index.html
     var GITHUB_OWNER = 'sundaypepper';
@@ -222,6 +255,18 @@
         var excerpt = meta.excerpt || meta.description || '';
 
         document.title = title + ' | Robert Myhre';
+        // Oppdater meta-tagger dynamisk for deling
+        var metaUpdates = {
+          'meta[property="og:title"]': title + ' | Robert Myhre',
+          'meta[property="og:description"]': excerpt || title,
+          'meta[name="twitter:title"]': title + ' | Robert Myhre',
+          'meta[name="twitter:description"]': excerpt || title,
+          'meta[name="description"]': excerpt || 'Innsikt og analyser innen offentlige anskaffelser av Robert Myhre.'
+        };
+        for (var sel in metaUpdates) {
+          var el = document.querySelector(sel);
+          if (el) el.setAttribute(el.hasAttribute('content') ? 'content' : 'content', metaUpdates[sel]);
+        }
 
         var html = '<div class="article-meta">';
         html += '<p class="article-date">' + formatDate(dateStr) + '</p>';
@@ -234,6 +279,8 @@
           return '<img ' + before + 'src="' + resolveImageUrl(src) + '"';
         });
         html += '<div class="article-body">' + bodyHtml + '</div>';
+        // Promo-bannere (kurs + rådgivning)
+        html += PROMO.byggPromoGrid();
         html += '<div class="article-footer"><a href="nyheter.html">&larr; Alle artikler</a></div>';
 
         container.innerHTML = html;
