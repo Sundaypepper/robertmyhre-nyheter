@@ -1,5 +1,7 @@
 ---
 title: "Rammeavtalens rekkevidde"
+date: 2026-02-21
+excerpt: "Når slutter avropet og den nye anskaffelsen begynner? Med utgangspunkt i KOFA 2025/1518 og rettspraksis fra EU-domstolen og KOFA"
 ---
 
 # Rammeavtalens rekkevidde
