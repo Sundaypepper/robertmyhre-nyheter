@@ -238,12 +238,22 @@
 
     (async function() {
       try {
+        // Sjekk cache først
+        var cached = null;
+        try { cached = JSON.parse(sessionStorage.getItem('rm_articles_v2')); } catch(ce) {}
+        if (cached && cached.a && cached.a.length && (Date.now() - cached.t < 30*60*1000)) {
+            allArticles = cached.a;
+            renderArticles(allArticles);
+            setupSearch();
+            return;
+        }
+
         var apiUrl = 'https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/' + NYHETER_PATH + '?ref=' + GITHUB_BRANCH;
         var r = await fetch(apiUrl);
         if (!r.ok) throw new Error('Kunne ikke hente fra GitHub');
         var files = await r.json();
         var mdFiles = files.filter(function(f) { return f.name.endsWith('.md'); })
-          .sort(function(a, b) { return b.name.localeCompare(a.name); });
+          ;
 
         if (!mdFiles.length) throw new Error('Ingen artikler');
 
@@ -258,13 +268,20 @@
           var dateStr = meta.date || f.name.substring(0, 10);
           var excerpt = meta.excerpt || meta.description || body.substring(0, 200).replace(/[#*_\[\]]/g, '').trim() + '...';
 
-          return { title: title, date: formatDate(dateStr), excerpt: excerpt, fil: f.name };
+          return { title: title, date: formatDate(dateStr), rawDate: String(dateStr), excerpt: excerpt, fil: f.name };
         }));
         renderArticles(allArticles);
         setupSearch();
       } catch(e) {
         console.log('GitHub-henting feilet:', e.message);
-        allArticles = FALLBACK;
+        // Prøv utløpt cache først
+        var old = null;
+        try { old = JSON.parse(sessionStorage.getItem('rm_articles_v2')); } catch(ce) {}
+        if (old && old.a && old.a.length) {
+            allArticles = old.a;
+        } else {
+            allArticles = FALLBACK;
+        }
         renderArticles(FALLBACK);
         setupSearch();
       }
