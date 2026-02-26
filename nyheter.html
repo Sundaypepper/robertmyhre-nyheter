@@ -137,9 +137,11 @@
 </div>
 
 <div class="articles-container">
+    <div id="promoTop"></div>
     <div class="articles-grid" id="articlesGrid">
         <div class="loading">Laster artikler...</div>
     </div>
+    <div id="promoBottom" style="margin-top:1.5rem"></div>
 </div>
 
 <footer>
@@ -201,23 +203,20 @@ function renderArticles(articles) {
         g.innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1">Ingen artikler publisert enn\u00e5.</p>';
         return;
     }
-    var promoIndex = 0;
     var html = '';
-    articles.forEach(function(a, i) {
+    articles.forEach(function(a) {
         var href = a.fil ? 'artikkel.html?fil=' + encodeURIComponent(a.fil) : '#';
         html += '<a href="' + href + '" class="article-card">'
             + '<span class="card-date">' + a.date + '</span>'
             + '<h3>' + a.title + '</h3>'
             + '<p>' + a.excerpt + '</p>'
             + '<span class="les-mer">Les mer &rarr;</span></a>';
-
-        // Sett inn promo-banner etter hver 3. artikkel
-        if ((i + 1) % 3 === 0) {
-            html += PROMO.getPromoHtml(promoIndex);
-            promoIndex++;
-        }
     });
     g.innerHTML = html;
+
+    // Plasser promoer: kurs øverst, rådgivning nederst
+    document.getElementById('promoTop').innerHTML = PROMO.getPromoHtml(0);
+    document.getElementById('promoBottom').innerHTML = PROMO.getPromoHtml(1);
 }
 
 var allArticles = [];
