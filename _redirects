@@ -1,0 +1,24 @@
+# 301-redirects for gamle Wix-URL-er som Google fortsatt besøker
+# robertmyhre.no
+
+# Gamle bloggposter → nye artikler
+/single-post/rammeavtalen-som-ble-en-juridisk-felle-fra-ugyldig-vilkår-til-tikkende-millionrisiko  /artikkel.html?fil=2025-09-21-rammeavtalen-som-ble-en-juridisk-felle-fra-ugyldig-vilkar-til-tikkende-millionri.md  301
+/single-post/hvorfor-er-timepriser-en-forretningshemmelighet  /artikkel.html?fil=2025-08-20-gjennomsnittlig-timepris-er-ikke-en-forretningshemmelighet-og-ma-opplyses.md  301
+/single-post/innovasjonspartnerskap-en-risikabel-vei-til-kjent-teknologi  /artikkel.html?fil=2026-02-11-innovasjonspartnerskap-en-risikabel-vei-til-kjent-teknologi.md  301
+/single-post/forsvarsmateriell-ilagt-milliongebyr-fortsatte-å-bruke-utløpt-rammeavtale-i-årevis  /artikkel.html?fil=2025-09-17-forsvarsmateriell-ilagt-milliongebyr-fortsatte-a-bruke-utlopt-rammeavtale-i-arev.md  301
+/single-post/tildelingskriterier-evaluering-og-forhandlinger-hva-gjelder-etter-forskriften-del-i  /artikkel.html?fil=2018-05-05-nesten-ubegrenset-frihet-ved-valg-av-tildelingskriterier-men-nesten-bundet-ved-b.md  301
+
+# Gamle bloggposter med dato i URL
+/single-post/2017/09/10/sikter-mot-å-kunngjøre-landets-første-innovasjonspartnerskap-i-høst  /artikkel.html?fil=2017-07-04-sikter-mot-a-kunngjore-landets-forste-innovasjonspartnerskap-i-host.md  301
+/single-post/2018/01/14/5-ting-å-tenke-på-før-du-tar-forbehold-i-tilbudet  /artikkel.html?fil=2018-01-14-5-ting-a-tenke-pa-for-du-tar-forbehold-i-tilbudet.md  301
+/single-post/2017/12/16/retting-av-åpenbare-feil  /artikkel.html?fil=2017-12-16-retting-av-apenbare-feil.md  301
+/single-post/2018/02/10/før-kommersiell-anskaffelse-for-å-kutte-utslipp-langs-kysten  /artikkel.html?fil=2018-02-10-for-kommersiell-anskaffelse-for-a-kutte-utslipp-langs-kysten.md  301
+/single-post/2018/02/17/fire-endringer-i-kontrakt-er-alltid-vesentlige-men-det-kan-være-flere  /artikkel.html?fil=2018-02-17-fire-endringer-i-kontrakt-er-alltid-vesentlige-men-det-kan-vaere-flere.md  301
+/single-post/2018/04/13/bruk-frivillig-karensperiode-ved-dynamisk-innkjøpsordning  /artikkel.html?fil=2018-04-13-bruk-frivillig-karensperiode-ved-dynamisk-innkjopsordning.md  301
+/single-post/2018/01/20/markedsdialog-reddet-oppdragsgiver-i-klagesak  /artikkel.html?fil=2018-01-20-markedsdialog-reddet-oppdragsgiver-i-klagesak.md  301
+
+# Gammel blogg-/nyhetsside
+/blog  /nyheter  301
+
+# Gammel eventside → forumoa kursside
+/events-1  https://forumoa.no/kursside  301
