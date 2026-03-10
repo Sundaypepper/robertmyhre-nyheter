@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DGDVFT9F4"></script>
-    <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-9DGDVFT9F4');
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DGDVFT9F4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9DGDVFT9F4');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Robert Myhre | Offentlige anskaffelser</title>
@@ -475,9 +475,14 @@
         <p class="section-subtitle" style="margin:0 auto">Få praktiske analyser av KOFA-praksis, regelverksendringer og juridiske vurderinger direkte i innboksen.</p>
       </div>
       <div class="fade-up" style="max-width:480px;margin:0 auto">
-        <form action="https://robertmyhre.us5.list-manage.com/subscribe/post?u=f01bfafad849ba2de6d23800c&amp;id=ee96374b55&amp;f_id=00a7f3e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" style="display:flex;gap:.75rem;flex-wrap:wrap">
+        <form action="https://robertmyhre.us20.list-manage.com/subscribe/post?u=20d7d548fad57f7b3a94015f8&amp;id=eea8da98ce&amp;f_id=00e2cbe3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" style="display:flex;gap:.75rem;flex-wrap:wrap">
+          <input type="text" name="FNAME" id="mce-FNAME" placeholder="Fornavn" style="flex:1;min-width:220px;padding:.8rem 1.2rem;border:1.5px solid var(--border);border-radius:8px;font-size:.95rem;font-family:var(--sans);color:var(--ink);background:#fff;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
           <input type="email" name="EMAIL" id="mce-EMAIL" required placeholder="Din e-postadresse" style="flex:1;min-width:220px;padding:.8rem 1.2rem;border:1.5px solid var(--border);border-radius:8px;font-size:.95rem;font-family:var(--sans);color:var(--ink);background:#fff;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
-          <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_f01bfafad849ba2de6d23800c_ee96374b55" tabindex="-1" value=""></div>
+          <div id="mce-responses" class="clear" style="display:none">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>
+          <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_20d7d548fad57f7b3a94015f8_eea8da98ce" tabindex="-1" value=""></div>
           <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn--primary" style="white-space:nowrap">Meld meg på</button>
         </form>
         <p style="margin-top:.75rem;font-size:.8rem;color:var(--light-muted)">Ingen spam. Kun faglig innsikt. Du kan melde deg av når som helst.</p>
@@ -485,7 +490,7 @@
     </div>
   </section>
   <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-  <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+  <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='MMERGE5';ftypes[5]='text';fnames[6]='MMERGE6';ftypes[6]='date';fnames[7]='MMERGE7';ftypes[7]='text';fnames[8]='MMERGE8';ftypes[8]='text';fnames[9]='MMERGE9';ftypes[9]='text';fnames[10]='MMERGE10';ftypes[10]='date';fnames[11]='MMERGE11';ftypes[11]='text';fnames[12]='MMERGE12';ftypes[12]='text';fnames[13]='MMERGE13';ftypes[13]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 
   <!-- FOOTER -->
   <footer id="kontakt">
@@ -544,7 +549,11 @@
     function render(articles){
       var g=document.getElementById('innsiktGrid');
       g.innerHTML=articles.map(function(a){
-        var href=a.fil?'artikkel.html?fil='+encodeURIComponent(a.fil):a.url||'#';
+        var href='#';
+        if(a.fil){
+          var slug=a.fil.replace(/\.md$/,'').replace(/\.html$/,'');
+          href='nyheter/'+slug+'.html';
+        }else if(a.url){href=a.url;}
         return '<a href="'+href+'" class="innsikt-card">'
           +'<span class="innsikt-date">'+a.date+'</span>'
           +'<h3>'+a.title+'</h3>'
@@ -575,11 +584,19 @@
         var r=await fetch(apiUrl);
         if(!r.ok) throw new Error('Kunne ikke hente fra GitHub');
         var files=await r.json();
-        // Filtrer kun .md-filer og sorter alfabetisk (nyeste først hvis datert filnavn)
+        // Bygg et sett med HTML-filnavn (uten endelse) for rask oppslag
+        var htmlSet={};
+        files.forEach(function(f){
+          if(f.name.endsWith('.html')){
+            htmlSet[f.name.replace(/\.html$/,'')]=f;
+          }
+        });
+
+        // Filtrer .md-filer og sorter (nyeste først)
         var mdFiles=files.filter(function(f){return f.name.endsWith('.md')}).sort(function(a,b){return b.name.localeCompare(a.name)}).slice(0,6);
         if(!mdFiles.length) throw new Error('Ingen nyheter funnet');
 
-        // Hent innholdet i hver fil
+        // Hent innholdet i hver .md-fil for metadata
         var articles=await Promise.all(mdFiles.map(async function(f){
           var raw=await fetch(f.download_url);
           var text=await raw.text();
@@ -587,7 +604,8 @@
           var meta=parsed.meta;
           var body=parsed.body;
 
-          var title=meta.title||f.name.replace(/^\d{4}-\d{2}-\d{2}-/,'').replace(/\.md$/,'').replace(/-/g,' ');
+          var slug=f.name.replace(/\.md$/,'');
+          var title=meta.title||slug.replace(/^\d{4}-\d{2}-\d{2}[-_]/,'').replace(/[-_]/g,' ');
           var dateStr=meta.date||f.name.substring(0,10);
           try{
             var d=new Date(dateStr);
@@ -595,7 +613,8 @@
           }catch(e){}
           var excerpt=meta.excerpt||meta.description||body.substring(0,200).replace(/[#*_\[\]]/g,'').trim()+'...';
 
-          return {title:title,date:dateStr,excerpt:excerpt,fil:f.name};
+          // Lenk alltid til .html-filen (som alltid finnes ved siden av .md)
+          return {title:title,date:dateStr,excerpt:excerpt,fil:slug+'.html'};
         }));
         render(articles);
       }catch(e){
