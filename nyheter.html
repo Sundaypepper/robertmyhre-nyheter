@@ -1,301 +1,1432 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DGDVFT9F4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-9DGDVFT9F4');
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innsikt | Robert Myhre</title>
-    <meta name="description" content="Analyser og kommentarer om offentlige anskaffelser av Robert Myhre. KOFA-praksis, EU-dommer og regelverksendringer.">
-    <meta property="og:title" content="Innsikt | Robert Myhre">
-    <meta property="og:description" content="Praktiske analyser av KOFA-praksis, EU-dommer og regelverksendringer innen offentlige anskaffelser.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://robertmyhre.no/nyheter.html">
-    <meta property="og:image" content="https://robertmyhre.no/bilder/IMG_7162_4.jpg">
-    <meta property="og:locale" content="nb_NO">
-    <meta property="og:site_name" content="Robert Myhre">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Innsikt | Robert Myhre">
-    <meta name="twitter:description" content="Praktiske analyser av KOFA-praksis, EU-dommer og regelverksendringer.">
-    <meta name="twitter:image" content="https://robertmyhre.no/bilder/IMG_7162_4.jpg">
-    <link rel="canonical" href="https://robertmyhre.no/nyheter.html">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Robert Myhre">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        :root{--ink:#2c2825;--paper:#faf8f5;--warm-bg:#f0ece5;--accent:#9e4a32;--accent-hover:#b85a3f;--muted:#7a7269;--light-muted:#a39e96;--card:#fff;--border:#e2ddd5;--shadow-sm:0 1px 3px rgba(44,40,37,.06);--shadow-md:0 4px 16px rgba(44,40,37,.08);--shadow-lg:0 8px 32px rgba(44,40,37,.1);--serif:'Source Serif 4',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;--max-w:1120px}
-        *{margin:0;padding:0;box-sizing:border-box}
-        html{scroll-behavior:smooth}
-        body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
-        a{color:inherit}
-
-        /* NAV */
-        nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,248,245,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm)}
-        .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px}
-        .nav-logo{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
-        .nav-logo span{color:var(--accent)}
-        .nav-back{display:flex;align-items:center;gap:.4rem;text-decoration:none;color:var(--muted);font-size:.9rem;font-weight:500;transition:color .2s}
-        .nav-back:hover{color:var(--accent)}
-
-        /* PAGE HEADER */
-        .page-header{padding:7rem 0 3rem;text-align:center}
-        .page-header .container{max-width:var(--max-w);margin:0 auto;padding:0 2rem}
-        .page-label{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
-        .page-title{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;line-height:1.25;color:var(--ink);margin-bottom:1rem}
-        .page-subtitle{font-size:1.05rem;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.7}
-
-        /* ARTICLE LIST */
-        .articles-container{max-width:var(--max-w);margin:0 auto;padding:0 2rem 4rem}
-        .articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem}
-        .article-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.75rem;text-decoration:none;transition:all .2s;display:flex;flex-direction:column}
-        .article-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--accent)}
-        .article-card .card-date{font-size:.78rem;color:var(--light-muted);font-weight:500;margin-bottom:.6rem}
-        .article-card h3{font-family:var(--serif);font-size:1.1rem;font-weight:600;line-height:1.35;margin-bottom:.6rem;color:var(--ink)}
-        .article-card p{font-size:.88rem;color:var(--muted);line-height:1.6;flex:1}
-        .article-card .les-mer{margin-top:1rem;font-size:.85rem;font-weight:500;color:var(--accent)}
-        .article-card:hover .les-mer{text-decoration:underline}
-
-        /* SEARCH */
-        .search-section{max-width:var(--max-w);margin:0 auto;padding:0 2rem 1rem}
-        .search-wrap{position:sticky;top:68px;z-index:10;background:var(--paper);padding:1rem 0}
-        .search-input{width:100%;padding:.75rem 1rem .75rem 2.8rem;font-size:1rem;font-family:var(--sans);border:2px solid var(--border);border-radius:10px;background:var(--card);color:var(--ink);transition:border-color .2s}
-        .search-input:focus{outline:none;border-color:var(--accent)}
-        .search-input::placeholder{color:var(--light-muted)}
-        .search-wrap svg{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);color:var(--light-muted);pointer-events:none}
-        .search-wrap{position:sticky;top:68px;z-index:10;background:var(--paper);padding:1rem 0}
-        .search-inner{position:relative}
-        .result-count{font-size:.82rem;color:var(--light-muted);margin-top:.5rem}
-
-        /* LOADING */
-        .loading{text-align:center;padding:4rem 0;color:var(--muted)}
-
-        /* PROMO BANNER */
-        .promo-banner{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.75rem;margin-top:.75rem;display:flex;align-items:center;gap:1.25rem;transition:all .2s;text-decoration:none;color:var(--ink)}
-        .promo-banner:hover{box-shadow:var(--shadow-md);border-color:var(--accent)}
-        .promo-banner::before{content:'';flex-shrink:0;width:4px;height:48px;background:var(--accent);border-radius:2px}
-        .promo-content{flex:1;min-width:0}
-        .promo-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}
-        .promo-title{font-family:var(--serif);font-size:1rem;font-weight:600;line-height:1.35;margin-bottom:.2rem}
-        .promo-desc{font-size:.82rem;color:var(--muted);line-height:1.5}
-        .promo-cta{flex-shrink:0;background:var(--accent);color:#fff;padding:.5rem 1.1rem;border-radius:6px;font-size:.85rem;font-weight:500;text-decoration:none;transition:background .2s}
-        .promo-banner:hover .promo-cta{background:var(--accent-hover)}
-        @media(max-width:640px){
-            .promo-banner{flex-direction:column;align-items:stretch;text-align:center;gap:.75rem}
-            .promo-banner::before{width:100%;height:3px}
-            .promo-cta{align-self:center}
-        }
-
-        /* FOOTER */
-        footer{background:var(--ink);color:rgba(255,255,255,.7);padding:2.5rem 0 1.5rem;margin-top:2rem}
-        .footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-        .footer-brand{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:#fff}
-        footer p{font-size:.85rem}
-        footer a{color:rgba(255,255,255,.85);text-decoration:none}
-        footer a:hover{color:#fff}
-        @media(max-width:640px){
-            .page-header{padding-top:5.5rem}
-            .articles-grid{grid-template-columns:1fr}
-        }
-    </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DGDVFT9F4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9DGDVFT9F4');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innsikt | Robert Myhre</title>
+  <meta name="description" content="Analyser og kommentarer om offentlige anskaffelser av Robert Myhre. KOFA-praksis, EU-dommer og regelverksendringer.">
+  <meta property="og:title" content="Innsikt | Robert Myhre">
+  <meta property="og:description" content="Praktiske analyser av KOFA-praksis, EU-dommer og regelverksendringer innen offentlige anskaffelser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://robertmyhre.no/nyheter.html">
+  <meta property="og:image" content="https://robertmyhre.no/bilder/IMG_7162_4.jpg">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:site_name" content="Robert Myhre">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Innsikt | Robert Myhre">
+  <meta name="twitter:description" content="Praktiske analyser av KOFA-praksis, EU-dommer og regelverksendringer.">
+  <meta name="twitter:image" content="https://robertmyhre.no/bilder/IMG_7162_4.jpg">
+  <link rel="canonical" href="https://robertmyhre.no/nyheter.html">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Robert Myhre">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Innsikt – Analyser og kommentarer",
+    "description": "Praktiske analyser av KOFA-praksis, EU-dommer og regelverksendringer innen offentlige anskaffelser.",
+    "url": "https://robertmyhre.no/nyheter.html",
+    "author": {
+      "@type": "Person",
+      "name": "Robert Myhre"
+    },
+    "numberOfItems": 171
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#2c2825;--paper:#faf8f5;--warm-bg:#f0ece5;--accent:#9e4a32;--accent-hover:#b85a3f;--muted:#7a7269;--light-muted:#a39e96;--card:#fff;--border:#e2ddd5;--shadow-sm:0 1px 3px rgba(44,40,37,.06);--shadow-md:0 4px 16px rgba(44,40,37,.08);--shadow-lg:0 8px 32px rgba(44,40,37,.1);--serif:'Source Serif 4',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;--max-w:1120px}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,248,245,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm)}
+    .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nav-logo{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+    .nav-logo span{color:var(--accent)}
+    .nav-back{display:flex;align-items:center;gap:.4rem;text-decoration:none;color:var(--muted);font-size:.9rem;font-weight:500;transition:color .2s}
+    .nav-back:hover{color:var(--accent)}
+    .page-header{padding:7rem 0 3rem;text-align:center}
+    .page-header .container{max-width:var(--max-w);margin:0 auto;padding:0 2rem}
+    .page-label{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+    .page-title{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;line-height:1.25;color:var(--ink);margin-bottom:1rem}
+    .page-subtitle{font-size:1.05rem;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.7}
+    .articles-container{max-width:var(--max-w);margin:0 auto;padding:0 2rem 4rem}
+    .articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem}
+    .article-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.75rem;text-decoration:none;transition:all .2s;display:flex;flex-direction:column}
+    .article-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--accent)}
+    .article-card.hidden{display:none}
+    .article-card .card-date{font-size:.78rem;color:var(--light-muted);font-weight:500;margin-bottom:.6rem}
+    .article-card h3{font-family:var(--serif);font-size:1.1rem;font-weight:600;line-height:1.35;margin-bottom:.6rem;color:var(--ink)}
+    .article-card p{font-size:.88rem;color:var(--muted);line-height:1.6;flex:1}
+    .article-card .les-mer{margin-top:1rem;font-size:.85rem;font-weight:500;color:var(--accent)}
+    .article-card:hover .les-mer{text-decoration:underline}
+    .search-section{max-width:var(--max-w);margin:0 auto;padding:0 2rem 1rem}
+    .search-wrap{position:sticky;top:68px;z-index:10;background:var(--paper);padding:1rem 0}
+    .search-input{width:100%;padding:.75rem 1rem .75rem 2.8rem;font-size:1rem;font-family:var(--sans);border:2px solid var(--border);border-radius:10px;background:var(--card);color:var(--ink);transition:border-color .2s}
+    .search-input:focus{outline:none;border-color:var(--accent)}
+    .search-input::placeholder{color:var(--light-muted)}
+    .search-wrap svg{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);color:var(--light-muted);pointer-events:none}
+    .search-inner{position:relative}
+    .result-count{font-size:.82rem;color:var(--light-muted);margin-top:.5rem}
+    .promo-banner{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.75rem;margin-top:.75rem;display:flex;align-items:center;gap:1.25rem;transition:all .2s;text-decoration:none;color:var(--ink)}
+    .promo-banner:hover{box-shadow:var(--shadow-md);border-color:var(--accent)}
+    .promo-banner::before{content:'';flex-shrink:0;width:4px;height:48px;background:var(--accent);border-radius:2px}
+    .promo-content{flex:1;min-width:0}
+    .promo-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}
+    .promo-title{font-family:var(--serif);font-size:1rem;font-weight:600;line-height:1.35;margin-bottom:.2rem}
+    .promo-desc{font-size:.82rem;color:var(--muted);line-height:1.5}
+    .promo-cta{flex-shrink:0;background:var(--accent);color:#fff;padding:.5rem 1.1rem;border-radius:6px;font-size:.85rem;font-weight:500;text-decoration:none;transition:background .2s}
+    .promo-banner:hover .promo-cta{background:var(--accent-hover)}
+    @media(max-width:640px){
+      .page-header{padding-top:5.5rem}
+      .articles-grid{grid-template-columns:1fr}
+      .promo-banner{flex-direction:column;align-items:stretch;text-align:center;gap:.75rem}
+      .promo-banner::before{width:100%;height:3px}
+      .promo-cta{align-self:center}
+    }
+    footer{background:var(--ink);color:rgba(255,255,255,.7);padding:2.5rem 0 1.5rem;margin-top:2rem}
+    .footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-brand{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:#fff}
+    footer p{font-size:.85rem}
+    footer a{color:rgba(255,255,255,.85);text-decoration:none}
+    footer a:hover{color:#fff}
+  </style>
 </head>
 <body>
 
-<nav>
+  <nav>
     <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Robert <span>Myhre</span></a>
-        <a href="index.html" class="nav-back">&larr; Tilbake til forsiden</a>
+      <a href="index.html" class="nav-logo">Robert <span>Myhre</span></a>
+      <a href="index.html" class="nav-back">&larr; Tilbake til forsiden</a>
     </div>
-</nav>
+  </nav>
 
-<header class="page-header">
+  <header class="page-header">
     <div class="container">
-        <p class="page-label">Innsikt</p>
-        <h1 class="page-title">Analyser og kommentarer</h1>
-        <p class="page-subtitle">Praktiske analyser av KOFA-praksis, EU-dommer og regelverksendringer.</p>
+      <p class="page-label">Innsikt</p>
+      <h1 class="page-title">Analyser og kommentarer</h1>
+      <p class="page-subtitle">Praktiske analyser av KOFA-praksis, EU-dommer og regelverksendringer.</p>
     </div>
-</header>
+  </header>
 
-<div class="search-section">
+  <div class="search-section">
     <div class="search-wrap">
-        <div class="search-inner">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="text" class="search-input" id="searchInput" placeholder="S&#248;k i artikler..." autocomplete="off">
-        </div>
-        <div class="result-count" id="resultCount"></div>
+      <div class="search-inner">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="S&oslash;k i artikler..." autocomplete="off">
+      </div>
+      <div class="result-count" id="resultCount">171 artikler</div>
     </div>
-</div>
+  </div>
 
-<div class="articles-container">
-    <div id="promoTop"></div>
+  <div class="articles-container">
     <div class="articles-grid" id="articlesGrid">
-        <div class="loading">Laster artikler...</div>
-    </div>
-    <div id="promoBottom" style="margin-top:1.5rem"></div>
-</div>
+      <a href="nyheter/2026-03-02_Miljokriterier_i_anskaffelser_av_det_som_enna_ikke_finnes.html" class="article-card" data-title="miljøkriterier i anskaffelser av det som ennå ikke finnes" data-excerpt="">
+          <span class="card-date">2. mars 2026</span>
+          <h3>Miljøkriterier i anskaffelser av det som ennå ikke finnes</h3>
+          <p></p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-03-02_Hva_koster_30_prosent_miljovekting.html" class="article-card" data-title="hva koster 30 % miljøvekting – og hva koster det når anskaffelser blir politikk?" data-excerpt="">
+          <span class="card-date">2. mars 2026</span>
+          <h3>Hva koster 30 % miljøvekting – og hva koster det når anskaffelser blir politikk?</h3>
+          <p></p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-03-02_Fra_DFOs_veileder_til_Sintesi_EOS_robusthet_30prosent.html" class="article-card" data-title="fra dføs nye veileder til sintesi (c-247/02): oppdragsgiver fastsetter tildelingskriteriene – hvor eøs-robust er den norske miljøregelen?" data-excerpt="">
+          <span class="card-date">2. mars 2026</span>
+          <h3>Fra DFØs nye veileder til Sintesi (C-247/02): Oppdragsgiver fastsetter tildelingskriteriene – hvor EØS-robust er den norske miljøregelen?</h3>
+          <p></p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-02-26-miljovekting-kofa-hybrid-dfo.html" class="article-card" data-title="miljøvekting i anskaffelser: kofa åpner for hybrid – dfø sier nei" data-excerpt="anskaffelsesforskriften § 7-9 krever 30 % miljøvekting eller krav i kravspesifikasjonen. kofa har akseptert en hybridmodell – dfø avviser den. her er den juridiske uenigheten, og...">
+          <span class="card-date">26. februar 2026</span>
+          <h3>Miljøvekting i anskaffelser: KOFA åpner for hybrid – DFØ sier nei</h3>
+          <p>Anskaffelsesforskriften § 7-9 krever 30 % miljøvekting eller krav i kravspesifikasjonen. KOFA har akseptert en hybridmodell – DFØ avviser den. Her er den juridiske uenigheten, og...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-02-21-rammeavtalens-rekkevidde.html" class="article-card" data-title="rammeavtalens rekkevidde" data-excerpt="når slutter avropet og den nye anskaffelsen begynner? med utgangspunkt i kofa 2025/1518 og rettspraksis fra eu-domstolen og kofa">
+          <span class="card-date">21. februar 2026</span>
+          <h3>Rammeavtalens rekkevidde</h3>
+          <p>Når slutter avropet og den nye anskaffelsen begynner? Med utgangspunkt i KOFA 2025/1518 og rettspraksis fra EU-domstolen og KOFA</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-02-20-dfo-miljoemerker.html" class="article-card" data-title="når dfø sidestiller miljøfyrtårn og svanemerket, svekkes miljøeffekten" data-excerpt="miljømerking måler miljøprestasjonen i tjenesten. miljøledelse måler systemet hos leverandøren. det er ikke det samme, og bør ikke behandles som likeverdig.">
+          <span class="card-date">20. februar 2026</span>
+          <h3>Når DFØ sidestiller Miljøfyrtårn og Svanemerket, svekkes miljøeffekten</h3>
+          <p>Miljømerking måler miljøprestasjonen i tjenesten. Miljøledelse måler systemet hos leverandøren. Det er ikke det samme, og bør ikke behandles som likeverdig.</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2026-02-11-innovasjonspartnerskap-en-risikabel-vei-til-kjent-teknologi.html" class="article-card" data-title="innovasjonspartnerskap – hvorfor det ofte mislykkes og hva du bør vite før du starter" data-excerpt="i arbeidet med å modernisere offentlig sektor har «innovative anskaffelser» blitt et hyppig brukt begrep. det reises imidlertid stadig oftere spørsmål ved om innovasjon drives...">
+          <span class="card-date">11. februar 2026</span>
+          <h3>Innovasjonspartnerskap – hvorfor det ofte mislykkes og hva du bør vite før du starter</h3>
+          <p>I arbeidet med å modernisere offentlig sektor har «innovative anskaffelser» blitt et hyppig brukt begrep. Det reises imidlertid stadig oftere spørsmål ved om innovasjon drives...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-02-07-prisene-skal-gjenspeilede-faktiske-kostnadene.html" class="article-card" data-title="«prisene skal gjenspeilede faktiske kostnadene»" data-excerpt="et krav basert på en grunnleggende misforståelse av hvordan leverandører priser anbud1. problemstillingeni konkurransen om rv. 70 oppdølstranda krevde statens vegvesen at...">
+          <span class="card-date">7. februar 2026</span>
+          <h3>«Prisene skal gjenspeilede faktiske kostnadene»</h3>
+          <p>Et krav basert på en grunnleggende misforståelse av hvordan leverandører priser anbud1. ProblemstillingenI konkurransen om rv. 70 Oppdølstranda krevde Statens vegvesen at...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-02-03-fra-tildeling-til-rettssak-og-sa-en-til-og-sa-en-til.html" class="article-card" data-title="fra tildeling til rettssak. og så en til. og så en til." data-excerpt="sykehuset snudde etter å ha tapt en forføyningssak – det skulle de ikke gjorthva skjedde?sykehuset østfold gjennomførte en konkurranse om pasientkjøring. taxi3 leverte lavest pris...">
+          <span class="card-date">3. februar 2026</span>
+          <h3>Fra tildeling til rettssak. Og så en til. Og så en til.</h3>
+          <p>Sykehuset snudde etter å ha tapt en forføyningssak – det skulle de ikke gjortHva skjedde?Sykehuset Østfold gjennomførte en konkurranse om pasientkjøring. Taxi3 leverte lavest pris...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-02-03-nar-pris-og-kvalitet-blandes-i-samme-evalueringskriterium-i-strid-med-vektingspl.html" class="article-card" data-title="når pris og kvalitet blandes i samme evalueringskriterium – i strid med vektingsplikten?" data-excerpt="kofa-sak 2025/1673 reiser spørsmål om oppdragsgivers adgang til å konstruere evalueringskriterier der både kvalitative beskrivelser og pris skal vurderes samlet, uten å angi...">
+          <span class="card-date">3. februar 2026</span>
+          <h3>Når pris og kvalitet blandes i samme evalueringskriterium – i strid med vektingsplikten?</h3>
+          <p>KOFA-sak 2025/1673 reiser spørsmål om oppdragsgivers adgang til å konstruere evalueringskriterier der både kvalitative beskrivelser og pris skal vurderes samlet, uten å angi...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-01-29-nar-miljokrav-blir-en-papirtiger.html" class="article-card" data-title="når miljøkrav blir en papirtiger" data-excerpt="en fersk avgjørelse fra klagenemnda for offentlige anskaffelser (sak 2025/0960) reiser fundamentale spørsmål om verdien av grønne tildelingskriterier. når en leverandør vinner på...">
+          <span class="card-date">29. januar 2026</span>
+          <h3>Når miljøkrav blir en papirtiger</h3>
+          <p>En fersk avgjørelse fra Klagenemnda for offentlige anskaffelser (sak 2025/0960) reiser fundamentale spørsmål om verdien av grønne tildelingskriterier. Når en leverandør vinner på...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-01-26-eu-dom-heleide-datterselskap-ma-dokumenteres-i-anbud.html" class="article-card" data-title="eu-dom: heleide datterselskap må dokumenteres i anbud" data-excerpt="eu-domstolen har avgjort at leverandører må dokumentere også heleide datterselskap når de bruker deres kapasitet i offentlige anbud. men egenerklæringsskjema er ikke det eneste...">
+          <span class="card-date">26. januar 2026</span>
+          <h3>EU-dom: Heleide datterselskap må dokumenteres i anbud</h3>
+          <p>EU-domstolen har avgjort at leverandører må dokumentere også heleide datterselskap når de bruker deres kapasitet i offentlige anbud. Men egenerklæringsskjema er ikke det eneste...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2026-01-21-kofas-salamieffekt-et-juridisk-ingenmannsland-etter-tildelingen.html" class="article-card" data-title="kofas salamieffekt – et juridisk ingenmannsland etter tildelingen" data-excerpt="innledningklagenemnda for offentlige anskaffelser har i to nyere avgjørelser skapt et system hvor oppdragsgiver og vinneren kan forhandle seg frem til en helt annen kontrakt enn...">
+          <span class="card-date">21. januar 2026</span>
+          <h3>KOFAs salamieffekt – et juridisk ingenmannsland etter tildelingen</h3>
+          <p>InnledningKlagenemnda for offentlige anskaffelser har i to nyere avgjørelser skapt et system hvor oppdragsgiver og vinneren kan forhandle seg frem til en helt annen kontrakt enn...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-01-18-egenregi-kravet-til-80-omsetning.html" class="article-card" data-title="egenregi - kravet til 80 % omsetning" data-excerpt="kan et offentlig eid selskap oppfylle egenregivilkårene ved å la datterselskapene drive kommersiell virksomhet? nei, sier eu-domstolen i en fersk dom. her er det du trenger å...">
+          <span class="card-date">18. januar 2026</span>
+          <h3>Egenregi - kravet til 80 % omsetning</h3>
+          <p>Kan et offentlig eid selskap oppfylle egenregivilkårene ved å la datterselskapene drive kommersiell virksomhet? Nei, sier EU-domstolen i en fersk dom. Her er det du trenger å...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-01-16-lanseringswebinaret-for-hvordan-vinne-anbud.html" class="article-card" data-title="lanseringswebinaret for hvordan vinne anbud" data-excerpt="opptak fra lanseringswebinaret for boken hvordan vinne anbud 14. januar 2026 er nå tilgjengelig: lanseringswebinar hvordan vinne anbudhvordan vinne...">
+          <span class="card-date">16. januar 2026</span>
+          <h3>Lanseringswebinaret for Hvordan vinne anbud</h3>
+          <p>Opptak fra lanseringswebinaret for boken Hvordan vinne anbud 14. januar 2026 er nå tilgjengelig: Lanseringswebinar hvordan vinne anbudHvordan vinne...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-01-13-nar-ja-to-ganger-betyr-nei.html" class="article-card" data-title="når ja to ganger betyr nei" data-excerpt="i sak 2025/1476 konkluderte kofa med at en leverandør hadde begått en «åpenbar skrivefeil» da han bekreftet at noe ville endre seg. problemet er at leverandøren sa nøyaktig det...">
+          <span class="card-date">13. januar 2026</span>
+          <h3>Når ja to ganger betyr nei</h3>
+          <p>I sak 2025/1476 konkluderte KOFA med at en leverandør hadde begått en «åpenbar skrivefeil» da han bekreftet at noe ville endre seg. Problemet er at leverandøren sa nøyaktig det...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2026-01-01-mara-dommen-bekrefter-30-regelen-mangler-eos-rettslig-grunnlag.html" class="article-card" data-title="mara-dommen bekrefter: 30%-regelen mangler eøs-rettslig grunnlag" data-excerpt="ny dom fra eu-domstolen styrker kritikken mot foa § 7-9i en tidligere artikkel argumenterte jeg for at anskaffelsesforskriftens § 7-9 – som pålegger oppdragsgivere å vekte miljø...">
+          <span class="card-date">1. januar 2026</span>
+          <h3>Mara-dommen bekrefter: 30%-regelen mangler EØS-rettslig grunnlag</h3>
+          <p>Ny dom fra EU-domstolen styrker kritikken mot FOA § 7-9I en tidligere artikkel argumenterte jeg for at anskaffelsesforskriftens § 7-9 – som pålegger oppdragsgivere å vekte miljø...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-12-31-nar-kommunen-kjoper-boliger-som-enna-ikke-finnes.html" class="article-card" data-title="når kommunen kjøper boliger som ennå ikke finnes" data-excerpt="en ny kofa-avgjørelse (2025/1435) belyser grensene for direktekjøp av omsorgsboliger – og avdekker et komplisert samspill mellom anskaffelsesregler og statsstøttearendal kommune...">
+          <span class="card-date">31. desember 2025</span>
+          <h3>Når kommunen kjøper boliger som ennå ikke finnes</h3>
+          <p>En ny KOFA-avgjørelse (2025/1435) belyser grensene for direktekjøp av omsorgsboliger – og avdekker et komplisert samspill mellom anskaffelsesregler og statsstøtteArendal kommune...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2025-12-13-du-far-ikke-erfaring-av-a-se-pa-at-andre-jobber.html" class="article-card" data-title="du får ikke erfaring av å se på at andre jobber." data-excerpt="en kontrakt på 170 millioner kroner. laveste pris. seier i lagmannsretten. likevel tap i høyesterett.jeg har fulgt flage maskin-saken siden den startet, og dommen i hr-2022-1964-a...">
+          <span class="card-date">13. desember 2025</span>
+          <h3>Du får ikke erfaring av å se på at andre jobber.</h3>
+          <p>En kontrakt på 170 millioner kroner. Laveste pris. Seier i lagmannsretten. Likevel tap i Høyesterett.Jeg har fulgt Flage Maskin-saken siden den startet, og dommen i HR-2022-1964-A...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-12-07-de-skjulte-kostnadene-ved-forsinkede-anbudskonkurranser.html" class="article-card" data-title="de skjulte kostnadene ved forsinkede anbudskonkurranser" data-excerpt="når innkjøpsprosesser trekker ut i tid, øker risikoen for leverandørene – og regningen sendes til slutt til skattebetalerne. forsinkelser er ikke bare uheldige, de er en...">
+          <span class="card-date">7. desember 2025</span>
+          <h3>De skjulte kostnadene ved forsinkede anbudskonkurranser</h3>
+          <p>Når innkjøpsprosesser trekker ut i tid, øker risikoen for leverandørene – og regningen sendes til slutt til skattebetalerne. Forsinkelser er ikke bare uheldige, de er en...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-12-06-sikkerhetshullet-gjengkriminelle-kan-vinne-anbud-hos-kripos.html" class="article-card" data-title="sikkerhetshullet: gjengkriminelle kan vinne anbud hos kripos" data-excerpt="anskaffelsesregelverket krever at leverandører dømt for organisert kriminalitet skal avvises. men oppdragsgiver har ingen lovlig måte å sjekke det på.">
+          <span class="card-date">6. desember 2025</span>
+          <h3>Sikkerhetshullet: Gjengkriminelle kan vinne anbud hos Kripos</h3>
+          <p>Anskaffelsesregelverket krever at leverandører dømt for organisert kriminalitet skal avvises. Men oppdragsgiver har ingen lovlig måte å sjekke det på.</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-12-04-nrk-ga-ingen-ulovlig-fordel-i-arkitektkonkurransen.html" class="article-card" data-title="nrk ga ingen ulovlig fordel i arkitektkonkurransen" data-excerpt="nordic office of architecture hadde ikke en innsidefordel da de vant konkurransen om nrks nye hovedkontor på ensjø. det fastslår kofa (2025/0976), etter at bjarke ingels group...">
+          <span class="card-date">4. desember 2025</span>
+          <h3>NRK ga ingen ulovlig fordel i arkitektkonkurransen</h3>
+          <p>Nordic Office of Architecture hadde ikke en innsidefordel da de vant konkurransen om NRKs nye hovedkontor på Ensjø. Det fastslår KOFA (2025/0976), etter at Bjarke Ingels Group...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-12-03-standardisering-gir-ikke-fritak-fra-konkurranse.html" class="article-card" data-title="standardisering gir ikke fritak fra konkurranse" data-excerpt="kan en oppdragsgiver unnta en anskaffelse fra konkurranse fordi ledelsen har vedtatt en strategi om «ett felles system»? en  kofa-avgjørelse slår fast at interne preferanser ikke...">
+          <span class="card-date">3. desember 2025</span>
+          <h3>Standardisering gir ikke fritak fra konkurranse</h3>
+          <p>Kan en oppdragsgiver unnta en anskaffelse fra konkurranse fordi ledelsen har vedtatt en strategi om «ett felles system»? En  KOFA-avgjørelse slår fast at interne preferanser ikke...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-29-derfor-taper-gode-leverandorer-pa-kvalitet-adjektiv-fellen.html" class="article-card" data-title="derfor taper gode leverandører på kvalitet: «adjektiv-fellen»" data-excerpt="mange leverandører tror de scorer poeng ved å skrive at de er «fleksible», «kompetente» og «serviceinnstilte». i realiteten er dette ofte fyllord som gir null uttelling hos...">
+          <span class="card-date">29. november 2025</span>
+          <h3>Derfor taper gode leverandører på kvalitet: «Adjektiv-fellen»</h3>
+          <p>Mange leverandører tror de scorer poeng ved å skrive at de er «fleksible», «kompetente» og «serviceinnstilte». I realiteten er dette ofte fyllord som gir null uttelling hos...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-28-groftegraverens-forglemmelse-kan-bli-tidenes-erstatningskrav-mot-trondheim-kommu.html" class="article-card" data-title="grøftegraverens forglemmelse - kan bli tidenes erstatningskrav mot trondheim kommune" data-excerpt="trondheim kommune brøt regelverket da de tildelte en rammeavtale verdt en halv milliard kroner til en leverandør som manglet gyldig kompetansebevis på tilbudstidspunktet. det slår...">
+          <span class="card-date">28. november 2025</span>
+          <h3>Grøftegraverens forglemmelse - kan bli tidenes erstatningskrav mot Trondheim kommune</h3>
+          <p>Trondheim kommune brøt regelverket da de tildelte en rammeavtale verdt en halv milliard kroner til en leverandør som manglet gyldig kompetansebevis på tilbudstidspunktet. Det slår...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-26-kofa-forhandlingsforbudet-i-anbudskonkurranser-gjelder-ikke-etter-tildeling-av-k.html" class="article-card" data-title="kofa: forhandlingsforbudet i anbudskonkurranser gjelder ikke etter tildeling av kontrakt. hvis kofa har rett i" data-excerpt="i sak 2024/1733 fastslår kofa at forhandlingsforbudet bare gjelder frem til tildeling. begrunnelsen? ingen. konsekvensene? potensielt dramatiske.saken i korthetsunndal kommune...">
+          <span class="card-date">26. november 2025</span>
+          <h3>KOFA: Forhandlingsforbudet i anbudskonkurranser gjelder ikke etter tildeling av kontrakt. Hvis KOFA har rett i</h3>
+          <p>I sak 2024/1733 fastslår KOFA at forhandlingsforbudet bare gjelder frem til tildeling. Begrunnelsen? Ingen. Konsekvensene? Potensielt dramatiske.Saken i korthetSunndal kommune...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-25-30-prosent-miljovekt-slik-bruker-du-svanemerket-som-fasit.html" class="article-card" data-title="30 prosent miljøvekt: slik bruker du svanemerket som fasit" data-excerpt="når miljø skal vektes tungt i offentlige anbud, er dokumentasjonskravet innkjøperens viktigste verktøy. fersk rettspraksis viser at ordlyden «sertifisert» effektivt...">
+          <span class="card-date">25. november 2025</span>
+          <h3>30 prosent miljøvekt: Slik bruker du Svanemerket som fasit</h3>
+          <p>Når miljø skal vektes tungt i offentlige anbud, er dokumentasjonskravet innkjøperens viktigste verktøy. Fersk rettspraksis viser at ordlyden «sertifisert» effektivt...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-23-kommunen-ghostet-vinneren-og-fikk-gebyr-en-laerepenge-i-offentlige-anskaffelser.html" class="article-card" data-title="kommunen «ghostet» vinneren og fikk gebyr – en lærepenge i offentlige anskaffelser" data-excerpt="rødøy kommune brukte tre runder på å lande kontrakt om ny kunstgressbane. prosessen endte med at kommunen ignorerte kunngjøringsplikten, «glemte» vinneren av første runde i ett...">
+          <span class="card-date">23. november 2025</span>
+          <h3>Kommunen «ghostet» vinneren og fikk gebyr – en lærepenge i offentlige anskaffelser</h3>
+          <p>Rødøy kommune brukte tre runder på å lande kontrakt om ny kunstgressbane. Prosessen endte med at kommunen ignorerte kunngjøringsplikten, «glemte» vinneren av første runde i ett...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-21-vektingen-i-offentlige-anbud-er-ofte-en-ren-illusjon.html" class="article-card" data-title="vektingen i offentlige anbud er ofte en ren illusjon" data-excerpt="klagenemnda for offentlige anskaffelser (kofa) mener det er uproblematisk at beste tilbud får 4 av 10 poeng. og med det sagt at normalisering av poeng ikke alltid er nødvendig....">
+          <span class="card-date">21. november 2025</span>
+          <h3>Vektingen i offentlige anbud er ofte en ren illusjon</h3>
+          <p>Klagenemnda for offentlige anskaffelser (KOFA) mener det er uproblematisk at beste tilbud får 4 av 10 poeng. Og med det sagt at normalisering av poeng ikke alltid er nødvendig....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-18-taktisk-prising-nar-1-kroners-tilbud-tommer-budsjettet.html" class="article-card" data-title="taktisk prising: når 1-kroners tilbud tømmer budsjettet" data-excerpt="enhver innkjøper drømmer om lave priser. men når en leverandør priser seg til én krone på enkelte varer, er det sjelden et kupp. det er ofte starten på en kostbar affære som...">
+          <span class="card-date">18. november 2025</span>
+          <h3>Taktisk prising: Når 1-kroners tilbud tømmer budsjettet</h3>
+          <p>Enhver innkjøper drømmer om lave priser. Men når en leverandør priser seg til én krone på enkelte varer, er det sjelden et kupp. Det er ofte starten på en kostbar affære som...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-18-fritt-frem-for-vennetjenester-det-stille-farvel-med-konkurransen.html" class="article-card" data-title="fritt frem for vennetjenester? det stille farvel med konkurransen" data-excerpt="mens debatten om offentlig pengebruk ofte handler om de store skandalene, er en stille revolusjon på gang for de minste innkjøpene. forslaget til nytt anskaffelsesregelverk...">
+          <span class="card-date">18. november 2025</span>
+          <h3>Fritt frem for vennetjenester? Det stille farvel med konkurransen</h3>
+          <p>Mens debatten om offentlig pengebruk ofte handler om de store skandalene, er en stille revolusjon på gang for de minste innkjøpene. Forslaget til nytt anskaffelsesregelverk...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-15-vant-pa-grunn-av-gratis-frisor-og-parykktjenester-leverte-nesten-ingenting.html" class="article-card" data-title="vant på grunn av gratis frisør- og parykktjenester. leverte nesten ingenting " data-excerpt="en anbudskonkurranse om frisør- og parykktjenester ved oslo universitetssykehus (ous) endte hos klagenemnda for offentlige anskaffelser (kofa) (2025/0706). saken illustrerer en...">
+          <span class="card-date">15. november 2025</span>
+          <h3>Vant på grunn av gratis frisør- og parykktjenester. Leverte nesten ingenting </h3>
+          <p>En anbudskonkurranse om frisør- og parykktjenester ved Oslo Universitetssykehus (OUS) endte hos Klagenemnda for offentlige anskaffelser (KOFA) (2025/0706). Saken illustrerer en...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-12-650-000-650-000-650-000-hva-gjor-du-da.html" class="article-card" data-title="650.000 + 650.000 = 650.000. hva gjør du da?" data-excerpt="hva gjør en kommune når et anbud i en anbudskonkurranse på brøyting priser post a til 650.000 kroner og post b til 650.000 kroner. og deretter summerer disse til kr. 650.000...">
+          <span class="card-date">12. november 2025</span>
+          <h3>650.000 + 650.000 = 650.000. Hva gjør du da?</h3>
+          <p>Hva gjør en kommune når et anbud i en anbudskonkurranse på brøyting priser post A til 650.000 kroner og post B til 650.000 kroner. Og deretter summerer disse til kr. 650.000...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-11-krav-om-sertifisering-stenger-smb-ute-og-skaper-juridiske-floker-for-innkjopere.html" class="article-card" data-title="krav om sertifisering stenger smb ute, og skaper juridiske floker for innkjøpere" data-excerpt="offentlige innkjøpere sliter med lav konkurranse i anbud – en barriere dfø selv peker på at rammer små og mellomstore bedrifter (smb-er). en hovedårsak er unødig kompliserte krav...">
+          <span class="card-date">11. november 2025</span>
+          <h3>Krav om sertifisering stenger SMB ute, og skaper juridiske floker for innkjøpere</h3>
+          <p>Offentlige innkjøpere sliter med lav konkurranse i anbud – en barriere DFØ selv peker på at rammer små og mellomstore bedrifter (SMB-er). En hovedårsak er unødig kompliserte krav...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-09-lonner-det-seg-a-quot-spamme-quot-tilbudet-kofas-selvmotsigende-praksis.html" class="article-card" data-title="lønner det seg å &amp;quot;spamme&amp;quot; tilbudet? kofas selvmotsigende praksis" data-excerpt="ny praksis fra klagenemnda for offentlige anskaffelser (kofa) skaper usikkerhet om håndteringen av formalkrav. mens leverandører som overskrider sidetall normalt straffes ved at...">
+          <span class="card-date">9. november 2025</span>
+          <h3>Lønner det seg å &amp;quot;spamme&amp;quot; tilbudet? KOFAs selvmotsigende praksis</h3>
+          <p>Ny praksis fra Klagenemnda for offentlige anskaffelser (KOFA) skaper usikkerhet om håndteringen av formalkrav. Mens leverandører som overskrider sidetall normalt straffes ved at...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-07-israels-okkupasjon-et-anbudsproblem-i-oslo-kommune.html" class="article-card" data-title="israels okkupasjon - et anbudsproblem i oslo kommune" data-excerpt="oslo kommunes beslutning om å ikke utløse en opsjon på t-banevogner fra leverandøren caf, grunnet selskapets oppføring på fns liste over aktører som bidrar til israels okkupasjon...">
+          <span class="card-date">7. november 2025</span>
+          <h3>Israels okkupasjon - et anbudsproblem i Oslo kommune</h3>
+          <p>Oslo kommunes beslutning om å ikke utløse en opsjon på T-banevogner fra leverandøren CAF, grunnet selskapets oppføring på FNs liste over aktører som bidrar til Israels okkupasjon...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-05-kontrakten-som-krympet-for-den-ble-signert.html" class="article-card" data-title="kontrakten som krympet før den ble signert" data-excerpt="nettselskapet arva as kuttet verdien på en skogryddingskontrakt med nesten 40 prosent etter at vinneren var valgt, men før signering . kofa lot endringen passere. årsaken var ikke...">
+          <span class="card-date">5. november 2025</span>
+          <h3>Kontrakten som krympet før den ble signert</h3>
+          <p>Nettselskapet Arva AS kuttet verdien på en skogryddingskontrakt med nesten 40 prosent etter at vinneren var valgt, men før signering . KOFA lot endringen passere. Årsaken var ikke...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-05-hvorfor-alle-tar-feil-om-miljoregelen-i-forskriften-det-egentlige-eos-problemet.html" class="article-card" data-title="hvorfor alle tar feil om miljøregelen i forskriften. det egentlige eøs-problemet" data-excerpt="debatten om anskaffelsesforskriftens (foa) § 7-9 har til nå sentrert seg om et viktig, men ufullstendig, premiss: hvorvidt forskriften har tilstrekkelig hjemmel i lov om...">
+          <span class="card-date">5. november 2025</span>
+          <h3>Hvorfor alle tar feil om miljøregelen i forskriften. Det egentlige EØS-problemet</h3>
+          <p>Debatten om anskaffelsesforskriftens (FOA) § 7-9 har til nå sentrert seg om et viktig, men ufullstendig, premiss: Hvorvidt forskriften har tilstrekkelig hjemmel i lov om...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-05-kan-lonn-utover-tariffniva-vaere-et-tildelingskriterium.html" class="article-card" data-title="kan lønn utover tariffnivå være et tildelingskriterium?" data-excerpt="nettselskapet arva as benyttet lønn utover tariffnivå som et tildelingskriterium. en konkurrent mente kriteriet var ulovlig og manglet tilknytning til selve tjenesten. nå har kofa...">
+          <span class="card-date">5. november 2025</span>
+          <h3>Kan lønn utover tariffnivå være et tildelingskriterium?</h3>
+          <p>Nettselskapet Arva AS benyttet lønn utover tariffnivå som et tildelingskriterium. En konkurrent mente kriteriet var ulovlig og manglet tilknytning til selve tjenesten. Nå har KOFA...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-02-oppdragsgiver-ga-seg-selv-quot-slingringsmonn-quot-som-kunne-styre-kontrakten-ti.html" class="article-card" data-title="oppdragsgiver ga seg selv &amp;quot;slingringsmonn&amp;quot; som kunne styre kontrakten til en favoritt" data-excerpt="først etter at nettselskapet arva as hadde åpnet anbudene og sett leverandørenes priser, fastsatte de det nøyaktige omfanget av en skogryddingsjobb. samtidig valgte de å se bort...">
+          <span class="card-date">2. november 2025</span>
+          <h3>Oppdragsgiver ga seg selv &amp;quot;slingringsmonn&amp;quot; som kunne styre kontrakten til en favoritt</h3>
+          <p>Først etter at nettselskapet Arva AS hadde åpnet anbudene og sett leverandørenes priser, fastsatte de det nøyaktige omfanget av en skogryddingsjobb. Samtidig valgte de å se bort...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-11-02-ga-trostepoeng-for-a-unnga-misnoye.html" class="article-card" data-title="ga trøstepoeng for å unngå misnøye" data-excerpt="i et forsøk på å &amp;quot;unngå misnøye&amp;quot; fra en leverandør som tapte en anbudskonkurranse, justerte nettselskapet arva as ulovlig opp poengsummen deres etter at vinneren var...">
+          <span class="card-date">2. november 2025</span>
+          <h3>Ga trøstepoeng for å unngå misnøye</h3>
+          <p>I et forsøk på å &amp;quot;unngå misnøye&amp;quot; fra en leverandør som tapte en anbudskonkurranse, justerte nettselskapet Arva AS ulovlig opp poengsummen deres etter at vinneren var...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-10-29-sa-eller-tilsvarende-mente-apenbart-bedre-her-er-tabben-som-veltet-million-anbud.html" class="article-card" data-title="sa «eller tilsvarende» – mente «åpenbart bedre»: her er tabben som veltet million-anbudet" data-excerpt="en fatal feil i anbudspapirene stopper nå sandnes havns planer for et nytt, flytende svømmebasseng i vågen. sandnes havn krevde at bassenget måtte bygges i «armert betong». de la...">
+          <span class="card-date">29. oktober 2025</span>
+          <h3>Sa «eller tilsvarende» – mente «åpenbart bedre»: Her er tabben som veltet million-anbudet</h3>
+          <p>En fatal feil i anbudspapirene stopper nå Sandnes Havns planer for et nytt, flytende svømmebasseng i Vågen. Sandnes Havn krevde at bassenget måtte bygges i «armert betong». De la...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2025-10-27-lettere-a-justere-priser-i-offentlige-kontrakter.html" class="article-card" data-title="lettere å justere priser i offentlige kontrakter" data-excerpt="i en fersk dom fra eu-domstolen (c-282/24) klargjør at offentlige oppdragsgivere har rom til å justere betalingsmodeller i løpende kontrakter. så lenge tjenesten som leveres er...">
+          <span class="card-date">27. oktober 2025</span>
+          <h3>Lettere å justere priser i offentlige kontrakter</h3>
+          <p>I en fersk dom fra EU-domstolen (C-282/24) klargjør at offentlige oppdragsgivere har rom til å justere betalingsmodeller i løpende kontrakter. Så lenge tjenesten som leveres er...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-10-23-hva-skal-innkjoperen-gjore-nar-det-kommer-varsel-om-ulovlig-anbudssamarbeid.html" class="article-card" data-title="hva skal innkjøperen gjøre når det kommer varsel om ulovlig anbudssamarbeid?" data-excerpt="to taxiselskaper med felles eiere og overlappende ledelse vant hver sin del av en skoleskyss-kontrakt på 116 millioner kroner. de konkurrerte kun mot hverandre på én av tolv...">
+          <span class="card-date">23. oktober 2025</span>
+          <h3>Hva skal innkjøperen gjøre når det kommer varsel om ulovlig anbudssamarbeid?</h3>
+          <p>To taxiselskaper med felles eiere og overlappende ledelse vant hver sin del av en skoleskyss-kontrakt på 116 millioner kroner. De konkurrerte kun mot hverandre på én av tolv...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-10-19-byttet-prismodell-og-holdt-tilbake-info-dobbelt-regelbrudd-i-nord-troms.html" class="article-card" data-title="byttet prismodell og holdt tilbake info: dobbelt regelbrudd i nord-troms" data-excerpt="en fersk avgjørelse fra klagenemnda for offentlige anskaffelser (kofa) (2025/0993) er en kraftig påminnelse om at de grunnleggende prinsippene i anskaffelsesloven gjelder med full...">
+          <span class="card-date">19. oktober 2025</span>
+          <h3>Byttet prismodell og holdt tilbake info: Dobbelt regelbrudd i Nord-Troms</h3>
+          <p>En fersk avgjørelse fra Klagenemnda for offentlige anskaffelser (KOFA) (2025/0993) er en kraftig påminnelse om at de grunnleggende prinsippene i anskaffelsesloven gjelder med full...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-10-17-den-farlige-snarveien-hvordan-gasscos-nodregel-i-rammeavtalen-kan-vaere-en-ulovl.html" class="article-card" data-title="den farlige snarveien: hvordan gasscos «nødregel» i rammeavtalen kan være en ulovlig omvei forbi konkurransepl" data-excerpt="i en fersk avgjørelse (sak 2025/0585) har klagenemnda godkjent en spesiell «nødregel» i gasscos it-kontrakter. men avgjørelsen reiser et fundamentalt spørsmål: er selve...">
+          <span class="card-date">17. oktober 2025</span>
+          <h3>Den farlige snarveien: Hvordan Gasscos «nødregel» i rammeavtalen kan være en ulovlig omvei forbi konkurransepl</h3>
+          <p>I en fersk avgjørelse (sak 2025/0585) har Klagenemnda godkjent en spesiell «nødregel» i Gasscos IT-kontrakter. Men avgjørelsen reiser et fundamentalt spørsmål: Er selve...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-10-14-ulovlig-vekting-fylkeskommunen-lot-pris-og-kvalitet-bytte-plass.html" class="article-card" data-title="ulovlig vekting: fylkeskommunen lot pris og kvalitet bytte plass" data-excerpt="troms fylkeskommune brøt regelverket da de benyttet en evalueringsmodell som gjorde det uvisst for leverandørene om pris eller kvalitet ville være det viktigste kriteriet. det...">
+          <span class="card-date">14. oktober 2025</span>
+          <h3>Ulovlig vekting: Fylkeskommunen lot pris og kvalitet bytte plass</h3>
+          <p>Troms fylkeskommune brøt regelverket da de benyttet en evalueringsmodell som gjorde det uvisst for leverandørene om pris eller kvalitet ville være det viktigste kriteriet. Det...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-10-12-tidligere-kontraktsbrudd-ikke-nok-for-avvisning-pga-quot-self-cleaning-quot.html" class="article-card" data-title="tidligere kontraktsbrudd ikke nok for avvisning - pga &amp;quot;self-cleaning&amp;quot;" data-excerpt="oslo tingretts avgjørelse om å stanse ruters anbudskonkurranse i bærum er mer enn bare en seier for unibuss; den er en viktig påminnelse om de grunnleggende prinsippene som styrer...">
+          <span class="card-date">12. oktober 2025</span>
+          <h3>Tidligere kontraktsbrudd ikke nok for avvisning - pga &amp;quot;self-cleaning&amp;quot;</h3>
+          <p>Oslo tingretts avgjørelse om å stanse Ruters anbudskonkurranse i Bærum er mer enn bare en seier for Unibuss; den er en viktig påminnelse om de grunnleggende prinsippene som styrer...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2025-10-09-opsjoner-i-rammeavtaler-betaler-du-for-en-fleksibilitet-du-ikke-trenger.html" class="article-card" data-title="opsjoner i rammeavtaler: betaler du for en fleksibilitet du ikke trenger?" data-excerpt="fleksibilitet er et nøkkelord i de fleste innkjøp, men få tenker over hva den egentlig koster. opsjoner i rammeavtaler gir en verdifull trygghet, men denne tryggheten har en...">
+          <span class="card-date">9. oktober 2025</span>
+          <h3>Opsjoner i rammeavtaler: Betaler du for en fleksibilitet du ikke trenger?</h3>
+          <p>Fleksibilitet er et nøkkelord i de fleste innkjøp, men få tenker over hva den egentlig koster. Opsjoner i rammeavtaler gir en verdifull trygghet, men denne tryggheten har en...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-10-06-kofa-paslagsmodellen-er-lovlig-men-bare-hvis-du-tor-a-apne-leverandorens-boker.html" class="article-card" data-title="kofa: påslagsmodellen er lovlig, men bare hvis du tør å åpne leverandørens bøker" data-excerpt="i en tid der teknologi og priser endres raskere enn en kommune kan planlegge et budsjett, utfordres tradisjonelle anbudsmodeller. en fersk avgjørelse fra klagenemnda for...">
+          <span class="card-date">6. oktober 2025</span>
+          <h3>KOFA: Påslagsmodellen er lovlig, men bare hvis du tør å åpne leverandørens bøker</h3>
+          <p>I en tid der teknologi og priser endres raskere enn en kommune kan planlegge et budsjett, utfordres tradisjonelle anbudsmodeller. En fersk avgjørelse fra Klagenemnda for...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-10-02-en-quot-bestepris-quot-regel-smart-for-kommunen-men-darlig-for-konkurransen.html" class="article-card" data-title="en &amp;quot;bestepris&amp;quot;-regel - smart for kommunen, men dårlig for konkurransen" data-excerpt="hva er en &amp;quot;beste pris&amp;quot;-regel?tenk deg at du inngår en rammeavtale om å kjøpe varer og tjenester i flere år. du vil være sikker på at du ikke betaler overpris i...">
+          <span class="card-date">2. oktober 2025</span>
+          <h3>En &amp;quot;bestepris&amp;quot;-regel - smart for kommunen, men dårlig for konkurransen</h3>
+          <p>Hva er en &amp;quot;Beste Pris&amp;quot;-regel?Tenk deg at du inngår en rammeavtale om å kjøpe varer og tjenester i flere år. Du vil være sikker på at du ikke betaler overpris i...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-29-oygarden-botelagt-8-mill-kr-for-feil-bruk-av-rammeavtale.html" class="article-card" data-title="øygarden bøtelagt 8 mill. kr. for feil bruk av rammeavtale" data-excerpt="da øygarden kommune ble ilagt et gebyr på over 8 millioner kroner (kofa-sak 2020/119), var det ikke bare på grunn av et spektakulært overforbruk. kjernen i saken var en langt mer...">
+          <span class="card-date">29. september 2025</span>
+          <h3>Øygarden bøtelagt 8 mill. kr. for feil bruk av rammeavtale</h3>
+          <p>Da Øygarden kommune ble ilagt et gebyr på over 8 millioner kroner (KOFA-sak 2020/119), var det ikke bare på grunn av et spektakulært overforbruk. Kjernen i saken var en langt mer...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-26-hybrid-mellom-fastpris-og-regningsarbeid-matte-avlyse-konkurransen.html" class="article-card" data-title="hybrid mellom fastpris og regningsarbeid - måtte avlyse konkurransen" data-excerpt="en nylig avgjørelse fra klagenemnda for offentlige anskaffelser (kofa) (2025/0303) understreker risikoen offentlige oppdragsgivere tar når de fraviker standardiserte...">
+          <span class="card-date">26. september 2025</span>
+          <h3>Hybrid mellom fastpris og regningsarbeid - måtte avlyse konkurransen</h3>
+          <p>En nylig avgjørelse fra Klagenemnda for offentlige anskaffelser (KOFA) (2025/0303) understreker risikoen offentlige oppdragsgivere tar når de fraviker standardiserte...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-24-konkurransegrunnlaget-gar-foran-informasjon-i-mercell.html" class="article-card" data-title="konkurransegrunnlaget går foran informasjon i mercell" data-excerpt="i en prinsipielt viktig avgjørelse har klagenemnda for offentlige anskaffelser (kofa) i sak 2025/0886 konkludert med at de detaljerte reglene i et konkurransegrunnlag veier tyngre...">
+          <span class="card-date">24. september 2025</span>
+          <h3>Konkurransegrunnlaget går foran informasjon i Mercell</h3>
+          <p>I en prinsipielt viktig avgjørelse har Klagenemnda for offentlige anskaffelser (KOFA) i sak 2025/0886 konkludert med at de detaljerte reglene i et konkurransegrunnlag veier tyngre...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-21-rammeavtalen-som-ble-en-juridisk-felle-fra-ugyldig-vilkar-til-tikkende-millionri.html" class="article-card" data-title="rammeavtalen som ble en juridisk felle: fra ugyldig vilkår til tikkende millionrisiko" data-excerpt="en avgjørelse fra kofa har avdekket en fundamental brist i en rammeavtale for oversettelsestjenester i departementene (sakene 2024/256 og 2024/577). ved å tillate &amp;quot;fritt...">
+          <span class="card-date">21. september 2025</span>
+          <h3>Rammeavtalen som ble en juridisk felle: Fra ugyldig vilkår til tikkende millionrisiko</h3>
+          <p>En avgjørelse fra KOFA har avdekket en fundamental brist i en rammeavtale for oversettelsestjenester i departementene (sakene 2024/256 og 2024/577). Ved å tillate &amp;quot;fritt...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-17-forsvarsmateriell-ilagt-milliongebyr-fortsatte-a-bruke-utlopt-rammeavtale-i-arev.html" class="article-card" data-title="forsvarsmateriell ilagt milliongebyr – fortsatte å bruke utløpt rammeavtale i årevis" data-excerpt="klagenemnda for offentlige anskaffelser har ilagt forsvarsmateriell et gebyr på nesten to millioner kroner. årsaken er at etaten fortsatte å kjøpe satellittkommunikasjonstjenester...">
+          <span class="card-date">17. september 2025</span>
+          <h3>Forsvarsmateriell ilagt milliongebyr – fortsatte å bruke utløpt rammeavtale i årevis</h3>
+          <p>Klagenemnda for offentlige anskaffelser har ilagt Forsvarsmateriell et gebyr på nesten to millioner kroner. Årsaken er at etaten fortsatte å kjøpe satellittkommunikasjonstjenester...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-17-arbeidsmiljo-er-ikke-miljo-avlysning-pga-miljokravet-igjen.html" class="article-card" data-title="arbeidsmiljø er ikke miljø... avlysning pga miljøkravet - igjen" data-excerpt="kofa har i sak (2025/0999) pålagt gran kommune å avlyse en anbudskonkurranse etter å ha funnet alvorlige feil i tildelingskriteriene knyttet til miljø. formelt så det ut til at...">
+          <span class="card-date">17. september 2025</span>
+          <h3>Arbeidsmiljø er ikke miljø... Avlysning pga miljøkravet - igjen</h3>
+          <p>KOFA har i sak (2025/0999) pålagt Gran kommune å avlyse en anbudskonkurranse etter å ha funnet alvorlige feil i tildelingskriteriene knyttet til miljø. Formelt så det ut til at...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-15-avlysning-pa-grunn-av-miljo-igjen.html" class="article-card" data-title="avlysning på grunn av miljø - igjen... " data-excerpt="miljøreglene er nå den desidert risikoen for innkjøpere og leverandører - serien av avgjørelser fra kofa hvor det offentlige pålegges å avlyse konkurranser om millionkontrakter...">
+          <span class="card-date">15. september 2025</span>
+          <h3>Avlysning på grunn av miljø - igjen... </h3>
+          <p>Miljøreglene er nå den desidert risikoen for innkjøpere og leverandører - serien av avgjørelser fra KOFA hvor det offentlige pålegges å avlyse konkurranser om millionkontrakter...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-15-hvordan-vinne-anbud-ikke-gi-bort-gratis-kvalitet.html" class="article-card" data-title="hvordan vinne anbud - ikke gi bort gratis kvalitet" data-excerpt="i kampen om offentlige kontrakter er det en vanlig feil mange leverandører begår: de tilbyr mer enn kunden ber om. i et forsøk på å imponere, legger man inn ekstra funksjonalitet,...">
+          <span class="card-date">15. september 2025</span>
+          <h3>Hvordan vinne anbud - ikke gi bort gratis kvalitet</h3>
+          <p>I kampen om offentlige kontrakter er det en vanlig feil mange leverandører begår: De tilbyr mer enn kunden ber om. I et forsøk på å imponere, legger man inn ekstra funksjonalitet,...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-11-millionkontrakt-avlyst-da-sykehusinnkjop-glemte-a-vurdere-den-viktigste-miljofak.html" class="article-card" data-title="millionkontrakt avlyst: da sykehusinnkjøp glemte å vurdere den viktigste miljøfaktoren" data-excerpt="en offentlig kontrakt verdt opptil 45 millioner kroner måtte nylig avlyses. grunnen? sykehusinnkjøp hf, en av landets største offentlige innkjøpere, hadde gjort en alvorlig...">
+          <span class="card-date">11. september 2025</span>
+          <h3>Millionkontrakt avlyst: Da Sykehusinnkjøp glemte å vurdere den viktigste miljøfaktoren</h3>
+          <p>En offentlig kontrakt verdt opptil 45 millioner kroner måtte nylig avlyses. Grunnen? Sykehusinnkjøp HF, en av landets største offentlige innkjøpere, hadde gjort en alvorlig...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-11-hva-er-prisen-for-miljo-topper-klagesaker-i-kofa.html" class="article-card" data-title="hva er prisen for miljø? topper klagesaker i kofa" data-excerpt="av robert myhre, kursleder og rådgiver i offentlige anskaffelseren titt i arkivet til klagenemnda for offentlige anskaffelser (kofa) forteller en alarmerende historie. nesten...">
+          <span class="card-date">11. september 2025</span>
+          <h3>Hva er prisen for miljø? Topper klagesaker i KOFA</h3>
+          <p>Av Robert Myhre, kursleder og rådgiver i offentlige anskaffelserEn titt i arkivet til Klagenemnda for offentlige anskaffelser (KOFA) forteller en alarmerende historie. Nesten...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-10-anbudsgrense-pa-600-ord-veltet-skolekontrakt.html" class="article-card" data-title="anbudsgrense på 600 ord veltet skolekontrakt" data-excerpt="en kontrakt for renovering av tomter skole ble tildelt på feil grunnlag etter at vinneren brøt en fastsatt ordgrense. klagenemnda for offentlige anskaffelser slår fast at tilbudet...">
+          <span class="card-date">10. september 2025</span>
+          <h3>Anbudsgrense på 600 ord veltet skolekontrakt</h3>
+          <p>En kontrakt for renovering av Tomter skole ble tildelt på feil grunnlag etter at vinneren brøt en fastsatt ordgrense. Klagenemnda for offentlige anskaffelser slår fast at tilbudet...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-10-brudd-pa-laerlingkravet-far-ingen-konsekvenser-kritisk-lys-pa-kofas-vurdering.html" class="article-card" data-title="brudd på lærlingkravet får ingen konsekvenser. kritisk lys på kofas vurdering" data-excerpt="en kommune glemte et lovpålagt krav om bruk av lærlinger i en anbudskonkurranse verdt 12 millioner kroner. konsekvensen? ingen. klagenemnda for offentlige anskaffelser (kofa)...">
+          <span class="card-date">10. september 2025</span>
+          <h3>Brudd på lærlingkravet får ingen konsekvenser. Kritisk lys på KOFAs vurdering</h3>
+          <p>En kommune glemte et lovpålagt krav om bruk av lærlinger i en anbudskonkurranse verdt 12 millioner kroner. Konsekvensen? Ingen. Klagenemnda for offentlige anskaffelser (KOFA)...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-07-gronne-innkjop-slik-kan-det-offentlige-lovlig-erstatte-30-prosentregelen-for-mil.html" class="article-card" data-title="grønne innkjøp: slik kan det offentlige lovlig erstatte 30-prosentregelen for miljø" data-excerpt="en fersk avgjørelse gir kommuner og statlige etater en viktig avklaring på hvordan de kan erstatte det strenge 30-prosentkravet for miljø med egne, absolutte krav. men det er...">
+          <span class="card-date">7. september 2025</span>
+          <h3>Grønne innkjøp: Slik kan det offentlige lovlig erstatte 30-prosentregelen for miljø</h3>
+          <p>En fersk avgjørelse gir kommuner og statlige etater en viktig avklaring på hvordan de kan erstatte det strenge 30-prosentkravet for miljø med egne, absolutte krav. Men det er...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-09-04-liten-tue-kan-velte-stort-anbud-krav-til-kvalitetsstyring-var-ulovlig.html" class="article-card" data-title="liten tue kan velte stort anbud – krav til kvalitetsstyring var ulovlig" data-excerpt="for mange små og mellomstore virksomheter kan deltakelse i offentlige anbud oppleves som krevende. selv tilsynelatende enkle krav kan i praksis utgjøre en barriere for deltakelse....">
+          <span class="card-date">4. september 2025</span>
+          <h3>Liten tue kan velte stort anbud – krav til kvalitetsstyring var ulovlig</h3>
+          <p>For mange små og mellomstore virksomheter kan deltakelse i offentlige anbud oppleves som krevende. Selv tilsynelatende enkle krav kan i praksis utgjøre en barriere for deltakelse....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-30-den-uformelle-sms-en-som-kan-velte-anskaffelsen-din.html" class="article-card" data-title="den uformelle sms-en som kan velte anskaffelsen din" data-excerpt="en rask sms til en leverandør for å avklare en detalj kan virke uskyldig. men en fersk uttalelse fra sivilombudet slår fast med all tydelighet: all skriftlig dialog er i praksis...">
+          <span class="card-date">30. august 2025</span>
+          <h3>Den uformelle SMS-en som kan velte anskaffelsen din</h3>
+          <p>En rask SMS til en leverandør for å avklare en detalj kan virke uskyldig. Men en fersk uttalelse fra Sivilombudet slår fast med all tydelighet: All skriftlig dialog er i praksis...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-24-tre-ting-du-kanskje-ikke-visste-om-dynamiske-innkjopsordninger.html" class="article-card" data-title="tre ting du kanskje ikke visste om dynamiske innkjøpsordninger" data-excerpt="slik åpner en «evigvarende» avtale døren for flere bedrifteren innkjøpsmetode i det offentlige endrer spillereglene for hvordan kontrakter tildeles. uten begrensning på antall...">
+          <span class="card-date">24. august 2025</span>
+          <h3>Tre ting du kanskje ikke visste om Dynamiske innkjøpsordninger</h3>
+          <p>Slik åpner en «evigvarende» avtale døren for flere bedrifterEn innkjøpsmetode i det offentlige endrer spillereglene for hvordan kontrakter tildeles. Uten begrensning på antall...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-24-kan-oppdragsgiver-avlyse-konkurransen-pa-grunn-av-egne-feil.html" class="article-card" data-title="kan oppdragsgiver avlyse konkurransen på grunn av egne feil?" data-excerpt="en fersk avgjørelse fra klagenemnda for offentlige anskaffelser (kofa) (2025/0303) bekrefter at en oppdragsgivers kan avlyse en konkurranse på grunn av uklarheter i...">
+          <span class="card-date">24. august 2025</span>
+          <h3>Kan oppdragsgiver avlyse konkurransen på grunn av egne feil?</h3>
+          <p>En fersk avgjørelse fra Klagenemnda for offentlige anskaffelser (KOFA) (2025/0303) bekrefter at en oppdragsgivers kan avlyse en konkurranse på grunn av uklarheter i...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-24-det-er-ikke-miljo-eller-klima-det-er-miljo-og-klima.html" class="article-card" data-title="det er ikke miljø eller klima. det er miljø og klima." data-excerpt="offentlige innkjøpere har feiltolket et av lovens strengeste miljøkrav, noe som har ført til at konkurranser om kontrakter for titalls millioner måtte avlyses. klagenemnda for...">
+          <span class="card-date">24. august 2025</span>
+          <h3>Det er ikke miljø ELLER klima. Det er miljø OG klima.</h3>
+          <p>Offentlige innkjøpere har feiltolket et av lovens strengeste miljøkrav, noe som har ført til at konkurranser om kontrakter for titalls millioner måtte avlyses. Klagenemnda for...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-24-nar-reduksjon-av-kontrakten-blir-en-ulovlig-anskaffelse.html" class="article-card" data-title="når reduksjon av kontrakten blir en ulovlig anskaffelse" data-excerpt="i en banebrytende dom har eu-domstolen fastslått at en forliksavtale som reduserte en offentlig it-kontrakt fra 527 millioner til rundt 85 millioner danske kroner, utgjorde en...">
+          <span class="card-date">24. august 2025</span>
+          <h3>Når reduksjon av kontrakten blir en ulovlig anskaffelse</h3>
+          <p>I en banebrytende dom har EU-domstolen fastslått at en forliksavtale som reduserte en offentlig IT-kontrakt fra 527 millioner til rundt 85 millioner danske kroner, utgjorde en...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-20-gjennomsnittlig-timepris-er-ikke-en-forretningshemmelighet-og-ma-opplyses.html" class="article-card" data-title="gjennomsnittlig timepris er ikke en forretningshemmelighet og må opplyses" data-excerpt="en fersk avgjørelse fra kofa (2025/0650) tegner et nytt kart for hva som kan hemmeligholdes i offentlige anbud. da bergen kommune nektet innsyn i prisen på en bybane-kontrakt til...">
+          <span class="card-date">20. august 2025</span>
+          <h3>Gjennomsnittlig timepris er ikke en forretningshemmelighet og må opplyses</h3>
+          <p>En fersk avgjørelse fra KOFA (2025/0650) tegner et nytt kart for hva som kan hemmeligholdes i offentlige anbud. Da Bergen kommune nektet innsyn i prisen på en Bybane-kontrakt til...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-19-forhandlinger-hvor-gar-grensen-for-hva-man-kan-si.html" class="article-card" data-title="forhandlinger: hvor går grensen for hva man kan si?" data-excerpt="forhandlinger kan være en avgjørende fase i en offentlig konkurranse, men både oppdragsgivere og leverandører er ofte usikre på spillereglene. hvor mye informasjon kan en...">
+          <span class="card-date">19. august 2025</span>
+          <h3>Forhandlinger: Hvor går grensen for hva man kan si?</h3>
+          <p>Forhandlinger kan være en avgjørende fase i en offentlig konkurranse, men både oppdragsgivere og leverandører er ofte usikre på spillereglene. Hvor mye informasjon kan en...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-18-eksosroret-det-gronne-paradokset-i-offentlige-innkjop.html" class="article-card" data-title="eksosrøret - det grønne paradokset i offentlige innkjøp" data-excerpt="det grønne paradokset i offentlige innkjøpnår det offentlige bruker milliarder på varer og tjenester, skal de samtidig drive frem det grønne skiftet. men en fersk avgjørelse...">
+          <span class="card-date">18. august 2025</span>
+          <h3>Eksosrøret - det grønne paradokset i offentlige innkjøp</h3>
+          <p>Det grønne paradokset i offentlige innkjøpNår det offentlige bruker milliarder på varer og tjenester, skal de samtidig drive frem det grønne skiftet. Men en fersk avgjørelse...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-14-de-nye-anbudsdetektivene-slik-vil-de-jakte-pa-konkurrentens-gamle-synder-for-a-v.html" class="article-card" data-title="de nye anbudsdetektivene: slik vil de jakte på konkurrentens gamle synder for å vinne milliardkontrakten" data-excerpt="anbudskrigen har fått et nytt våpen: ferdigpakket skittentøy fra rivalens fortiden fersk rettsavgjørelse, utløst av et anonymt tips, har endret spillereglene for norsk næringsliv....">
+          <span class="card-date">14. august 2025</span>
+          <h3>De nye anbudsdetektivene: Slik vil de jakte på konkurrentens gamle synder for å vinne milliardkontrakten</h3>
+          <p>Anbudskrigen har fått et nytt våpen: Ferdigpakket skittentøy fra rivalens fortidEn fersk rettsavgjørelse, utløst av et anonymt tips, har endret spillereglene for norsk næringsliv....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-13-tilbyder-ble-avvist-pa-grunn-av-sosial-dumping-hos-underleverandor.html" class="article-card" data-title="tilbyder ble avvist på grunn av sosial dumping hos underleverandør " data-excerpt="en prinsipiell avgjørelse fra oslo tingrett setter en ny standard for tilbydernes ansvar for sosial dumping hos underleverandører. det oppsiktsvekkende i kjennelsen er prinsippet:...">
+          <span class="card-date">13. august 2025</span>
+          <h3>Tilbyder ble avvist på grunn av sosial dumping hos underleverandør </h3>
+          <p>En prinsipiell avgjørelse fra Oslo tingrett setter en ny standard for tilbydernes ansvar for sosial dumping hos underleverandører. Det oppsiktsvekkende i kjennelsen er prinsippet:...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-09-mange-offentlige-rammeavtaler-kan-vaere-ugyldige.html" class="article-card" data-title="mange offentlige rammeavtaler kan være ugyldige" data-excerpt="en krystallklar dom fra eu-domstolen fastslår at offentlige rammeavtaler uten et fastsatt tak er ulovlige. det gir et nytt og kraftig våpen, som kan tvinge kommuner og statlige...">
+          <span class="card-date">9. august 2025</span>
+          <h3>Mange offentlige rammeavtaler kan være ugyldige</h3>
+          <p>En krystallklar dom fra EU-domstolen fastslår at offentlige rammeavtaler uten et fastsatt tak er ulovlige. Det gir et nytt og kraftig våpen, som kan tvinge kommuner og statlige...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-07-ulovlig-avtale-offentlig-sektor-kan-selv-be-domstolen-annullere-kontrakten.html" class="article-card" data-title="ulovlig avtale? offentlig sektor kan selv be domstolen annullere kontrakten" data-excerpt="en ny dom fra eu-domstolen slår fast at en offentlig oppdragsgiver kan få en kontrakt kjent ugyldig fordi den ble inngått som ulovlig direkte anskaffelse, selv om det egentlige...">
+          <span class="card-date">7. august 2025</span>
+          <h3>Ulovlig avtale? Offentlig sektor kan selv be domstolen annullere kontrakten</h3>
+          <p>En ny dom fra EU-domstolen slår fast at en offentlig oppdragsgiver kan få en kontrakt kjent ugyldig fordi den ble inngått som ulovlig direkte anskaffelse, selv om det egentlige...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-04-fra-quot-kan-quot-til-quot-skal-quot-laerlingreglene-skjerpes-kraftig-i-offentli.html" class="article-card" data-title="fra &amp;quot;kan&amp;quot; til &amp;quot;skal&amp;quot; - lærlingreglene skjerpes kraftig i offentlige anskaffelser fra 1. august" data-excerpt="den 1. august 2025 trådte omfattende endringer i kraft for lærlingreglene i offentlige anskaffelser. endringene representerer en balansert innstramming: færre kontrakter omfattes,...">
+          <span class="card-date">4. august 2025</span>
+          <h3>Fra &amp;quot;kan&amp;quot; til &amp;quot;skal&amp;quot; - lærlingreglene skjerpes kraftig i offentlige anskaffelser fra 1. august</h3>
+          <p>Den 1. august 2025 trådte omfattende endringer i kraft for lærlingreglene i offentlige anskaffelser. Endringene representerer en balansert innstramming: færre kontrakter omfattes,...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2025-08-03-brudd-pa-informasjonsplikt-og-grensen-for-ulovlig-kontraktsendring.html" class="article-card" data-title="brudd på informasjonsplikt og grensen for ulovlig kontraktsendring" data-excerpt="i sak 2025/0064 mot rana kommune avklarer klagenemnda (kofa) to sentrale punkter: den absolutte plikten til å dele informasjon likt, og når en oppdragsgivers passivitet overfor...">
+          <span class="card-date">3. august 2025</span>
+          <h3>Brudd på informasjonsplikt og grensen for ulovlig kontraktsendring</h3>
+          <p>I sak 2025/0064 mot Rana kommune avklarer Klagenemnda (KOFA) to sentrale punkter: den absolutte plikten til å dele informasjon likt, og når en oppdragsgivers passivitet overfor...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-27-nar-leverandor-lover-mer-enn-produktet-kan.html" class="article-card" data-title="når leverandør lover mer enn produktet kan" data-excerpt="standardprodukt vs. kontraktsløfte - hvem skal innkjøper stole på? hålogaland lagmannsrett lh-2023-78956 saken i korte trekksykehusinnkjøp hf kunngjorde konkurranse om...">
+          <span class="card-date">27. juli 2025</span>
+          <h3>Når leverandør lover mer enn produktet kan</h3>
+          <p>Standardprodukt vs. kontraktsløfte - hvem skal innkjøper stole på? Hålogaland lagmannsrett LH-2023-78956 SAKEN I KORTE TREKKSykehusinnkjøp HF kunngjorde konkurranse om...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-20-eu-domstolene-skaper-quot-tilbudets-fire-hjorner-quot-men-hva-med-oppdragsgivers.html" class="article-card" data-title="eu-domstolene skaper &amp;quot;tilbudets fire hjørner&amp;quot; - men hva med oppdragsgivers valgfrihet?" data-excerpt="dataintegritet som absolutt krav - ingen unntak for tilbyderehovedbudskap: kategorisk forbud etablerteu-domstolens avgjørelser i t-376/21 (14. juni 2023) og c-534/23 p (3. juli...">
+          <span class="card-date">20. juli 2025</span>
+          <h3>EU-domstolene skaper &amp;quot;tilbudets fire hjørner&amp;quot; - men hva med oppdragsgivers valgfrihet?</h3>
+          <p>Dataintegritet som absolutt krav - ingen unntak for tilbydereHovedbudskap: Kategorisk forbud etablertEU-domstolens avgjørelser i T-376/21 (14. juni 2023) og C-534/23 P (3. juli...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-20-eu-dom-lettere-a-begrunne-valg-av-leverandor.html" class="article-card" data-title="eu-dom: lettere å begrunne valg av leverandør" data-excerpt="ny eu-dom klargjør kravene til begrunnelse ved tildeling.bakgrunninstituto cervantes tapte et språkundervisningsanbud til eu med bare 1,49 poengs margin (87,40 mot 88,89 poeng)....">
+          <span class="card-date">20. juli 2025</span>
+          <h3>EU-dom: Lettere å begrunne valg av leverandør</h3>
+          <p>Ny EU-dom klargjør kravene til begrunnelse ved tildeling.BakgrunnInstituto Cervantes tapte et språkundervisningsanbud til EU med bare 1,49 poengs margin (87,40 mot 88,89 poeng)....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-07-nar-ai-utviklere-vil-ha-tilgang-til-dine-innkjopsdata.html" class="article-card" data-title="når ai-utviklere vil ha tilgang til dine innkjøpsdata" data-excerpt="">
+          <span class="card-date">7. juli 2025</span>
+          <h3>Når AI-utviklere vil ha tilgang til dine innkjøpsdata</h3>
+          <p></p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-07-open-data-sikrer-digital-tilgang-til-offentlige-anskaffelser.html" class="article-card" data-title="open data sikrer digital tilgang til offentlige anskaffelser" data-excerpt="en fersk dom fra eu-domstolen, c-336/23.,  gir viktig klarhet om forholdet mellom åpne data-regler og beskyttelse av forretningshemmeligheter i offentlige anskaffelser.eus regler...">
+          <span class="card-date">7. juli 2025</span>
+          <h3>Open Data sikrer digital tilgang til offentlige anskaffelser</h3>
+          <p>En fersk dom fra EU-domstolen, C-336/23.,  gir viktig klarhet om forholdet mellom åpne data-regler og beskyttelse av forretningshemmeligheter i offentlige anskaffelser.EUs regler...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-06-kan-prosjektet-endres-etter-tilbudsfristen.html" class="article-card" data-title="kan prosjektet endres etter tilbudsfristen?" data-excerpt="om prosjektet kan endres, avhenger av konkurransetypen - og hvor store endringene er.">
+          <span class="card-date">6. juli 2025</span>
+          <h3>Kan prosjektet endres etter tilbudsfristen?</h3>
+          <p>Om prosjektet kan endres, avhenger av konkurransetypen - og hvor store endringene er.</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-06-kommunen-kunne-endre-prosjektet-etter-tilbudsfristen.html" class="article-card" data-title="kommunen kunne endre prosjektet etter tilbudsfristen" data-excerpt="sula kommune endret et boligprosjekt etter at tilbudene var kommet inn - og fikk medhold i kofa sak 2025/0787 da en leverandør klaget. saken viser hvor mye kommuner kan endre på...">
+          <span class="card-date">6. juli 2025</span>
+          <h3>Kommunen kunne endre prosjektet etter tilbudsfristen</h3>
+          <p>Sula kommune endret et boligprosjekt etter at tilbudene var kommet inn - og fikk medhold i KOFA sak 2025/0787 da en leverandør klaget. Saken viser hvor mye kommuner kan endre på...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-05-hvorfor-cpv-koder-ikke-kan-behandles-som-bagateller.html" class="article-card" data-title="hvorfor cpv-koder ikke kan behandles som bagateller" data-excerpt="hvorfor cpv-koder ikke kan behandles som bagatellerhovedsakenklagenemnda har tvunget sola kommune til å avlyse sin konkurranse for multifunksjonsmaskiner (kofa sak 2025/0669)....">
+          <span class="card-date">5. juli 2025</span>
+          <h3>Hvorfor CPV-koder ikke kan behandles som bagateller</h3>
+          <p>Hvorfor CPV-koder ikke kan behandles som bagatellerHOVEDSAKENKlagenemnda har tvunget Sola kommune til å avlyse sin konkurranse for multifunksjonsmaskiner (KOFA sak 2025/0669)....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-04-kofa-2025-01090-video.html" class="article-card" data-title="kofa 2025/01090 video" data-excerpt="krav til erfaring må vurderes konkret.">
+          <span class="card-date">4. juli 2025</span>
+          <h3>KOFA 2025/01090 Video</h3>
+          <p>Krav til erfaring må vurderes konkret.</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-04-hr-2025-1097-a.html" class="article-card" data-title="hr-2025-1097-a" data-excerpt="8731bf56f2794d0baa556701756b60ea.movforskjellen på avvik og alternative tilbud">
+          <span class="card-date">4. juli 2025</span>
+          <h3>HR-2025-1097-A</h3>
+          <p>8731bf56f2794d0baa556701756b60ea.MOVForskjellen på avvik og alternative tilbud</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-07-03-quot-skal-quot-krav-medforer-ikke-automatisk-at-tilbud-med-avvik-ma-avvises.html" class="article-card" data-title="&amp;quot;skal&amp;quot;-krav medfører ikke automatisk at tilbud med avvik må avvises" data-excerpt="hovedsakenkofa avgjorde 25. juni 2025 (2025/0498) en prinsipiell sak om når tilbud skal avvises for avvik fra tekniske krav. avgjørelsen klargjør at selv &amp;quot;skal-krav&amp;quot;...">
+          <span class="card-date">3. juli 2025</span>
+          <h3>&amp;quot;Skal&amp;quot;-krav medfører ikke automatisk at tilbud med avvik må avvises</h3>
+          <p>HovedsakenKOFA avgjorde 25. juni 2025 (2025/0498) en prinsipiell sak om når tilbud skal avvises for avvik fra tekniske krav. Avgjørelsen klargjør at selv &amp;quot;skal-krav&amp;quot;...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2025-06-29-regelbrudd-uten-konsekvenser-nar-avlysning-blir-kommunens-frikort.html" class="article-card" data-title="regelbrudd uten konsekvenser: når avlysning blir kommunens frikort" data-excerpt="lagmannsretten har i en ny sak (lh-2025-7215) gitt viktige retningslinjer for å vurdere om oppdragsgiver kan avskjære erstatningskrav med begrunnelse i at konkurransen ville blitt...">
+          <span class="card-date">29. juni 2025</span>
+          <h3>Regelbrudd uten konsekvenser: Når avlysning blir kommunens frikort</h3>
+          <p>Lagmannsretten har i en ny sak (LH-2025-7215) gitt viktige retningslinjer for å vurdere om oppdragsgiver kan avskjære erstatningskrav med begrunnelse i at konkurransen ville blitt...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-06-29-nar-ma-oppdragsgiver-avvise-tilbud-som-avviker-fra-kravspesifikasjonen.html" class="article-card" data-title="når må oppdragsgiver avvise tilbud som avviker fra kravspesifikasjonen?" data-excerpt="norges høyesterett har avsagt en viktig dom (hr-2025-1098-a) som både klargjør og skjerper reglene for offentlige anskaffelser. saken gjaldt en havnekontrakt hvor vinneren hadde...">
+          <span class="card-date">29. juni 2025</span>
+          <h3>Når må oppdragsgiver avvise tilbud som avviker fra kravspesifikasjonen?</h3>
+          <p>Norges Høyesterett har avsagt en viktig dom (HR-2025-1098-A) som både klargjør og skjerper reglene for offentlige anskaffelser. Saken gjaldt en havnekontrakt hvor vinneren hadde...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-06-26-muntlige-lofter-i-anbudskonkurranser-bare-skriftlig-kommunikasjon-teller.html" class="article-card" data-title="muntlige løfter i anbudskonkurranser: bare skriftlig kommunikasjon teller" data-excerpt="klagenemnda for offentlige anskaffelser, sak 2025/0436sakssammendragørland kommune gjennomførte anbudskonkurranse for maskinentreprenørtjenester med krav om miljøsertifisering...">
+          <span class="card-date">26. juni 2025</span>
+          <h3>Muntlige løfter i anbudskonkurranser: Bare skriftlig kommunikasjon teller</h3>
+          <p>Klagenemnda for offentlige anskaffelser, sak 2025/0436SakssammendragØrland kommune gjennomførte anbudskonkurranse for maskinentreprenørtjenester med krav om miljøsertifisering...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-06-26-droppe-30-miljovekting-da-ma-du-bevise-at-alternativet-er-bedre.html" class="article-card" data-title="droppe 30% miljøvekting? da må du bevise at alternativet er bedre" data-excerpt="klagenemnda for offentlige anskaffelser, sak 2025/0666sakssammendraghafslund celsio gjennomførte anbudskonkurranse for industrirengjøring og sugebiltjenester til 192 millioner...">
+          <span class="card-date">26. juni 2025</span>
+          <h3>Droppe 30% miljøvekting? Da må du bevise at alternativet er bedre</h3>
+          <p>Klagenemnda for offentlige anskaffelser, sak 2025/0666SakssammendragHafslund Celsio gjennomførte anbudskonkurranse for industrirengjøring og sugebiltjenester til 192 millioner...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-06-23-eu-dom-krever-tydeligere-offentlige-kontrakter.html" class="article-card" data-title="eu-dom krever tydeligere offentlige kontrakter" data-excerpt="slutt på &amp;quot;underforståtte&amp;quot; regler - men ikke all fleksibilitet forsvinneren fersk dom fra eu-domstolen (c-82/24) setter nye standarder for hvor tydelige offentlige...">
+          <span class="card-date">23. juni 2025</span>
+          <h3>EU-dom krever tydeligere offentlige kontrakter</h3>
+          <p>Slutt på &amp;quot;underforståtte&amp;quot; regler - men ikke all fleksibilitet forsvinnerEn fersk dom fra EU-domstolen (C-82/24) setter nye standarder for hvor tydelige offentlige...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2025-06-16-farvel-til-enkle-sorteringsregler-kvalifikasjonskrav-ma-begrunnes-saklig-og-konk.html" class="article-card" data-title="farvel til enkle sorteringsregler: kvalifikasjonskrav må begrunnes saklig og konkret" data-excerpt="kofa slår fast: kvalifikasjonskrav kan ikke kategorisk ekskludere barneskoler og boligbyggklagenemnda for offentlige anskaffelser har i sak 2025/0109 konkludert med at buskerud...">
+          <span class="card-date">16. juni 2025</span>
+          <h3>Farvel til enkle sorteringsregler: Kvalifikasjonskrav må begrunnes saklig og konkret</h3>
+          <p>KOFA slår fast: Kvalifikasjonskrav kan ikke kategorisk ekskludere barneskoler og boligbyggKlagenemnda for offentlige anskaffelser har i sak 2025/0109 konkludert med at Buskerud...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2019-03-23-ulovlig-direkte-anskaffelse-og-rigget-konkurranse.html" class="article-card" data-title="ulovlig direkte anskaffelse og rigget konkurranse" data-excerpt="i en fersk dom fra lagmannsretten (lh-2018-99424) ble det avdekket både ulovlig direkte anskaffelse, og retten la til grunn at hele konkurransen var rigget til fordel for en...">
+          <span class="card-date">23. mars 2019</span>
+          <h3>Ulovlig direkte anskaffelse og rigget konkurranse</h3>
+          <p>I en fersk dom fra lagmannsretten (LH-2018-99424) ble det avdekket både ulovlig direkte anskaffelse, og retten la til grunn at hele konkurransen var rigget til fordel for en...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2019-03-03-viktige-avklaringer-i-ny-dom.html" class="article-card" data-title="viktige avklaringer i ny dom" data-excerpt="bilde: silje drevdal / statens vegvesen  lagmnannsretten har i en helt fersk dom tatt stilling til:  1) hvilke veiledning må gis i konkurransegrunnlaget,  2)hva er...">
+          <span class="card-date">3. mars 2019</span>
+          <h3>Viktige avklaringer i ny dom</h3>
+          <p>Bilde: Silje Drevdal / Statens vegvesen  Lagmnannsretten har i en helt fersk dom tatt stilling til:  1) hvilke veiledning må gis i konkurransegrunnlaget,  2)hva er...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2019-02-25-tradebroker-avtale-ble-en-ulovlig-direkte-anskaffelse-for-bane-nor.html" class="article-card" data-title="tradebroker-avtale ble en ulovlig direkte anskaffelse for bane nor" data-excerpt="bane nor fikk et gebyr på 3,8 mill. kr. i kofa-sak 2018/24 i en ulovlig direkte anskaffelse. bane nor hadde gjennomført en konkurranse, som endte med at alle tilbud ble avvist....">
+          <span class="card-date">25. februar 2019</span>
+          <h3>Tradebroker-avtale ble en ulovlig direkte anskaffelse for Bane NOR</h3>
+          <p>Bane NOR fikk et gebyr på 3,8 mill. kr. I KOFA-sak 2018/24 i en ulovlig direkte anskaffelse. Bane NOR hadde gjennomført en konkurranse, som endte med at alle tilbud ble avvist....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-12-16-pa-tide-a-bruke-anskaffelser-som-strategisk-virkemiddel-for-gronn-omstilling.html" class="article-card" data-title="på tide å bruke anskaffelser som strategisk virkemiddel for grønn omstilling" data-excerpt="«bruk av merkeordninger kan bli dyrt for leverandører og gi konkurransebegrensning» var overskriften i artikkel på nettsiden forum for anskaffelser (www.foa.no) 25. november....">
+          <span class="card-date">16. desember 2018</span>
+          <h3>På tide å bruke anskaffelser som strategisk virkemiddel for grønn omstilling</h3>
+          <p>«Bruk av merkeordninger kan bli dyrt for leverandører og gi konkurransebegrensning» var overskriften i artikkel på nettsiden Forum for Anskaffelser (www.foa.no) 25. november....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-08-26-frykter-at-utforming-av-offentlige-kontrakter-skviser-de-sma-ut-av-anleggsmarked.html" class="article-card" data-title="frykter at utforming av offentlige kontrakter skviser de små ut av anleggsmarkedet" data-excerpt="mindre entreprenør-bedrifter er alvorlig bekymret for om det er plass for dem i anleggsmarkedet. det er for store kontrakter for dem, og utformingen av kontraktene på doffin er...">
+          <span class="card-date">26. august 2018</span>
+          <h3>Frykter at utforming av offentlige kontrakter skviser de små ut av anleggsmarkedet</h3>
+          <p>Mindre entreprenør-bedrifter er alvorlig bekymret for om det er plass for dem i anleggsmarkedet. Det er for store kontrakter for dem, og utformingen av kontraktene på DOFFIN er...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-06-02-ber-om-a-fa-dokumentert-at-utsatt-tildeling-av-togkontrakter-ikke-forfordeler-ns.html" class="article-card" data-title="ber om å få dokumentert at utsatt tildeling av togkontrakter ikke forfordeler nsb" data-excerpt="kontraktstildeling for to av de store «togpakkene» er utsatt. det er nho transport kritisk til fordi dagens trafikkavtaler med nsb dermed blir forlenget for seks måneder for både...">
+          <span class="card-date">2. juni 2018</span>
+          <h3>Ber om å få dokumentert at utsatt tildeling av togkontrakter ikke forfordeler NSB</h3>
+          <p>Kontraktstildeling for to av de store «togpakkene» er utsatt. Det er NHO Transport kritisk til fordi dagens trafikkavtaler med NSB dermed blir forlenget for seks måneder for både...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2018-05-13-skal-bli-et-stjerneeksempel-pa-hva-man-kan-oppna-ved-miljokrav-i-offentlige-ansk.html" class="article-card" data-title="skal bli et stjerneeksempel på hva man kan oppnå ved miljøkrav i offentlige anskaffelser" data-excerpt="på stortinget er det bred enighet om å gjøre det nye regjeringskvartalet til et stjerneeksempel på hva man kan opp nå ved miljøkrav i offentlige anskaffelser. det skal bli et...">
+          <span class="card-date">13. mai 2018</span>
+          <h3>Skal bli et stjerneeksempel på hva man kan oppnå ved miljøkrav i offentlige anskaffelser</h3>
+          <p>På Stortinget er det bred enighet om å gjøre det nye regjeringskvartalet til et stjerneeksempel på hva man kan opp nå ved miljøkrav i offentlige anskaffelser. Det skal bli et...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-05-09-seminarklipp-environmental-product-declaration-epd.html" class="article-card" data-title="seminarklipp: environmental product declaration (epd)" data-excerpt="jobber du med anskaffelser og lurer på hva de tre mystiske bokstavene epd egentlig betyr? advokatfullmektig kaja sæland sandvig gjennomgikk hva det innebærer å ha en environmental...">
+          <span class="card-date">9. mai 2018</span>
+          <h3>Seminarklipp: Environmental Product Declaration (EPD)</h3>
+          <p>Jobber du med anskaffelser og lurer på hva de tre mystiske bokstavene EPD egentlig betyr? Advokatfullmektig Kaja Sæland Sandvig gjennomgikk hva det innebærer å ha en Environmental...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-05-05-anker-for-a-rekke-a-bli-ferdig-med-kontrakten-for-endelig-dom.html" class="article-card" data-title="anker for å rekke å bli ferdig med kontrakten før endelig dom?" data-excerpt="herøy kommune ble i alstahaug tingrett dømt til å betale overtredelsesgebyr på nesten 5.9 mill. kr. for en ulovlig direkte anskaffelse. anskaffelsen gjaldt bygging av nytt...">
+          <span class="card-date">5. mai 2018</span>
+          <h3>Anker for å rekke å bli ferdig med kontrakten før endelig dom?</h3>
+          <p>Herøy kommune ble i Alstahaug tingrett dømt til å betale overtredelsesgebyr på nesten 5.9 mill. kr. for en ulovlig direkte anskaffelse. Anskaffelsen gjaldt bygging av nytt...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-05-05-nesten-ubegrenset-frihet-ved-valg-av-tildelingskriterier-men-nesten-bundet-ved-b.html" class="article-card" data-title="nesten ubegrenset frihet ved valg av tildelingskriterier, men nesten bundet ved bruk" data-excerpt="oppdragsgiveren har et vidt innkjøpsfaglig skjønn ved utformingen av tildelingskriteriene.tildelingskriteriene kan derimot ikke gi oppdragsgiveren et tilnærmet ubegrenset skjønn...">
+          <span class="card-date">5. mai 2018</span>
+          <h3>Nesten ubegrenset frihet ved valg av tildelingskriterier, men nesten bundet ved bruk</h3>
+          <p>Oppdragsgiveren har et vidt innkjøpsfaglig skjønn ved utformingen av tildelingskriteriene.Tildelingskriteriene kan derimot ikke gi oppdragsgiveren et tilnærmet ubegrenset skjønn...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-04-29-endring-av-konkurransegrunnlaget-etter-tilbudsfrist.html" class="article-card" data-title="endring av konkurransegrunnlaget etter tilbudsfrist" data-excerpt="utgangspunktet er at det ikke kan gjøres endringer i konkurransegrunnlaget etter tilbudsfristen har utløpt. dette er naturlig, siden en slik endring kan påvirke utfallet av...">
+          <span class="card-date">29. april 2018</span>
+          <h3>Endring av konkurransegrunnlaget etter tilbudsfrist</h3>
+          <p>Utgangspunktet er at det ikke kan gjøres endringer i konkurransegrunnlaget etter tilbudsfristen har utløpt. Dette er naturlig, siden en slik endring kan påvirke utfallet av...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-04-21-ma-sorge-for-a-ha-nodvendig-kompetanse-ved-ikt-tjenesteutsetting.html" class="article-card" data-title="må sørge for å ha nødvendig kompetanse ved ikt-tjenesteutsetting" data-excerpt="- vi må sørge for at man ved tjenesteutsetting har kompetanse og stiller de kravene som er nødvendige, poengterte justis- og beredskapsminister tor mikkel vara da stortinget nylig...">
+          <span class="card-date">21. april 2018</span>
+          <h3>Må sørge for å ha nødvendig kompetanse ved IKT-tjenesteutsetting</h3>
+          <p>- Vi må sørge for at man ved tjenesteutsetting har kompetanse og stiller de kravene som er nødvendige, poengterte justis- og beredskapsminister Tor Mikkel Vara da Stortinget nylig...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2018-04-17-driver-konkurransevridning-i-anbud-om-alarmsystemer-hindrer-innovasjon-av-tjenes.html" class="article-card" data-title="driver konkurransevridning i anbud om alarmsystemer – hindrer innovasjon av tjenesteproduksjon" data-excerpt="mange kommuner driver ubevisst med konkurransevridning i anbudskonkurranser når de skal f.eks. kjøpe pasientvarslingssystemer. ofte står det i anbudspapirene at kommunen dekker...">
+          <span class="card-date">17. april 2018</span>
+          <h3>Driver konkurransevridning i anbud om alarmsystemer – hindrer innovasjon av tjenesteproduksjon</h3>
+          <p>Mange kommuner driver ubevisst med konkurransevridning i anbudskonkurranser når de skal f.eks. kjøpe pasientvarslingssystemer. Ofte står det i anbudspapirene at kommunen dekker...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-04-13-bruk-frivillig-karensperiode-ved-dynamisk-innkjopsordning.html" class="article-card" data-title="bruk frivillig karensperiode ved dynamisk innkjøpsordning" data-excerpt="en dynamisk innkjøpsordning er en fullelektronisk innkjøpsprosess som kan brukes på ordinære anskaffelser som er tilgjengelig på markedet, for eksempel kontorrekvisita.når en...">
+          <span class="card-date">13. april 2018</span>
+          <h3>Bruk frivillig karensperiode ved dynamisk innkjøpsordning</h3>
+          <p>En dynamisk innkjøpsordning er en fullelektronisk innkjøpsprosess som kan brukes på ordinære anskaffelser som er tilgjengelig på markedet, for eksempel kontorrekvisita.Når en...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-04-13-laerlingordning-kunne-benyttes-som-tildelingskriterium.html" class="article-card" data-title="lærlingordning kunne benyttes som tildelingskriterium" data-excerpt="lindesnes gjennomførte en konkurranse om drift og vedlikehold av veier og kommunale anlegg, som ble klaget inn for kofa (sak 2018/82). et av tildelingskriteriene var...">
+          <span class="card-date">13. april 2018</span>
+          <h3>Lærlingordning kunne benyttes som tildelingskriterium</h3>
+          <p>Lindesnes gjennomførte en konkurranse om drift og vedlikehold av veier og kommunale anlegg, som ble klaget inn for KOFA (sak 2018/82). Et av tildelingskriteriene var...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-04-07-legemiddel-anskaffelser-med-miljokrav-kommer-til-hosten.html" class="article-card" data-title="legemiddel-anskaffelser med miljøkrav kommer til høsten" data-excerpt="fra andre halvår 2018 blir det ikke bare laveste pris som teller når norske myndigheter skal bestemme hvilke legemidler de vil kjøpe inn. også miljøansvar skal være et kriterium....">
+          <span class="card-date">7. april 2018</span>
+          <h3>Legemiddel-anskaffelser med miljøkrav kommer til høsten</h3>
+          <p>Fra andre halvår 2018 blir det ikke bare laveste pris som teller når norske myndigheter skal bestemme hvilke legemidler de vil kjøpe inn. Også miljøansvar skal være et kriterium....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-04-04-rett-til-trygge-pensjonsvilkar-ved-konkurranseutsetting-av-offentlige-virksomhet.html" class="article-card" data-title="rett til trygge pensjonsvilkår ved konkurranseutsetting av offentlige virksomheter" data-excerpt="et viktig spørsmål ved omorganisering og konkurranseutsetting i offentlig sektor, er hvilke pensjonsrettigheter de ansatte skal ha med seg dersom de må gå over til privat sektor....">
+          <span class="card-date">4. april 2018</span>
+          <h3>Rett til trygge pensjonsvilkår ved konkurranseutsetting av offentlige virksomheter</h3>
+          <p>Et viktig spørsmål ved omorganisering og konkurranseutsetting i offentlig sektor, er hvilke pensjonsrettigheter de ansatte skal ha med seg dersom de må gå over til privat sektor....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-04-02-eksempler-pa-innovative-anskaffelser.html" class="article-card" data-title="eksempler på innovative anskaffelser" data-excerpt="de fleste innovative anskaffelser i europe skjer innen ikt.  dette fremgår av eocds rapport fra 2017 om innovasjon i offentlige anskaffelser. samtidig er det trukket frem gode...">
+          <span class="card-date">2. april 2018</span>
+          <h3>Eksempler på innovative anskaffelser</h3>
+          <p>De fleste innovative anskaffelser i Europe skjer innen IKT.  Dette fremgår av EOCDs rapport fra 2017 om innovasjon i offentlige anskaffelser. Samtidig er det trukket frem gode...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2018-03-28-ikke-bare-store-hotellkjeder.html" class="article-card" data-title="ikke bare store hotellkjeder" data-excerpt="det har i mange statlige anskaffelser av hotelltjenesten vært en praksis med å favorisere de største hotellkjedene. dette har skjedd gjennom å stille tildelingskriterier som...">
+          <span class="card-date">28. mars 2018</span>
+          <h3>Ikke bare store hotellkjeder</h3>
+          <p>Det har i mange statlige anskaffelser av hotelltjenesten vært en praksis med å favorisere de største hotellkjedene. Dette har skjedd gjennom å stille tildelingskriterier som...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-03-16-en-oppdragsgiver-har-et-vidt-skjonn-i-valg-av-forhandlingsform-men.html" class="article-card" data-title="en oppdragsgiver har et vidt skjønn i valg av forhandlingsform, men …" data-excerpt="det stilles ingen formkrav til hvordan forhandlinger etter anskaffelsesregelverket skal gjennomføres. oppdragsgiveren har et vidt skjønn til å velge den kommunikasjonsformen som...">
+          <span class="card-date">16. mars 2018</span>
+          <h3>En oppdragsgiver har et vidt skjønn i valg av forhandlingsform, men …</h3>
+          <p>Det stilles ingen formkrav til hvordan forhandlinger etter anskaffelsesregelverket skal gjennomføres. Oppdragsgiveren har et vidt skjønn til å velge den kommunikasjonsformen som...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-03-09-fossilfritt-som-minimum-i-alle-nye-anleggs-anskaffelser-i-oslo.html" class="article-card" data-title="fossilfritt som minimum i alle nye anleggs-anskaffelser i oslo" data-excerpt="i oslo skal alle nye offentlige anlegg nå være utslipps- eller fossilfrie. bruk av offentlige anskaffelser skal være ett av verktøyene for å nå målet. det fremgår av...">
+          <span class="card-date">9. mars 2018</span>
+          <h3>Fossilfritt som minimum i alle nye anleggs-anskaffelser i Oslo</h3>
+          <p>I Oslo skal alle nye offentlige anlegg nå være utslipps- eller fossilfrie. Bruk av offentlige anskaffelser skal være ett av verktøyene for å nå målet. Det fremgår av...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-03-02-vid-adgang-til-a-be-om-ettersending-i-kvalifikasjonsfasen-ikke-i-tilbudsfasen.html" class="article-card" data-title="vid adgang til å be om ettersending i kvalifikasjonsfasen, ikke i tilbudsfasen" data-excerpt="det er ikke tillatt å forbedre et tilbud ved ettersendelse av opplysninger uavhengig av om det har betydning for konkurranseforholdet. en konkret vurdering avgjør om ettersendelse...">
+          <span class="card-date">2. mars 2018</span>
+          <h3>Vid adgang til å be om ettersending i kvalifikasjonsfasen, ikke i tilbudsfasen</h3>
+          <p>Det er ikke tillatt å forbedre et tilbud ved ettersendelse av opplysninger uavhengig av om det har betydning for konkurranseforholdet. En konkret vurdering avgjør om ettersendelse...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-02-28-nytt-kurs-for-forsyningssektorene.html" class="article-card" data-title="nytt kurs for forsyningssektorene" data-excerpt="den 5. juni arrangeres kurs for oppdragsgivere innenfor forsyningssektorene. det er særlig aktuelt for oppdragsgivere i energiverk, og oppdragsgivere innenfor transport og...">
+          <span class="card-date">28. februar 2018</span>
+          <h3>Nytt kurs for forsyningssektorene</h3>
+          <p>Den 5. juni arrangeres kurs for oppdragsgivere innenfor forsyningssektorene. Det er særlig aktuelt for oppdragsgivere i energiverk, og oppdragsgivere innenfor transport og...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-02-23-posten-greide-det-kjopte-el-mopeder-og-kuttet-kostnader-og-klimautslipp.html" class="article-card" data-title="posten greide det, kjøpte el-mopeder og kuttet kostnader og klimautslipp" data-excerpt="posten har klart både å kutte kostnader og samtidig redusere klimautslipp. det fremgår av en fersk rapport der bl.a. postens anskaffelse av el-mopeder analyseres. til en viss grad...">
+          <span class="card-date">23. februar 2018</span>
+          <h3>Posten greide det, kjøpte el-mopeder og kuttet kostnader og klimautslipp</h3>
+          <p>Posten har klart både å kutte kostnader og samtidig redusere klimautslipp. Det fremgår av en fersk rapport der bl.a. Postens anskaffelse av el-mopeder analyseres. Til en viss grad...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2018-02-19-fra-konflikt-til-samarbeid-hvordan-lykkes-med-bygge-og-anleggsprosjektet.html" class="article-card" data-title="fra konflikt til samarbeid: - hvordan lykkes med bygge- og anleggsprosjektet?" data-excerpt="dla piper inviterer til halvdagsseminar med hovedfokus på de nyere anskaffelse- og kontraktsformene best value procurement (bvp), samspillskontrakter og integrated project...">
+          <span class="card-date">19. februar 2018</span>
+          <h3>Fra konflikt til samarbeid: - Hvordan lykkes med bygge- og anleggsprosjektet?</h3>
+          <p>DLA Piper inviterer til halvdagsseminar med hovedfokus på de nyere anskaffelse- og kontraktsformene Best Value Procurement (BVP), Samspillskontrakter og Integrated Project...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-02-19-seminar-oppfolgning-av-lonns-og-arbeidsvilkar-i-offentlige-kontrakter-sosial-dum.html" class="article-card" data-title="seminar: oppfølgning av lønns- og arbeidsvilkår i offentlige kontrakter - sosial dumping og offentli" data-excerpt="dla piper norway inviterer til frokostseminar om sosial dumping og offentlige anskaffelser 12. april 2018 kl. 08:30-11. riksrevisjonen har avdekket at det offentliges plikt til å...">
+          <span class="card-date">19. februar 2018</span>
+          <h3>Seminar: Oppfølgning av lønns- og arbeidsvilkår i offentlige kontrakter - sosial dumping og offentli</h3>
+          <p>DLA Piper Norway inviterer til frokostseminar om sosial dumping og offentlige anskaffelser 12. april 2018 kl. 08:30-11. Riksrevisjonen har avdekket at det offentliges plikt til å...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-02-17-fire-endringer-i-kontrakt-er-alltid-vesentlige-men-det-kan-vaere-flere.html" class="article-card" data-title="fire endringer i kontrakt er alltid vesentlige, men det kan være flere" data-excerpt="fire endringer i en kontrakt skal alltid skal anses som vesentlige. men hvilke andre endringer som er vesentlige, beror på en konkret helhetsvurdering av avtaleforholdet slik det...">
+          <span class="card-date">17. februar 2018</span>
+          <h3>Fire endringer i kontrakt er alltid vesentlige, men det kan være flere</h3>
+          <p>Fire endringer i en kontrakt skal alltid skal anses som vesentlige. Men hvilke andre endringer som er vesentlige, beror på en konkret helhetsvurdering av avtaleforholdet slik det...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-02-10-for-kommersiell-anskaffelse-for-a-kutte-utslipp-langs-kysten.html" class="article-card" data-title="før-kommersiell anskaffelse for å kutte utslipp langs kysten" data-excerpt="i disse dager går tilbudsfristen ut for første steg i en førkommersiell anskaffelse med sikte på å utvikle en helt ny form for hurtigbåt. hurtigbåt av i dag er den klart største...">
+          <span class="card-date">10. februar 2018</span>
+          <h3>Før-kommersiell anskaffelse for å kutte utslipp langs kysten</h3>
+          <p>I disse dager går tilbudsfristen ut for første steg i en førkommersiell anskaffelse med sikte på å utvikle en helt ny form for hurtigbåt. Hurtigbåt av i dag er den klart største...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-02-03-anskaffelse-bidro-til-a-lette-boligsituasjonen-for-vanskeligstilte.html" class="article-card" data-title="anskaffelse bidro til å lette boligsituasjonen for vanskeligstilte" data-excerpt="i likhet med mange andre kommuner bekymret man seg i lindås kommune over boligmarkedet. det var vanskelig for unge i etableringsfasen og andre med tilsvarende utfordringer....">
+          <span class="card-date">3. februar 2018</span>
+          <h3>Anskaffelse bidro til å lette boligsituasjonen for vanskeligstilte</h3>
+          <p>I likhet med mange andre kommuner bekymret man seg i Lindås kommune over boligmarkedet. Det var vanskelig for unge i etableringsfasen og andre med tilsvarende utfordringer....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-02-03-fem-gyldne-unntak-apner-for-forhandlinger-og-konkurransepreget-dialog.html" class="article-card" data-title="fem gyldne unntak åpner for forhandlinger og konkurransepreget dialog" data-excerpt="det er vilkårene i de fem gyldne unntakstilfellene som avgjør om konkurranse med forhandlinger etter forutgående kunngjøring eller konkurransepreget dialog kan benyttes.men de nye...">
+          <span class="card-date">3. februar 2018</span>
+          <h3>Fem gyldne unntak åpner for forhandlinger og konkurransepreget dialog</h3>
+          <p>Det er vilkårene i de fem gyldne unntakstilfellene som avgjør om konkurranse med forhandlinger etter forutgående kunngjøring eller konkurransepreget dialog kan benyttes.Men de nye...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-31-kunngjoring-av-endringer-i-kontrakten-en-oversett-regel.html" class="article-card" data-title="kunngjøring av endringer i kontrakten - en oversett regel?" data-excerpt="etter kontrakt er inngått, kan det oppstå behov for å gjøre endringer i kontrakten. regelverket åpner for å kunne håndtere slike situasjoner.  i forskriften § 28-1 åpnes det...">
+          <span class="card-date">31. januar 2018</span>
+          <h3>Kunngjøring av endringer i kontrakten - en oversett regel?</h3>
+          <p>Etter kontrakt er inngått, kan det oppstå behov for å gjøre endringer i kontrakten. Regelverket åpner for å kunne håndtere slike situasjoner.  I forskriften § 28-1 åpnes det...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-27-lonns-og-arbeidsvilkar-i-offentlige-anskaffelser-regelbrudd-uten-konsekvenser.html" class="article-card" data-title="lønns- og arbeidsvilkår i offentlige anskaffelser - regelbrudd uten konsekvenser?" data-excerpt="offentlige oppdragsgivere plikter å sikre de ansatte hos leverandørene som utfører arbeidet lønns- og arbeidsforhold i samsvar med tariff. dette følger av forskrift om lønns- og...">
+          <span class="card-date">27. januar 2018</span>
+          <h3>Lønns- og arbeidsvilkår i offentlige anskaffelser - regelbrudd uten konsekvenser?</h3>
+          <p>Offentlige oppdragsgivere plikter å sikre de ansatte hos leverandørene som utfører arbeidet lønns- og arbeidsforhold i samsvar med tariff. Dette følger av forskrift om lønns- og...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-27-stor-forbedringseffekt-av-a-digitalisere-kostnadsanalyse.html" class="article-card" data-title="stor forbedringseffekt av å digitalisere kostnadsanalyse" data-excerpt="digitalisering av kostnadsanalyse har stor effekt. det fremgår av en undersøkelse som pwc har utført knyttet til anskaffelser i offentlig sektor. 50% av virksomheter som har...">
+          <span class="card-date">27. januar 2018</span>
+          <h3>Stor forbedringseffekt av å digitalisere kostnadsanalyse</h3>
+          <p>Digitalisering av kostnadsanalyse har stor effekt. Det fremgår av en undersøkelse som PwC har utført knyttet til anskaffelser i offentlig sektor. 50% av virksomheter som har...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-20-markedsdialog-kan-vaere-et-godt-redskap-men-pass-opp-for-fallgruver.html" class="article-card" data-title="markedsdialog kan være et godt redskap, men pass opp for fallgruver" data-excerpt="dialog mellom oppdragsgivere og leverandører kan være et godt redskap i forberedelsen av en anskaffelse for å skape den mest effektive konkurransen. oppdragsgiveren skal...">
+          <span class="card-date">20. januar 2018</span>
+          <h3>Markedsdialog kan være et godt redskap, men pass opp for fallgruver</h3>
+          <p>Dialog mellom oppdragsgivere og leverandører kan være et godt redskap i forberedelsen av en anskaffelse for å skape den mest effektive konkurransen. Oppdragsgiveren skal...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-20-markedsdialog-reddet-oppdragsgiver-i-klagesak.html" class="article-card" data-title="markedsdialog reddet oppdragsgiver i klagesak" data-excerpt="i kofa-sak 2014/24 hadde oppdragsgiver, film &amp;amp; kino, gjennomført en konkurranse om rammeavtale på levering av overvåking, support og feilretting for norske kinoer.  en...">
+          <span class="card-date">20. januar 2018</span>
+          <h3>Markedsdialog reddet oppdragsgiver i klagesak</h3>
+          <p>I KOFA-sak 2014/24 hadde oppdragsgiver, Film &amp;amp; Kino, gjennomført en konkurranse om rammeavtale på levering av overvåking, support og feilretting for norske kinoer.  En...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-15-miljovennlige-anskaffelser-vektlegges-i-den-politiske-plattformen-for-samarbeids.html" class="article-card" data-title="miljøvennlige anskaffelser vektlegges i den politiske plattformen for samarbeidsregjeringen" data-excerpt="i den politiske plattformen for en regjering utgått av høyre, fremskrittspartiet og venstre legges det vekt på miljøhensyn ved offentlige anskaffelser.  når det gjelder offentlige...">
+          <span class="card-date">15. januar 2018</span>
+          <h3>Miljøvennlige anskaffelser vektlegges i den politiske plattformen for samarbeidsregjeringen</h3>
+          <p>I den politiske plattformen for en regjering utgått av Høyre, Fremskrittspartiet og Venstre legges det vekt på miljøhensyn ved offentlige anskaffelser.  Når det gjelder offentlige...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-14-5-ting-a-tenke-pa-for-du-tar-forbehold-i-tilbudet.html" class="article-card" data-title="5 ting å tenke på før du tar forbehold i tilbudet" data-excerpt="et forbehold i tilbudet kan medføre at tilbudet må avvises fra konkurransen, eventuelt at det beregnes et pristillegg i evaluering av tilbudsprisene. det er derfor viktig at du...">
+          <span class="card-date">14. januar 2018</span>
+          <h3>5 ting å tenke på før du tar forbehold i tilbudet</h3>
+          <p>Et forbehold i tilbudet kan medføre at tilbudet må avvises fra konkurransen, eventuelt at det beregnes et pristillegg i evaluering av tilbudsprisene. Det er derfor viktig at du...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-12-kunne-kjope-helsetjenester-fra-private-for-6-2-mrd-i-2017.html" class="article-card" data-title="kunne kjøpe helsetjenester fra private for 6,2 mrd i 2017" data-excerpt="i fjor hadde de regionale helseforetakene i sine budsjetter til sammen 6,2 milliarder til å gjøre kjøpsavtaler med private tjenesteleverandører. det var en nominell økning på 2,6%...">
+          <span class="card-date">12. januar 2018</span>
+          <h3>Kunne kjøpe helsetjenester fra private for 6,2 mrd i 2017</h3>
+          <p>I fjor hadde de regionale helseforetakene i sine budsjetter til sammen 6,2 milliarder til å gjøre kjøpsavtaler med private tjenesteleverandører. Det var en nominell økning på 2,6%...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-11-arbeidstakeres-rettigheter-ved-offentlige-anbud.html" class="article-card" data-title="arbeidstakeres rettigheter ved offentlige anbud" data-excerpt="eu-domstolen har i sak c-200/16 vurdert arbeidstakeres rettigheter i forbindelse med gjennomføring av offentlig anbudskonkurranse. saken gjaldt vakttjenester for oppdragsgivers...">
+          <span class="card-date">11. januar 2018</span>
+          <h3>Arbeidstakeres rettigheter ved offentlige anbud</h3>
+          <p>EU-domstolen har i sak C-200/16 vurdert arbeidstakeres rettigheter i forbindelse med gjennomføring av offentlig anbudskonkurranse. Saken gjaldt vakttjenester for oppdragsgivers...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-10-hva-betyr-brexit-for-offentlige-anskaffelser.html" class="article-card" data-title="hva betyr brexit for offentlige anskaffelser?" data-excerpt="som eu-medlem er uk forpliktet til å ha regler som gjennomfører eus innkjøpsdirektiver. dette innebærer blant annet at det ikke er anledning til å diskriminere basert på...">
+          <span class="card-date">10. januar 2018</span>
+          <h3>Hva betyr Brexit for offentlige anskaffelser?</h3>
+          <p>Som EU-medlem er UK forpliktet til å ha regler som gjennomfører EUs innkjøpsdirektiver. Dette innebærer blant annet at det ikke er anledning til å diskriminere basert på...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-07-bruk-av-underleverandorer-ved-kontrakter-reservert-for-vanskeligstilte-og-funksj.html" class="article-card" data-title="bruk av underleverandører ved kontrakter reservert for vanskeligstilte og funksjonshemmede - kofa 20" data-excerpt="kvam herad gjennomførte sommeren 2017 en konkurranse om middagslevering til helse- og omsorgssektoren, slik som dagsenter, institusjoner mv. konkurransen var reservert for...">
+          <span class="card-date">7. januar 2018</span>
+          <h3>Bruk av underleverandører ved kontrakter reservert for vanskeligstilte og funksjonshemmede - KOFA 20</h3>
+          <p>Kvam herad gjennomførte sommeren 2017 en konkurranse om middagslevering til helse- og omsorgssektoren, slik som dagsenter, institusjoner mv. Konkurransen var reservert for...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2018-01-06-reserverte-kontrakter-for-vanskeligstilte-eller-funksjonshemmede-personer.html" class="article-card" data-title="reserverte kontrakter for vanskeligstilte eller funksjonshemmede personer" data-excerpt="på bestemte vilkår kan retten til å delta i konkurranser begrenses til bestemte virksomheter. hovedformålet for disse virksomhetene må være å integrere personer med nedsatt...">
+          <span class="card-date">6. januar 2018</span>
+          <h3>Reserverte kontrakter for vanskeligstilte eller funksjonshemmede personer</h3>
+          <p>På bestemte vilkår kan retten til å delta i konkurranser begrenses til bestemte virksomheter. Hovedformålet for disse virksomhetene må være å integrere personer med nedsatt...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-30-dla-piper-med-nye-seminarer-i-offentlige-anskaffelser.html" class="article-card" data-title="dla piper med nye seminarer i offentlige anskaffelser" data-excerpt="advokatfirmaet dla piper gjennomfører en storstilt seminarrekke i offentlige anskaffelser, der en rekke nye emner og temaer tas opp. alle seminarene er gratis, og passer både for...">
+          <span class="card-date">30. desember 2017</span>
+          <h3>DLA Piper med nye seminarer i offentlige anskaffelser</h3>
+          <p>Advokatfirmaet DLA Piper gjennomfører en storstilt seminarrekke i offentlige anskaffelser, der en rekke nye emner og temaer tas opp. Alle seminarene er gratis, og passer både for...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-30-kan-det-offentlige-kjope-toyota-auris-etter-arsskiftet.html" class="article-card" data-title="kan det offentlige kjøpe toyota auris etter årsskiftet?" data-excerpt="fra 1.1.2018 trer ny forskrift om energi- og miljøkrav ved anskaffelse av kjøretøy i kraft. forskriften gjør det obligatorisk å stille strenge krav til utslipp ved anskaffelse av...">
+          <span class="card-date">30. desember 2017</span>
+          <h3>Kan det offentlige kjøpe Toyota Auris etter årsskiftet?</h3>
+          <p>Fra 1.1.2018 trer ny forskrift om energi- og miljøkrav ved anskaffelse av kjøretøy i kraft. Forskriften gjør det obligatorisk å stille strenge krav til utslipp ved anskaffelse av...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-30-halte-i-land-eu-anerkjennelse-av-miljofyrtarn-sertifisering.html" class="article-card" data-title="halte i land eu-anerkjennelse av miljøfyrtårn-sertifisering" data-excerpt="miljøfyrtårn er av eu-kommisjonen blitt likestilt med iso 14001 og emas som verktøy for sertifisering og miljøledelse. samtidig er miljøfyrtårn den første nasjonale...">
+          <span class="card-date">30. desember 2017</span>
+          <h3>Halte i land EU-anerkjennelse av Miljøfyrtårn-sertifisering</h3>
+          <p>Miljøfyrtårn er av EU-kommisjonen blitt likestilt med ISO 14001 og EMAS som verktøy for sertifisering og miljøledelse. Samtidig er Miljøfyrtårn den første nasjonale...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-20-c-178-16.html" class="article-card" data-title="c-178/16" data-excerpt="domstolens dom (fjerde afdeling)20. december 2017 ()»præjudiciel forelæggelse – offentlige bygge- og anlægskontrakter – direktiv 2004/18/ef – artikel 45, stk. 2 og 3 – betingelser...">
+          <span class="card-date">20. desember 2017</span>
+          <h3>C-178/16</h3>
+          <p>DOMSTOLENS DOM (Fjerde Afdeling)20. december 2017 ()»Præjudiciel forelæggelse – offentlige bygge- og anlægskontrakter – direktiv 2004/18/EF – artikel 45, stk. 2 og 3 – betingelser...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-16-regionreformen-nye-driftskontrakter-pa-vent-anbudskonkurranser-avlyses.html" class="article-card" data-title="regionreformen: nye driftskontrakter på vent, anbudskonkurranser avlyses" data-excerpt="gjennomføringen av regionreformen skaper utfordringer for statens vegvesen: de har bedt om at alle nye driftskontrakter settes på vent. anbudskonkurranser som er i markedet må...">
+          <span class="card-date">16. desember 2017</span>
+          <h3>Regionreformen: Nye driftskontrakter på vent, anbudskonkurranser avlyses</h3>
+          <p>Gjennomføringen av regionreformen skaper utfordringer for Statens vegvesen: De har bedt om at alle nye driftskontrakter settes på vent. Anbudskonkurranser som er i markedet må...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-16-retting-av-apenbare-feil.html" class="article-card" data-title="retting av åpenbare feil...?" data-excerpt="i tidligere regelverk fremgikk det at åpenbare feil skal rettes, dersom det er utvilsomt hvordan den skal rettes. bestemmelsen er tatt bort i den nye forskriften, og erstattet av...">
+          <span class="card-date">16. desember 2017</span>
+          <h3>Retting av åpenbare feil...?</h3>
+          <p>I tidligere regelverk fremgikk det at åpenbare feil skal rettes, dersom det er utvilsomt hvordan den skal rettes. Bestemmelsen er tatt bort i den nye forskriften, og erstattet av...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-16-opplysning-om-tilbudspriser-i-begrunnelsen-for-valg-av-tilbud.html" class="article-card" data-title="opplysning om tilbudspriser i begrunnelsen for valg av tilbud" data-excerpt="ved valg av tilbud, skal oppdragsgivere begrunne valget, jf. forskrift om offentlige anskaffelser § 25-1. det følger av denne bestemmelsen at oppdragsgiver skal gi &amp;quot;en...">
+          <span class="card-date">16. desember 2017</span>
+          <h3>Opplysning om tilbudspriser i begrunnelsen for valg av tilbud</h3>
+          <p>Ved valg av tilbud, skal oppdragsgivere begrunne valget, jf. forskrift om offentlige anskaffelser § 25-1. Det følger av denne bestemmelsen at oppdragsgiver skal gi &amp;quot;en...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-08-gjenoppliving-av-vedstaelsesfristen.html" class="article-card" data-title="gjenoppliving av vedståelsesfristen" data-excerpt="vedståelsesfristen er perioden der tilbudene er bindende for leverandørene. dette innebærer at en leverandør ikke kan trekke tilbudet sitt, så lenge vedståelsesfristen løper....">
+          <span class="card-date">8. desember 2017</span>
+          <h3>Gjenoppliving av vedståelsesfristen</h3>
+          <p>Vedståelsesfristen er perioden der tilbudene er bindende for leverandørene. Dette innebærer at en leverandør ikke kan trekke tilbudet sitt, så lenge vedståelsesfristen løper....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-08-kvalifikasjonskrav-ved-prekvalifisering-dikterer-ikke-valg-av-utvelgelseskriteri.html" class="article-card" data-title="kvalifikasjonskrav ved prekvalifisering dikterer ikke valg av utvelgelseskriterier" data-excerpt="minst tre eller fem leverandører skal velges der det er snakk om prekvalifisering. grensedragningen kan ses på som et minsteantall for å sikre reell konkurranse.oppdragsgiveren er...">
+          <span class="card-date">8. desember 2017</span>
+          <h3>Kvalifikasjonskrav ved prekvalifisering dikterer ikke valg av utvelgelseskriterier</h3>
+          <p>Minst tre eller fem leverandører skal velges der det er snakk om prekvalifisering. Grensedragningen kan ses på som et minsteantall for å sikre reell konkurranse.Oppdragsgiveren er...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-05-kofa-2017-35.html" class="article-card" data-title="kofa 2017/35" data-excerpt="i nnklagede kunngjorde en konkurranse med forhandling for anskaffelse av nøkkelferdige boliger. klager har anført at innklagede brøt regelverket ved å benytte et ulovlig...">
+          <span class="card-date">5. desember 2017</span>
+          <h3>KOFA 2017/35</h3>
+          <p>I nnklagede kunngjorde en konkurranse med forhandling for anskaffelse av nøkkelferdige boliger. Klager har anført at innklagede brøt regelverket ved å benytte et ulovlig...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-12-03-ingen-forklaring-pa-arlig-okte-anbudspriser-og-redusert-konkurranse-ved-busskjop.html" class="article-card" data-title="ingen forklaring på årlig økte anbudspriser og redusert konkurranse ved busskjøp" data-excerpt="-når vi har korrigert for en rekke faktorer som påvirker anbudspris og konkurranse, gjenstår det uforklarte trender i form av årlige økninger i anbudspris og årlig redusert...">
+          <span class="card-date">3. desember 2017</span>
+          <h3>Ingen forklaring på årlig økte anbudspriser og redusert konkurranse ved busskjøp</h3>
+          <p>-Når vi har korrigert for en rekke faktorer som påvirker anbudspris og konkurranse, gjenstår det uforklarte trender i form av årlige økninger i anbudspris og årlig redusert...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-11-26-seminar-om-prosjektsamarbeid-i-offentlige-anskaffelser.html" class="article-card" data-title="seminar om prosjektsamarbeid i offentlige anskaffelser" data-excerpt="advokatfirmaet dla piper inviterer til seminar om anbudssamarbeid i offentlige anskaffelser, og de konkurranserettslige utfordringer dette innebærer. seminaret er gratis, og med...">
+          <span class="card-date">26. november 2017</span>
+          <h3>Seminar om prosjektsamarbeid i offentlige anskaffelser</h3>
+          <p>Advokatfirmaet DLA PIper inviterer til seminar om anbudssamarbeid i offentlige anskaffelser, og de konkurranserettslige utfordringer dette innebærer. Seminaret er gratis, og med...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2017-11-25-stort-handlingsrom-ved-anskaffelse-av-konsesjonskontrakter.html" class="article-card" data-title="stort handlingsrom ved anskaffelse av konsesjonskontrakter" data-excerpt="når det gjelder konsesjonskontrakter, er oppdragsgiveren gitt stort handlingsrom for hvordan han ønsker å gjennomføre anskaffelsen. men de grunnleggende prinsippene må overholdes...">
+          <span class="card-date">25. november 2017</span>
+          <h3>Stort handlingsrom ved anskaffelse av konsesjonskontrakter</h3>
+          <p>Når det gjelder konsesjonskontrakter, er oppdragsgiveren gitt stort handlingsrom for hvordan han ønsker å gjennomføre anskaffelsen. Men de grunnleggende prinsippene må overholdes...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-11-22-kofa-2017-68.html" class="article-card" data-title="kofa 2017/68" data-excerpt="innklagede gjennomførte en konkurranse med forhandling for levering av bygge- og anleggsarbeider i prosjektet &amp;quot;heimdal stasjon, forlengelse spor 3&amp;quot;. klager anførte at...">
+          <span class="card-date">22. november 2017</span>
+          <h3>KOFA 2017/68</h3>
+          <p>Innklagede gjennomførte en konkurranse med forhandling for levering av bygge- og anleggsarbeider i prosjektet &amp;quot;Heimdal stasjon, forlengelse spor 3&amp;quot;. Klager anførte at...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-11-22-kofa-2017-18.html" class="article-card" data-title="kofa 2017/18" data-excerpt="riksantikvaren og niku inngikk avtaler om konservering og restaurering av et predellamaleri, en altertavle og en prekestol. saken ble behandlet i stornemnd. nemnda konkluderte med...">
+          <span class="card-date">22. november 2017</span>
+          <h3>KOFA 2017/18</h3>
+          <p>Riksantikvaren og NIKU inngikk avtaler om konservering og restaurering av et predellamaleri, en altertavle og en prekestol. Saken ble behandlet i stornemnd. Nemnda konkluderte med...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-11-17-innovative-miljoanskaffelser-gav-klimagevinster-og-sparte-penger.html" class="article-card" data-title="innovative miljøanskaffelser gav klimagevinster og sparte penger" data-excerpt="gevinstanalyser av fire anskaffelser der miljøkrav har stått sentralt, viser at samtidig med at klima- og miljøgevinster er innkassert, er også betydelige offentlige midler spart....">
+          <span class="card-date">17. november 2017</span>
+          <h3>Innovative miljøanskaffelser gav klimagevinster og sparte penger</h3>
+          <p>Gevinstanalyser av fire anskaffelser der miljøkrav har stått sentralt, viser at samtidig med at klima- og miljøgevinster er innkassert, er også betydelige offentlige midler spart....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-11-10-kan-kreve-at-avgrensede-kritiske-oppgaver-holdes-unna-underleverandorer.html" class="article-card" data-title="kan kreve at avgrensede, kritiske oppgaver holdes unna underleverandører" data-excerpt="en oppdragsgiver har mulighet til å kreve at bestemte kritiske oppgaver skal utføres av leverandøren selv. det betyr at leverandøren ikke kan sette dette arbeidet ut til...">
+          <span class="card-date">10. november 2017</span>
+          <h3>Kan kreve at avgrensede, kritiske oppgaver holdes unna underleverandører</h3>
+          <p>En oppdragsgiver har mulighet til å kreve at bestemte kritiske oppgaver skal utføres av leverandøren selv. Det betyr at leverandøren ikke kan sette dette arbeidet ut til...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-11-04-lanserer-10-sikkerhetskrav-til-bruk-ved-ikt-anskaffelser.html" class="article-card" data-title="lanserer 10 sikkerhetskrav til bruk ved ikt-anskaffelser" data-excerpt="ved en tjenesteutsetting bør det, ifølge nasjonal sikkerhetsmyndighet (nsm), som et minimum stilles et sett med krav til leverandøren for å sørge for best mulig sikkerhetsnivå ved...">
+          <span class="card-date">4. november 2017</span>
+          <h3>Lanserer 10 sikkerhetskrav til bruk ved IKT-anskaffelser</h3>
+          <p>Ved en tjenesteutsetting bør det, ifølge Nasjonal sikkerhetsmyndighet (NSM), som et minimum stilles et sett med krav til leverandøren for å sørge for best mulig sikkerhetsnivå ved...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2017-10-28-stor-frihet-til-a-velge-hva-som-skal-kjopes-bruk-av-funksjonskrav-anbefales.html" class="article-card" data-title="stor frihet til å velge hva som skal kjøpes, bruk av funksjonskrav anbefales" data-excerpt="en oppdragsgiver har stor grad av skjønnsfrihet til å bestemme hva han ønsker å anskaffe. men når han skal ut i markedet, anbefaler nærings- og fiskeridepartementet (nfd) at han...">
+          <span class="card-date">28. oktober 2017</span>
+          <h3>Stor frihet til å velge hva som skal kjøpes, bruk av funksjonskrav anbefales</h3>
+          <p>En oppdragsgiver har stor grad av skjønnsfrihet til å bestemme hva han ønsker å anskaffe. Men når han skal ut i markedet, anbefaler Nærings- og fiskeridepartementet (NFD) at han...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-10-26-kofa-2017-97.html" class="article-card" data-title="kofa 2017/97" data-excerpt="statens vegvesen region vest kunngjorde en åpen anbudskonkurranse for inngåelse av rammeavtale for landmåling og bilbåren laserskanning i hordaland. klagenemnda ga klager medhold...">
+          <span class="card-date">26. oktober 2017</span>
+          <h3>KOFA 2017/97</h3>
+          <p>Statens vegvesen Region vest kunngjorde en åpen anbudskonkurranse for inngåelse av rammeavtale for landmåling og bilbåren laserskanning i Hordaland. Klagenemnda ga klager medhold...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-10-22-anskaffelser-tungt-inne-i-halvparten-av-helse-midt-norges-storste-risikoprosjekt.html" class="article-card" data-title="anskaffelser tungt inne i halvparten av helse midt-norges største risikoprosjekter" data-excerpt="tre store ikt-prosjekter der anskaffelser spiller en sentral rolle samtidig med bygging av et helt nytt sykehus, gir helse midt-norge en betydelig risikoutfordring. at disse fire...">
+          <span class="card-date">22. oktober 2017</span>
+          <h3>Anskaffelser tungt inne i halvparten av Helse Midt-Norges største risikoprosjekter</h3>
+          <p>Tre store IKT-prosjekter der anskaffelser spiller en sentral rolle samtidig med bygging av et helt nytt sykehus, gir Helse Midt-Norge en betydelig risikoutfordring. At disse fire...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-10-14-innovasjonspartnerskap-ny-og-kompleks-prosedyre-bare-til-reell-innovasjon.html" class="article-card" data-title="innovasjonspartnerskap – ny og kompleks prosedyre, bare til reell innovasjon" data-excerpt="innovasjonspartnerskap er en kompleks prosedyre som krever grundige forberedelser fra oppdragsgiveren. foruten de alminnelige kravene som stilles til konkurransegrunnlagets...">
+          <span class="card-date">14. oktober 2017</span>
+          <h3>Innovasjonspartnerskap – ny og kompleks prosedyre, bare til reell innovasjon</h3>
+          <p>Innovasjonspartnerskap er en kompleks prosedyre som krever grundige forberedelser fra oppdragsgiveren. Foruten de alminnelige kravene som stilles til konkurransegrunnlagets...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-10-14-hvordan-benytte-miljomerking-i-offentlige-innkjop.html" class="article-card" data-title="hvordan benytte miljømerking i offentlige innkjøp?" data-excerpt="hvordan benytte miljømerking i offentlige innkjøp?&amp;010;&amp;010;kurs for konsulenter som arbeider med anskaffelser&amp;010;&amp;010;&amp;010;i ny forskrift for offentlige anskaffelser åpner for å...">
+          <span class="card-date">14. oktober 2017</span>
+          <h3>Hvordan benytte miljømerking i offentlige innkjøp?</h3>
+          <p>Hvordan benytte miljømerking i offentlige innkjøp?&amp;010;&amp;010;Kurs for konsulenter som arbeider med anskaffelser&amp;010;&amp;010;&amp;010;I ny forskrift for offentlige anskaffelser åpner for å...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-10-09-ny-innkjopsmetode-sikret-sju-maneder-tidligere-e6-apning.html" class="article-card" data-title="ny innkjøpsmetode sikret sju måneder tidligere e6-åpning" data-excerpt="den nye e6-strekningen skulle etter planen åpnes sommeren 2021, men nye veier og veidekke har inngått kontrakt som gjør at veien kan åpnes allerede i før jul 2021.prosessen frem...">
+          <span class="card-date">9. oktober 2017</span>
+          <h3>Ny innkjøpsmetode sikret sju måneder tidligere E6-åpning</h3>
+          <p>Den nye E6-strekningen skulle etter planen åpnes sommeren 2021, men Nye Veier og Veidekke har inngått kontrakt som gjør at veien kan åpnes allerede i før jul 2021.Prosessen frem...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="https://forumoa.no/kurs" target="_blank" rel="noopener" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">Kurs</p>
+            <p class="promo-title">Se kommende kurs p&aring; forumoa.no</p>
+            <p class="promo-desc">Webinarer innen offentlige anskaffelser.</p>
+          </div>
+          <span class="promo-cta">Se kurs &rarr;</span>
+        </a>
+<a href="nyheter/2017-09-27-kofa-2017-106.html" class="article-card" data-title="kofa 2017/106" data-excerpt="rom eiendom as (bane nor sf) sendte ut en invitasjon til konkurranse med forhandling om utskifting av tak på våler stasjon. klager anførte blant annet at innklagedes...">
+          <span class="card-date">27. september 2017</span>
+          <h3>KOFA 2017/106</h3>
+          <p>Rom Eiendom AS (Bane NOR SF) sendte ut en invitasjon til konkurranse med forhandling om utskifting av tak på Våler stasjon. Klager anførte blant annet at innklagedes...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-09-24-ladestasjoner-bestar-mens-vinnere-av-elbuss-anbud-kan-komme-og-ga.html" class="article-card" data-title="ladestasjoner består, mens vinnere av elbuss-anbud kan komme og gå" data-excerpt="i norge har aktører med de elbussene som har vært mest økonomisk konkurransedyktige, vunnet de fleste anbud som har vært utlyst. det skriver transportøkonomisk institutt i en...">
+          <span class="card-date">24. september 2017</span>
+          <h3>Ladestasjoner består, mens vinnere av elbuss-anbud kan komme og gå</h3>
+          <p>I Norge har aktører med de elbussene som har vært mest økonomisk konkurransedyktige, vunnet de fleste anbud som har vært utlyst. Det skriver Transportøkonomisk Institutt i en...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-09-24-trangt-naloye-for-dem-som-onsker-forhandlinger-uten-a-kunngjore-forst.html" class="article-card" data-title="trangt nåløye for dem som ønsker forhandlinger uten å kunngjøre først" data-excerpt="dårlig planlegging, politisk press eller at det er besværlig for oppdragsgiveren er ikke lovlig grunnlag for å benytte seg av konkurranse med forhandlinger uten forutgående...">
+          <span class="card-date">24. september 2017</span>
+          <h3>Trangt nåløye for dem som ønsker forhandlinger uten å kunngjøre først</h3>
+          <p>Dårlig planlegging, politisk press eller at det er besværlig for oppdragsgiveren er ikke lovlig grunnlag for å benytte seg av konkurranse med forhandlinger uten forutgående...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-09-16-strengt-for-dem-som-skal-slippe-unna-kunngjoringsplikten.html" class="article-card" data-title="strengt for dem som skal slippe unna kunngjøringsplikten" data-excerpt="kunngjøringsplikten i anskaffelsesforskriftens del iii har sine unntak. ett av disse er forhandlinger uten forutgående kunngjøring. årsaken er hensynet til effektiv ressursbruk....">
+          <span class="card-date">16. september 2017</span>
+          <h3>Strengt for dem som skal slippe unna kunngjøringsplikten</h3>
+          <p>Kunngjøringsplikten i anskaffelsesforskriftens del III har sine unntak. Ett av disse er forhandlinger uten forutgående kunngjøring. Årsaken er hensynet til effektiv ressursbruk....</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-09-14-fikk-5-5-mill-i-erstatning.html" class="article-card" data-title="fikk 5,5 mill. i erstatning" data-excerpt="et interkommunalt avfallsselskap tapte nylig en årelang kamp i retten, og måtte til slutt betale 5,5 millioner til forbigått tilbyder.konkurransen gjaldt en rammeavtale på...">
+          <span class="card-date">14. september 2017</span>
+          <h3>Fikk 5,5 mill. i erstatning</h3>
+          <p>Et interkommunalt avfallsselskap tapte nylig en årelang kamp i retten, og måtte til slutt betale 5,5 millioner til forbigått tilbyder.Konkurransen gjaldt en rammeavtale på...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-09-03-trenger-ikke-selv-sorge-for-a-folge-regelverket-om-innkjopssentral-benyttes.html" class="article-card" data-title="trenger ikke selv sørge for å følge regelverket om innkjøpssentral benyttes" data-excerpt="dersom en oppdragsgiver kjøper fra eller gjennom en innkjøpssentral, anses han for å ha overholdt forskriften. en oppdragsgiver som benytter en innkjøpssentral, trenger med andre...">
+          <span class="card-date">3. september 2017</span>
+          <h3>Trenger ikke selv sørge for å følge regelverket om innkjøpssentral benyttes</h3>
+          <p>Dersom en oppdragsgiver kjøper fra eller gjennom en innkjøpssentral, anses han for å ha overholdt forskriften. En oppdragsgiver som benytter en innkjøpssentral, trenger med andre...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="index.html#radgivning" class="promo-banner" style="grid-column:1/-1">
+          <div class="promo-content">
+            <p class="promo-label">R&aring;dgivning</p>
+            <p class="promo-title">Trenger du bistand med en anskaffelse?</p>
+            <p class="promo-desc">Strategisk r&aring;dgivning for innkj&oslash;pere og leverand&oslash;rer.</p>
+          </div>
+          <span class="promo-cta">Kontakt meg &rarr;</span>
+        </a>
+<a href="nyheter/2017-08-22-forskning-skal-gi-suksess-med-offentlige-ikt-anskaffelser.html" class="article-card" data-title="forskning skal gi suksess med offentlige ikt-anskaffelser" data-excerpt="offentlige ikt-anskaffelser utgjør årlig over 64 mrd og potensialet for bedre utnyttelse av disse investeringene er stort. en undersøkelse tyder på at bare 5% av norske offentlige...">
+          <span class="card-date">22. august 2017</span>
+          <h3>Forskning skal gi suksess med offentlige IKT-anskaffelser</h3>
+          <p>Offentlige IKT-anskaffelser utgjør årlig over 64 mrd og potensialet for bedre utnyttelse av disse investeringene er stort. En undersøkelse tyder på at bare 5% av norske offentlige...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-08-22-kofa-2017-102.html" class="article-card" data-title="kofa 2017/102" data-excerpt="innklagede gjennomførte en åpen tilbudskonferansen for totalentreprise ved oppføringen av et krisesenterbygg i tromsø. klager anførte at innklagede hadde brutt de grunnleggende...">
+          <span class="card-date">22. august 2017</span>
+          <h3>KOFA 2017/102</h3>
+          <p>Innklagede gjennomførte en åpen tilbudskonferansen for totalentreprise ved oppføringen av et krisesenterbygg i Tromsø. Klager anførte at innklagede hadde brutt de grunnleggende...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
+<a href="nyheter/2017-07-04-sikter-mot-a-kunngjore-landets-forste-innovasjonspartnerskap-i-host.html" class="article-card" data-title="sikter mot å kunngjøre landets første innovasjonspartnerskap i høst" data-excerpt="etter grundig prosess for å definere behov og gjennomføre markedsdialog, tar stavanger kommune sikte på å kunngjøre norges første innovasjonspartnerskap i høst. kommunen er på...">
+          <span class="card-date">4. juli 2017</span>
+          <h3>Sikter mot å kunngjøre landets første innovasjonspartnerskap i høst</h3>
+          <p>Etter grundig prosess for å definere behov og gjennomføre markedsdialog, tar Stavanger kommune sikte på å kunngjøre Norges første innovasjonspartnerskap i høst. Kommunen er på...</p>
+          <span class="les-mer">Les mer &rarr;</span>
+        </a>
 
-<footer>
+    </div>
+  </div>
+
+  <footer>
     <div class="footer-inner">
-        <div>
-            <div class="footer-brand">Robert Myhre</div>
-            <p>R&aring;dgivning, kurs og innsikt innen offentlige anskaffelser</p>
-        </div>
-        <p><a href="mailto:robert@robertmyhre.no">robert@robertmyhre.no</a> &middot; <a href="tel:92054415">920 54 415</a></p>
+      <div>
+        <div class="footer-brand">Robert Myhre</div>
+        <p>R&aring;dgivning, kurs og innsikt innen offentlige anskaffelser</p>
+      </div>
+      <p><a href="mailto:robert@robertmyhre.no">robert@robertmyhre.no</a> &middot; <a href="tel:92054415">920 54 415</a></p>
     </div>
-</footer>
+  </footer>
 
-<script src="promo.js"></script>
-<script>
-var GITHUB_OWNER = 'sundaypepper';
-var GITHUB_REPO = 'robertmyhre-nyheter';
-var GITHUB_BRANCH = 'main';
-var NYHETER_PATH = 'nyheter';
-
-var months = ['januar','februar','mars','april','mai','juni','juli','august','september','oktober','november','desember'];
-
-var CACHE_KEY = 'rm_articles_v2';
-var CACHE_TTL = 30 * 60 * 1000; // 30 minutter
-
-var FALLBACK = [
-    {title:'Innovasjonspartnerskap: En risikabel vei til kjent teknologi?',date:'Februar 2025',rawDate:'2025-02-01',excerpt:'Er innovasjon best drevet gjennom komplekse partnerskap, eller oppn\u00e5r man mer ved \u00e5 stille \u00e5pne funksjonskrav?',fil:''},
-    {title:'Prisene skal gjenspeile de faktiske kostnadene',date:'Februar 2025',rawDate:'2025-02-01',excerpt:'Et krav basert p\u00e5 en grunnleggende misforst\u00e5else av hvordan leverand\u00f8rer priser anbud.',fil:''},
-    {title:'N\u00e5r pris og kvalitet blandes i samme evalueringskriterium',date:'Januar 2025',rawDate:'2025-01-01',excerpt:'KOFA-sak 2025/1673 reiser sp\u00f8rsm\u00e5l om evalueringskriterier der kvalitet og pris vurderes samlet.',fil:''}
-];
-
-function parseFrontmatter(text) {
-    var fm = {};
-    var match = text.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)/);
-    if (!match) return { meta: fm, body: text };
-    match[1].split('\n').forEach(function(line) {
-        var idx = line.indexOf(':');
-        if (idx > 0) {
-            var key = line.substring(0, idx).trim();
-            var val = line.substring(idx + 1).trim().replace(/^["']|["']$/g, '');
-            fm[key] = val;
-        }
-    });
-    return { meta: fm, body: match[2] };
-}
-
-function formatDate(dateStr) {
-    try {
-        var d = new Date(dateStr);
-        if (!isNaN(d)) {
-            return months[d.getMonth()].charAt(0).toUpperCase() + months[d.getMonth()].slice(1) + ' ' + d.getFullYear();
-        }
-    } catch(e) {}
-    return dateStr;
-}
-
-function renderArticles(articles) {
-    var g = document.getElementById('articlesGrid');
-    if (!articles.length) {
-        g.innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1">Ingen artikler publisert enn\u00e5.</p>';
-        return;
-    }
-    var html = '';
-    articles.forEach(function(a) {
-        var href = a.fil ? 'artikkel.html?fil=' + encodeURIComponent(a.fil) : '#';
-        html += '<a href="' + href + '" class="article-card">'
-            + '<span class="card-date">' + a.date + '</span>'
-            + '<h3>' + a.title + '</h3>'
-            + '<p>' + a.excerpt + '</p>'
-            + '<span class="les-mer">Les mer &rarr;</span></a>';
-    });
-    g.innerHTML = html;
-
-    // Plasser promoer: kurs øverst, rådgivning nederst
-    document.getElementById('promoTop').innerHTML = PROMO.getPromoHtml(0);
-    document.getElementById('promoBottom').innerHTML = PROMO.getPromoHtml(1);
-}
-
-var allArticles = [];
-
-function setupSearch() {
+  <script>
+    // Client-side search (filters the already-rendered static cards)
+    var cards = document.querySelectorAll('.article-card');
+    var promos = document.querySelectorAll('.promo-banner');
     var input = document.getElementById('searchInput');
     var countEl = document.getElementById('resultCount');
-    countEl.textContent = allArticles.length + ' artikler';
+    var total = cards.length;
+
     input.addEventListener('input', function() {
-        var q = this.value.toLowerCase().trim();
-        if (!q) {
-            renderArticles(allArticles);
-            countEl.textContent = allArticles.length + ' artikler';
-            return;
-        }
-        var filtered = allArticles.filter(function(a) {
-            return a.title.toLowerCase().indexOf(q) !== -1
-                || a.excerpt.toLowerCase().indexOf(q) !== -1;
-        });
-        renderArticles(filtered);
-        countEl.textContent = filtered.length + ' av ' + allArticles.length + ' artikler';
-    });
-}
-
-(async function() {
-    try {
-        // Sjekk cache først
-        var cached = null;
-        try { cached = JSON.parse(sessionStorage.getItem(CACHE_KEY)); } catch(e) {}
-        if (cached && cached.a && cached.a.length && (Date.now() - cached.t < CACHE_TTL)) {
-            allArticles = cached.a;
-            renderArticles(allArticles);
-            setupSearch();
-            return;
-        }
-
-        var apiUrl = 'https://api.github.com/repos/' + GITHUB_OWNER + '/' + GITHUB_REPO + '/contents/' + NYHETER_PATH + '?ref=' + GITHUB_BRANCH;
-        var r = await fetch(apiUrl);
-        if (!r.ok) throw new Error('Kunne ikke hente fra GitHub (status ' + r.status + ')');
-
-        var files = await r.json();
-        var mdFiles = files.filter(function(f) { return f.name.endsWith('.md'); });
-        if (!mdFiles.length) throw new Error('Ingen artikler');
-
-        allArticles = await Promise.all(mdFiles.map(async function(f) {
-            var raw = await fetch(f.download_url);
-            var text = await raw.text();
-            var parsed = parseFrontmatter(text);
-            var meta = parsed.meta;
-            var body = parsed.body;
-            var title = meta.title || f.name.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '').replace(/-/g, ' ');
-            var dateStr = meta.date || f.name.substring(0, 10);
-            var excerpt = meta.excerpt || meta.description || body.substring(0, 200).replace(/[#*_\[\]]/g, '').trim() + '...';
-            return { title: title, date: formatDate(dateStr), rawDate: String(dateStr), excerpt: excerpt, fil: f.name };
-        }));
-
-        // Sorter etter frontmatter-dato (nyeste først)
-        allArticles.sort(function(a, b) { return b.rawDate.localeCompare(a.rawDate); });
-
-        // Lagre i cache
-        try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), a: allArticles })); } catch(e) {}
-
-        renderArticles(allArticles);
-        setupSearch();
-    } catch(e) {
-        console.log('GitHub-henting feilet:', e.message);
-
-        // Prøv utløpt cache først
-        var old = null;
-        try { old = JSON.parse(sessionStorage.getItem(CACHE_KEY)); } catch(e2) {}
-        if (old && old.a && old.a.length) {
-            allArticles = old.a;
+      var q = this.value.toLowerCase().trim();
+      if (!q) {
+        cards.forEach(function(c) { c.classList.remove('hidden'); });
+        promos.forEach(function(p) { p.style.display = ''; });
+        countEl.textContent = total + ' artikler';
+        return;
+      }
+      var shown = 0;
+      cards.forEach(function(c) {
+        var title = c.getAttribute('data-title') || '';
+        var excerpt = c.getAttribute('data-excerpt') || '';
+        if (title.indexOf(q) !== -1 || excerpt.indexOf(q) !== -1) {
+          c.classList.remove('hidden');
+          shown++;
         } else {
-            allArticles = FALLBACK;
+          c.classList.add('hidden');
         }
-        renderArticles(allArticles);
-        setupSearch();
-    }
-})();
-</script>
+      });
+      promos.forEach(function(p) { p.style.display = 'none'; });
+      countEl.textContent = shown + ' av ' + total + ' artikler';
+    });
+  </script>
+
 </body>
 </html>
