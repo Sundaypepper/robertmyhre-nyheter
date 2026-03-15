@@ -536,7 +536,7 @@
     var GITHUB_OWNER = 'sundaypepper';
     var GITHUB_REPO = 'robertmyhre-nyheter';
     var GITHUB_BRANCH = 'main';
-    var NYHETER_PATH = 'nyheter'; // mappe i repo med .md-filer
+    var NYHETER_PATH = 'nyheter';
 
     var FALLBACK=[
       {title:'Innovasjonspartnerskap: En risikabel vei til kjent teknologi?',date:'Februar 2025',excerpt:'Er innovasjon best drevet gjennom komplekse partnerskap, eller oppnår man mer ved å stille åpne funksjonskrav?',url:'#'},
@@ -562,21 +562,6 @@
       }).join('');
     }
 
-    function parseFrontmatter(text){
-      var fm={};
-      var match=text.match(/^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)/);
-      if(!match) return {meta:fm,body:text};
-      match[1].split('\n').forEach(function(line){
-        var idx=line.indexOf(':');
-        if(idx>0){
-          var key=line.substring(0,idx).trim();
-          var val=line.substring(idx+1).trim().replace(/^["']|["']$/g,'');
-          fm[key]=val;
-        }
-      });
-      return {meta:fm,body:match[2]};
-    }
-
     (async function(){
       try{
         // Hent liste over filer i nyheter-mappen
@@ -584,37 +569,35 @@
         var r=await fetch(apiUrl);
         if(!r.ok) throw new Error('Kunne ikke hente fra GitHub');
         var files=await r.json();
-        // Bygg et sett med HTML-filnavn (uten endelse) for rask oppslag
-        var htmlSet={};
-        files.forEach(function(f){
-          if(f.name.endsWith('.html')){
-            htmlSet[f.name.replace(/\.html$/,'')]=f;
-          }
-        });
 
-        // Filtrer .md-filer og sorter (nyeste først)
-        var mdFiles=files.filter(function(f){return f.name.endsWith('.md')}).sort(function(a,b){return b.name.localeCompare(a.name)}).slice(0,6);
-        if(!mdFiles.length) throw new Error('Ingen nyheter funnet');
+        // Filtrer HTML-filer og sorter (nyeste først)
+        var htmlFiles=files.filter(function(f){return f.name.endsWith('.html')}).sort(function(a,b){return b.name.localeCompare(a.name)}).slice(0,6);
+        if(!htmlFiles.length) throw new Error('Ingen nyheter funnet');
 
-        // Hent innholdet i hver .md-fil for metadata
-        var articles=await Promise.all(mdFiles.map(async function(f){
+        // Hent metadata fra hver HTML-fil
+        var articles=await Promise.all(htmlFiles.map(async function(f){
           var raw=await fetch(f.download_url);
           var text=await raw.text();
-          var parsed=parseFrontmatter(text);
-          var meta=parsed.meta;
-          var body=parsed.body;
+          var parser=new DOMParser();
+          var doc=parser.parseFromString(text,'text/html');
 
-          var slug=f.name.replace(/\.md$/,'');
-          var title=meta.title||slug.replace(/^\d{4}-\d{2}-\d{2}[-_]/,'').replace(/[-_]/g,' ');
-          var dateStr=meta.date||f.name.substring(0,10);
+          // Hent tittel fra <title> og fjern " | Robert Myhre"-suffikset
+          var rawTitle=doc.querySelector('title');
+          var title=rawTitle?rawTitle.textContent.replace(/\s*\|\s*Robert Myhre$/,''):f.name.replace(/\.html$/,'').replace(/^\d{4}-\d{2}-\d{2}[-_]/,'').replace(/[-_]/g,' ');
+
+          // Hent dato fra article:published_time eller filnavn
+          var timeMeta=doc.querySelector('meta[property="article:published_time"]');
+          var dateStr=timeMeta?timeMeta.getAttribute('content'):f.name.substring(0,10);
           try{
             var d=new Date(dateStr);
             if(!isNaN(d)) dateStr=months[d.getMonth()].charAt(0).toUpperCase()+months[d.getMonth()].slice(1)+' '+d.getFullYear();
           }catch(e){}
-          var excerpt=meta.excerpt||meta.description||body.substring(0,200).replace(/[#*_\[\]]/g,'').trim()+'...';
 
-          // Lenk alltid til .html-filen (som alltid finnes ved siden av .md)
-          return {title:title,date:dateStr,excerpt:excerpt,fil:slug+'.html'};
+          // Hent excerpt fra meta description
+          var descMeta=doc.querySelector('meta[name="description"]');
+          var excerpt=descMeta?descMeta.getAttribute('content'):'';
+
+          return {title:title,date:dateStr,excerpt:excerpt,fil:f.name};
         }));
         render(articles);
       }catch(e){
